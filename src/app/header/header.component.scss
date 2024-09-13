@@ -1,7 +1,7 @@
 @import '../../styles.scss';
 
 .header {
-    position: absolute;
+    position: fixed;
     z-index: 30;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     
-    font-family: "Staatliches", sans-serif;
+
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
     //font-weight: 100;
