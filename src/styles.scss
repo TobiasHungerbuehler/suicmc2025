@@ -75,6 +75,12 @@ h2{
   align-items: center;
   flex-direction: column;
   padding-bottom: 90px;
+  
+  @media (max-width: 1000px){
+    margin-top: 40px;
+    width: 96%;
+
+  }
 }
 
 .text-box{

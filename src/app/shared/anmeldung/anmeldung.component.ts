@@ -30,8 +30,8 @@ export class AnmeldungComponent implements OnInit {
           "en": "Online registration for SUICMC 25 is open from October 1, 2024 to August 31, 2025. After that, you can register on-site. The registration fee is 20.- CHF. The registration fee for WTNB is voluntary. If you'd like to contribute more, we greatly appreciate any additional support. You will receive a confirmation email with payment details after registration."
         },
         "button": {
-          "de": "WEITER ZUR ONLINE ANMELDUNG",
-          "en": "PROCEED TO ONLINE REGISTRATION"
+          "de": "ONLINE ANMELDUNG",
+          "en": "ONLINE REGISTRATION"
         }
       },
       "sbpc": {
@@ -44,8 +44,8 @@ export class AnmeldungComponent implements OnInit {
           "en": "Registration for SBPC 2025 opens in December 2024."
         },
         "button": {
-          "de": "WEITER ZUR ONLINE ANMELDUNG",
-          "en": "PROCEED TO ONLINE REGISTRATION"
+          "de": "ONLINE ANMELDUNG",
+          "en": "ONLINE REGISTRATION"
         }
       },
       "pre ecmc": {
@@ -58,8 +58,8 @@ export class AnmeldungComponent implements OnInit {
           "en": "Register now for the PRE-ECMC. A four-day group ride will take place from St. Gallen via Munich to Salzburg. Right after the SUICMC 2025."
         },
         "button": {
-          "de": "WEITER ZUR ONLINE ANMELDUNG",
-          "en": "PROCEED TO ONLINE REGISTRATION"
+          "de": "ONLINE ANMELDUNG",
+          "en": "ONLINE REGISTRATION"
         }
       }
     }
