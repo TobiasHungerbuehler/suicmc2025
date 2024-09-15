@@ -7,15 +7,13 @@
     left: 0;
     right: 0;
     height: 60px;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-
     font-family: "IBM Plex Sans", sans-serif;
     font-size: 14px;
-    //font-weight: 100;
+    @include boxshadow;
+    
 
 
       
