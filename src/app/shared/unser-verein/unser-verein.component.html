@@ -1,0 +1,30 @@
+<section [ngStyle]="{
+  'background-color': currentRoute === 'suicmc' ? '#437CFA' :
+                      currentRoute === 'sbpc' ? '#9343E3' :
+                      currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+}">
+
+  <div class="inlay">
+    <h2 [ngStyle]="{
+      'color': currentRoute === 'suicmc' ? '#DEEEFF' :
+               currentRoute === 'sbpc' ? '#EEDDFF' :
+               currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+    }">
+      {{ getText('titel') }}
+    </h2>
+
+    <div class="text-box" [ngClass]="{
+          'text-suicmc': currentRoute === 'suicmc',
+          'text-sbpc': currentRoute === 'sbpc',
+          'text-pre-ecmc': currentRoute === 'pre ecmc'
+        }">
+      <p>{{ getText('p1') }}</p>
+      <p>{{ getText('p2') }}</p>
+      <p>{{ getText('p3') }}</p>
+    </div>
+  </div>
+  
+  <div class="polaroid">
+    <img src="../../../assets/img/polaroid.png" alt="">
+  </div>
+</section>
