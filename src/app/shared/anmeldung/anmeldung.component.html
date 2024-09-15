@@ -3,30 +3,27 @@
                       currentRoute === 'sbpc' ? '#EEDDFF' :
                       currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
 }">
-  <div class="inlay">
+  <div class="inlay" [ngStyle]="{
+    'color':  currentRoute === 'suicmc' ? '#437CFA' :
+              currentRoute === 'sbpc' ? '#9343E3' :
+              currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+  }">
 
-    <h2 [ngStyle]="{
-      'color':  currentRoute === 'suicmc' ? '#437CFA' :
-                currentRoute === 'sbpc' ? '#9343E3' :
-                currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
-    }">
+      <h2> {{ getText('titel') }}</h2>
   
-      Anmeldung
-  
-    </h2>
-  
-  
-    <span [ngClass]="{
-          'text-suicmc': currentRoute === 'suicmc',
-          'text-sbpc': currentRoute === 'sbpc',
-          'text-pre-ecmc': currentRoute === 'pre ecmc'
+      <div class="text-box">
+        <p>{{ getText('text1') }}</p>
+      </div>
+      
+      <div class="button-box">
+        <div class="button" [ngStyle]="{
+          'border-color':  currentRoute === 'suicmc' ? '#437CFA' :
+                    currentRoute === 'sbpc' ? '#9343E3' :
+                    currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
         }">
-        adhfgoüuahdf
-        adfhaoidhfogvhadufhgauiga¨
-    </span>
+          <p>{{ getText('button') }}</p>    
+        </div>
+      </div>
 
   </div>
-
-
-
 </section>

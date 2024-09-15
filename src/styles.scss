@@ -74,7 +74,7 @@ h2{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  padding-bottom: 90px;
 }
 
 .text-box{
@@ -91,6 +91,9 @@ h2{
 
 }
 
-
+@mixin boxshadow{
+  -webkit-box-shadow: -2px 12px 12px -5px rgba(0,0,0,0.42); 
+  box-shadow: -2px 12px 12px -5px rgba(0,0,0,0.42);
+}
 
 
