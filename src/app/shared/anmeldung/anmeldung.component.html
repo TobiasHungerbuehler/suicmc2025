@@ -1,0 +1,32 @@
+<section [ngStyle]="{
+  'background-color': currentRoute === 'suicmc' ? '#DEEEFF' :
+                      currentRoute === 'sbpc' ? '#EEDDFF' :
+                      currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+}">
+  <div class="inlay">
+
+    <h2 [ngStyle]="{
+      'color':  currentRoute === 'suicmc' ? '#437CFA' :
+                currentRoute === 'sbpc' ? '#9343E3' :
+                currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+    }">
+  
+      Anmeldung
+  
+    </h2>
+  
+  
+    <span [ngClass]="{
+          'text-suicmc': currentRoute === 'suicmc',
+          'text-sbpc': currentRoute === 'sbpc',
+          'text-pre-ecmc': currentRoute === 'pre ecmc'
+        }">
+        adhfgoüuahdf
+        adfhaoidhfogvhadufhgauiga¨
+    </span>
+
+  </div>
+
+
+
+</section>

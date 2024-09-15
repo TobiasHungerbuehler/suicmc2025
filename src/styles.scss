@@ -6,7 +6,6 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    //border: 1px solid;
   }
   
   *,
@@ -14,9 +13,10 @@ html, body {
   *::after {
     box-sizing: inherit;
   }
-  
 
 //Colors
+/////////////////////////////////////////
+
 // Suicmc 2025
 $suicmc-blau-01: #deeeff; // RGB: 222, 238, 255 | CMYK: 13, 7, 0, 0
 $suicmc-blau-02: #437cfa; // RGB: 67, 124, 250 | CMYK: 73, 50, 0, 2
@@ -35,6 +35,13 @@ $pre-ecmc-sunshade: #ff9021; // RGB: 255, 144, 33 | CMYK: 0, 44, 87, 0
 $pre-ecmc-mango-tango: #d86c00; // RGB: 216, 108, 0 | CMYK: 0, 50, 100, 15
 $pre-ecmc-cedar-wood-finish: #802700; // RGB: 128, 39, 0 | CMYK: 0, 70, 100, 50
 
+
+//Fonts
+////////////////////////////////////////
+
+$title-font:  "Staatliches", sans-serif;
+$text-font: "IBM Plex Sans", sans-serif;
+
 /* Globales Farb-Theme */
 .text-suicmc {
   color: $suicmc-blau-01;
@@ -47,3 +54,43 @@ $pre-ecmc-cedar-wood-finish: #802700; // RGB: 128, 39, 0 | CMYK: 0, 70, 100, 50
 .text-pre-ecmc {
   color: $pre-ecmc-light-apricot;
 }
+
+h2{
+  font-family: $title-font;
+  text-align: center;
+  font-size: clamp(42px, 8vw, 100px);
+  font-weight: 400;
+  border: 1px solid red;
+  margin: 0;
+
+}
+
+.inlay{
+  margin-top: 90px;
+  height: 100%;
+  width: 80%;
+  border: 1px solid peru;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.text-box{
+  margin-top: 70px;
+  font-family: $text-font;
+  text-align: center;
+  font-size: 20px;
+  
+  @media (max-width: 1000px){
+    margin-top: 40px;
+
+  }
+
+
+}
+
+
+
+
