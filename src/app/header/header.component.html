@@ -1,0 +1,53 @@
+<section class="header" [ngStyle]="{
+    'background-color': currentRoute === 'SUICMC' ? '#2b61d9' : 
+                        currentRoute === 'SBPC' ? '#622a9b' : 
+                        currentRoute === 'PRE ECMC' ? '#d86c00' : 'white'
+  }">
+<nav>
+    <!-- Navigation Links -->
+    <a routerLink="/" [class.active]="currentRoute === 'SUICMC'">SUICMC</a>
+    <a routerLink="/sbpc" [class.active]="currentRoute === 'SBPC'">SBPC</a>
+    <a routerLink="/preecmc" [class.active]="currentRoute === 'PRE ECMC'">PRE ECMC</a>
+  
+    <!-- Language Selector -->
+    <div class="language-box" (click)="toggleLanguageSelector()">
+      <img src="./assets/img/globe-2-64.png" class="globe-icon">
+  
+      <div class="language-selector" *ngIf="showLanguageSelector" (click)="$event.stopPropagation()">
+        <a (click)="changeLanguage('de'); $event.stopPropagation() " [class.active]="currentLanguage === 'de'">DE</a>
+        <a (click)="changeLanguage('en'); $event.stopPropagation()" [class.active]="currentLanguage === 'en'">EN</a>
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="sponsor-box">
+
+    <span>Goldsponsoren</span>
+
+    <div class="placeholder">Logo</div>
+    <div class="placeholder">Logo</div>
+    <div class="placeholder">Logo</div>
+
+  </div>
+
+  <img class="mobile-menu-img" src="./assets/img/menu-4-64.png" alt="" (click)="toggleOverlay()">
+
+  <div class="mobile-overlay" *ngIf="isOverlayVisible" (click)="toggleOverlay()">
+      
+    <a class="closer" (click)="toggleOverlay(); $event.stopPropagation()" >
+        <img src="./assets/img/x-mark-64.png" alt="">
+      </a>
+
+      <div class="menu-content">
+          <a routerLink="/" [class.active]="currentRoute === 'SUICMC'">SUICMC</a>
+          <a routerLink="/sbpc" [class.active]="currentRoute === 'SBPC'">SBPC</a>
+          <a routerLink="/preecmc" [class.active]="currentRoute === 'PRE ECMC'">PRE ECMC</a>
+          <a (click)="changeLanguage('de')" [class.active]="currentLanguage === 'de'">DE</a>
+          <a (click)="changeLanguage('en')" [class.active]="currentLanguage === 'en'">EN</a>
+    </div>
+  </div>
+
+
+
+</section>

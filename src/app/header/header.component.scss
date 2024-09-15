@@ -1,0 +1,198 @@
+@import '../../styles.scss';
+
+.header {
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 14px;
+    //font-weight: 100;
+
+
+      
+
+
+    nav{
+        list-style-type: none;
+        height: 100%;
+        width: auto;
+        margin: 0;
+        padding: 0;
+        margin-left: 2%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 6em;
+
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    
+        >a{
+            text-decoration: none;
+            color: white; 
+    
+            &:hover{
+                text-decoration: underline;
+            }
+
+        }
+        a.active {
+            text-decoration: underline;
+            //font-weight: bold;
+          }
+    
+        >.language-box{
+            position: relative;
+            height: 30px;
+            width: 30px;
+
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+             >.globe-icon{
+                 position: absolute;
+                 z-index: 31;
+                 height: 60%;
+                 width: auto;
+             }
+    
+             >.language-selector{
+                position: absolute;
+                z-index: 32;
+                bottom: -50px;
+
+    
+                >a{
+                    text-decoration: none;
+                    color: rgb(195, 26, 26); 
+            
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                a.active {
+                    text-decoration: underline;
+                    //font-weight: bold;
+                  }
+             }
+        }
+      }
+
+      >.sponsor-box{
+        display: flex;
+        margin-right: 2%;
+        height: 100%;
+        gap: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1000px) {
+            margin-left: 2%;
+        }
+        
+        >span{
+            color: white;
+            font-size: 8px;
+        }
+        
+        >.placeholder{
+            height: 70%;
+            width: 80px;
+            background-color: rgba(255, 255, 255, 0.636);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: white;
+        }
+      }
+
+      >.mobile-menu-img{
+          display: none;
+
+          @media (max-width: 1000px) {
+            display: block;
+            margin-right: 2%;
+            height: 60%;
+            width: auto;
+
+        }
+      }
+
+
+      .mobile-overlay {
+        position: fixed; /* Verwende fixed statt absolute, damit es den gesamten Viewport abdeckt */
+        top: 0;
+        left: 0;
+        width: 100vw; /* Volle Breite des Viewports */
+        height: 100vh; /* Volle Höhe des Viewports */
+        background-color: rgba(0, 0, 0); /* Transparentes schwarzes Overlay */
+        z-index: 50; /* Höherer z-index, um sicherzustellen, dass es über dem restlichen Inhalt liegt */
+        display: none; /* Standardmäßig ausgeblendet */
+        
+        @media (max-width: 1000px) {
+          display: block; /* Nur im mobilen Layout anzeigen */
+        }
+
+        >.closer{
+            position: absolute;
+            z-index: 43;
+            top: 2%;
+            right: 5%;
+
+            >img{
+                height: 22px;
+                width: auto;
+            }
+
+        }
+
+        >.menu-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+            
+            a {
+              color: white;
+              text-decoration: none;
+              font-size: 24px;
+              margin: 1em 0;
+              
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            a.active {
+              text-decoration: underline;
+              //font-weight: bold;
+            }
+          }
+          
+      }
+      
+}
+
+
+
+
+  
+
+
+  
