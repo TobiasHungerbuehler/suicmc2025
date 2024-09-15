@@ -1,6 +1,9 @@
-<div class="start">
+<div class="start" [ngClass]="{
+  'text-suicmc': currentRoute === 'suicmc',
+  'text-sbpc': currentRoute === 'sbpc',
+  'text-pre-ecmc': currentRoute === 'pre ecmc'
+}">
     <h1>{{ getText().titel }}</h1>
     <p>{{ getText().sub1 }}</p>
     <p>{{ getText().sub2 }}</p>
-  </div>
-  
+</div>

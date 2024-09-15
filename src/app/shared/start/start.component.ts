@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
 
@@ -8,7 +9,7 @@ type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 @Component({
   selector: 'app-start',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss']
 })

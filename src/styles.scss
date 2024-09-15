@@ -34,3 +34,16 @@ $pre-ecmc-light-apricot: #fde9d5; // RGB: 253, 233, 213 | CMYK: 0, 8, 16, 1
 $pre-ecmc-sunshade: #ff9021; // RGB: 255, 144, 33 | CMYK: 0, 44, 87, 0
 $pre-ecmc-mango-tango: #d86c00; // RGB: 216, 108, 0 | CMYK: 0, 50, 100, 15
 $pre-ecmc-cedar-wood-finish: #802700; // RGB: 128, 39, 0 | CMYK: 0, 70, 100, 50
+
+/* Globales Farb-Theme */
+.text-suicmc {
+  color: $suicmc-blau-01;
+}
+
+.text-sbpc {
+  color: $sbpc-violett-01;
+}
+
+.text-pre-ecmc {
+  color: $pre-ecmc-light-apricot;
+}
