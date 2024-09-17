@@ -14,8 +14,8 @@
       <img src="./assets/img/globe-2-64.png" class="globe-icon">
   
       <div class="language-selector" *ngIf="showLanguageSelector" (click)="$event.stopPropagation()">
-        <a (click)="changeLanguage('de'); $event.stopPropagation() " [class.active]="currentLanguage === 'de'">DE</a>
-        <a (click)="changeLanguage('en'); $event.stopPropagation()" [class.active]="currentLanguage === 'en'">EN</a>
+        <a (click)="changeLanguage('de'); $event.stopPropagation() " [class.active]="currentLanguage === 'de'">Deutsch</a>
+        <a (click)="changeLanguage('en'); $event.stopPropagation()" [class.active]="currentLanguage === 'en'">English</a>
       </div>
     </div>
   </nav>
