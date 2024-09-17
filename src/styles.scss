@@ -104,12 +104,17 @@ h2{
   font-size: $text-font-size;
   max-width: 1100px;
 
+
   
   
   @media (max-width: 1000px){
     text-align: center;
     margin-top: 40px;
 
+  }
+
+  a{
+    color: inherit;
   }
 
 
