@@ -1,0 +1,29 @@
+<section [ngStyle]="{
+  'background-color': currentRoute === 'suicmc' ? '#DEEEFF' :
+                      currentRoute === 'sbpc' ? '#EEDDFF' :
+                      currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+}">
+  <div class="inlay" [ngStyle]="{
+    'color':  currentRoute === 'suicmc' ? '#437CFA' :
+              currentRoute === 'sbpc' ? '#9343E3' :
+              currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+  }">
+
+      <h2> {{ getText('titel') }}</h2>
+  
+      <div class="text-box">
+        <p>{{ getText('text1') }}</p>
+      </div>
+      
+      <div class="button-box">
+        <div class="button" [ngStyle]="{
+          'border-color':  currentRoute === 'suicmc' ? '#437CFA' :
+                    currentRoute === 'sbpc' ? '#9343E3' :
+                    currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+        }">
+          <p>{{ getText('button') }}</p>    
+        </div>
+      </div>
+
+  </div>
+</section>

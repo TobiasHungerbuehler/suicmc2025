@@ -1,0 +1,46 @@
+@import '../../../styles.scss';
+
+section{
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    .text-box {
+        > p {
+          &:last-child {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .polaroid{
+        margin-top: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        @media (max-width: 1000px){
+            margin-top: 40px;
+
+        }
+        
+        >img{
+            width: 50vw;
+            max-width: 600px;
+            height: auto;
+            transform: rotate(-5deg);
+            
+            @media (max-width: 1000px) {
+                width: 90vw;  
+                height: auto; 
+                transform: rotate(0deg);
+              }
+          }
+      }
+      
+    
+}
