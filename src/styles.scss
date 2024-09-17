@@ -40,7 +40,9 @@ $pre-ecmc-cedar-wood-finish: #802700; // RGB: 128, 39, 0 | CMYK: 0, 70, 100, 50
 ////////////////////////////////////////
 
 $title-font:  "Staatliches", sans-serif;
+
 $text-font: "IBM Plex Sans", sans-serif;
+$text-font-size: clamp(16px, 4vw, 20px); //fliesstext grösse global
 
 /* Globales Farb-Theme */
 .text-suicmc {
@@ -60,7 +62,7 @@ h2{
   text-align: center;
   font-size: clamp(42px, 8vw, 100px);
   font-weight: 400;
-  border: 1px solid red;
+  //border: 1px solid red;
   margin: 0;
 
 }
@@ -69,7 +71,7 @@ h2{
   margin-top: 90px;
   height: 100%;
   width: 80%;
-  border: 1px solid peru;
+  border: 1px solid rgba(205, 134, 63, 0.272);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,9 +89,13 @@ h2{
   margin-top: 70px;
   font-family: $text-font;
   text-align: center;
-  font-size: 20px;
+  font-size: $text-font-size;
+  max-width: 1100px;
+
+  
   
   @media (max-width: 1000px){
+    text-align: center;
     margin-top: 40px;
 
   }
