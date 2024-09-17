@@ -37,4 +37,18 @@ export class FooterComponent {
     });
   }
 
+  getFooterImage(): string {
+    if (this.currentRoute === 'suicmc') {
+      return 'assets/img/footer_suicmc.png';
+    } else if (this.currentRoute === 'sbpc') {
+      return 'assets/img/footer_sbpc.png';
+    } else if (this.currentRoute === 'pre ecmc') {
+      return 'assets/img/footer_pre_ecmc.png';
+    } else {
+      return ''; // Fallback-Bild oder leer lassen
+    }
+  }
+  
+  
+
 }

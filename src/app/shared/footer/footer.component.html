@@ -1,51 +1,29 @@
-<section >
+<section [ngStyle]="{
+    'background-image': 'url(' + getFooterImage() + ')',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-repeat': 'no-repeat',
+    'height': '100vh',
+    'width': '100%'
+  }">
 
-    <div class="background">
+  <div class="footerline">
 
-        @if (currentRoute === 'suicmc'){
-            <img src="assets/img/footer_suicmc.png" alt="">
-        }
-        @if (currentRoute === 'sbpc') {
-            <img src="assets/img/footer_sbpc.png" alt="">
-        }
-        @if (currentRoute === 'pre ecmc') {
-            <img src="assets/img/footer_pre_ecmc.png" alt="">
-        }   
-        
-        
-        
-            <div class="footerline">
+      <div class="contact">
+        <p>Kontakt</p>
+        <br>
+        <p>Verein Drehmoment 9000</p>
+        <p>C/O Velokurier St.Gallen</p>
+        <p>Turnerstrasse 2</p>
+        <p>9000 St.Gallen</p>
+        <br>
+        <p><a href="mailto:hallo&#64;suicmc25.ch">hallo&#64;suicmc25.ch</a></p>
+      </div>
+      <div class="sponsor-box">
+        <span>Silbersponsoren</span>
+        <div class="placeholder">Logo</div>
+        <div class="placeholder">Logo</div>                    
+      </div>
+    </div>  
 
-                <div class="content">
-                    <div class="contact">
-                        <p>Kontakt</p>
-                        <br>
-                        <p>Verein Drehmoment 9000</p>
-                        <p>C/O Velokurier St.Gallen</p>
-                        <p>Turnerstrasse 2</p>
-                        <p>9000 St.Gallen</p>
-                        <br>
-                        <p><a href="mailto:hallo&#64;suicmc25.ch">hallo&#64;suicmc25.ch</a></p>
-                    </div>
-
-                    <div class="sponsor-box">
-
-                        <span>Silbersponsoren</span>
-                    
-                        <div class="placeholder">Logo</div>
-                        <div class="placeholder">Logo</div>                    
-                      </div>
-
-                </div>
-
-            </div>
-        
-    </div>
-    
-
-
-
-
-
-    
 </section>
