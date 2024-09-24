@@ -1,0 +1,157 @@
+<section>
+    <div class="inlay">
+
+            <form (ngSubmit)="onSubmit(registrationForm)" #registrationForm="ngForm">
+
+                <div class="input-group">
+                    <div class="single-box">
+                        <!-- Vorname (Pflichtfeld) -->
+                        <input [(ngModel)]="userData.vorname" type="text" id="vorname" name="vorname" placeholder="Vorname" required #vorname="ngModel">
+                        <span *ngIf="(vorname.invalid && (vorname.touched || registrationForm.submitted))">Vorname ist erforderlich</span>
+                    </div>
+    
+    
+                    <div class="single-box">
+                        <!-- Nachname (Pflichtfeld) -->
+                        <input [(ngModel)]="userData.nachname" type="text" id="nachname" name="nachname" placeholder="Nachname" required #nachname="ngModel">
+                        <span *ngIf="(nachname.invalid && (nachname.touched || registrationForm.submitted))">Nachname ist erforderlich</span>
+                    </div>
+    
+                    <div class="single-box">
+                        <!-- Spitzname (optional) -->
+                        <input [(ngModel)]="userData.spitzname" type="text" id="spitzname" name="spitzname" placeholder="Spitzname (optional)">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                        <div class="single-box">
+                        <!-- Ort (Pflichtfeld) -->
+                            <input [(ngModel)]="userData.ort" type="text" id="ort" name="ort" placeholder="Ort" required #ort="ngModel">
+                            <span *ngIf="(ort.invalid && (ort.touched || registrationForm.submitted))">Ort ist erforderlich</span>
+                        </div>
+        
+                        <div class="single-box">
+                            <!-- Firma (optional) -->
+                            <input [(ngModel)]="userData.firma" type="text" id="firma" name="firma" placeholder="Firma (optional)">
+                        </div>
+        
+                        <div class="single-box">
+                            <!-- Email (Pflichtfeld) -->
+                            <input [(ngModel)]="userData.email" type="email" id="email" name="email" placeholder="Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel">
+                            <span *ngIf="(email.invalid && (email.touched || registrationForm.submitted))">Bitte gib eine gültige Email-Adresse ein</span>
+                        </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div class="single-box">
+                    <!-- Startnummer (Pflichtfeld, 1 bis 4-stellige Zahl) -->
+                        <input [(ngModel)]="userData.startnummer" type="number" id="startnummer" name="startnummer" placeholder="Startnummer (optional)"
+                        min="1" max="9999" #startnummer="ngModel">
+                        <span *ngIf="(startnummer.invalid && (startnummer.touched || registrationForm.submitted))">Startnummer muss zwischen 1 und 9999 liegen</span>
+                    </div>
+                </div>
+
+
+                <!-- Cargorace -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Carcorace</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="open"> Open
+                    <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="noRanking"> No Ranking
+                </div> 
+                
+                <!-- Mainrace -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Mainrace</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="open"> Open
+                    <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="noRanking"> No Ranking
+                </div>
+
+                <!-- Bergsprint -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Bergsprint</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="open"> Open
+                    <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="noRanking"> No Ranking
+                </div>
+                
+                <!-- Skid -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Skid</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.skid" name="skid" value="open"> Open
+                    <input type="radio" [(ngModel)]="userData.skid" name="skid" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.skid" name="skid" value="noRanking"> No Ranking
+                </div>
+
+                <!-- Trackstand -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Trackstand</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="open"> Open
+                    <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="noRanking"> No Ranking
+                </div>
+
+                <!-- Footdown -->
+                <div class="radio-box">
+                    <div class="label-container">
+                        <label>Footdown</label>
+                    </div>
+                    <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="open" > Open
+                    <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="wtnb"> WTNB
+                    <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="noRanking"> No Ranking
+                </div>
+
+                <!-- Essen -->
+                <div class="radio-box">
+                    <input type="radio" [(ngModel)]="userData.essen" name="essen" value="vegan" required> Vegan
+                    <input type="radio" [(ngModel)]="userData.essen" name="essen" value="vegetarisch"> Vegetarisch
+                    <input type="radio" [(ngModel)]="userData.essen" name="essen" value="keinWunsch"> Kein Wunsch
+                </div>
+                <!-- Fehlermeldung, kein essen gewählt-->
+                <div *ngIf="!userData.essen && registrationForm.submitted">
+                    <span style="color:red">Bitte wählen</span>
+                </div>
+
+                <!-- Housing -->
+                <div class="radio-box">
+                    <input type="radio" [(ngModel)]="userData.housing" name="housing" value="ja" required> Ja
+                    <input type="radio" [(ngModel)]="userData.housing" name="housing" value="nein"> Nein
+                </div>
+                <!-- Fehlermeldung, kein essen gewählt-->
+                <div *ngIf="!userData.housing && registrationForm.submitted">
+                    <span style="color:red">Bitte wählen</span>
+                </div>
+
+                <!-- Helfer -->
+                <div class="radio-box">
+                    <input type="radio" [(ngModel)]="userData.helfer" name="helfer" value="ja" required> Ja
+                    <input type="radio" [(ngModel)]="userData.helfer" name="helfer" value="nein"> Nein
+                </div>
+                <!-- Fehlermeldung, kein essen gewählt-->
+                <div *ngIf="!userData.helfer && registrationForm.submitted">
+                    <span style="color:red">Bitte wählen</span>
+                </div>
+
+                <!-- Bemerkungen (optional) -->
+                <textarea [(ngModel)]="userData.bemerkung" type="text" id="bemerkung" name="bemerkung" placeholder="Bemerkung"></textarea>
+
+                <div class="button-box">
+                    <!-- Submit Button -->
+                    <input class="button" type="submit" value="JETZT ANMELDEN">
+                </div>
+            </form>
+        </div>
+
+</section>
