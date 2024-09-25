@@ -16,12 +16,12 @@
       </div>
       
       <div class="button-box">
-        <div class="button" [ngStyle]="{
+        <div class="button" routerLink="{{ getLink() }}" [ngStyle]="{
           'border-color':  currentRoute === 'suicmc' ? '#437CFA' :
                     currentRoute === 'sbpc' ? '#9343E3' :
                     currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
         }">
-          <p>{{ getText('button') }}</p>    
+          <p >{{ getText('button') }} </p>    
         </div>
       </div>
 

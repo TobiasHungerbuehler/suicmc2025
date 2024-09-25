@@ -50,21 +50,35 @@ section {
           display: flex;
           justify-content: center;
           align-items: center;
-          margin-right: 2%;
-          height: 70px;
           gap: 1em;
+          margin-right: 2%;
+          height: 150px;
+          background-color: rgba(255, 255, 255, 0.84);
+
+          @media (max-width: 1000px) {
+            padding-left: 2%; 
+        }
   
 
   
           span {
             font-family: $text-font;
-            color: white;
+            color: rgb(50, 57, 102);
             font-size: 12px;
-
+            padding-left: 10px;
             @media (max-width: 1000px) {
               display: none;  
                
           }
+          }
+
+          >img{
+            height: 90px;
+            width: auto;
+
+            &:last-child{
+              height: 110px;
+            }
           }
   
           >.placeholder{
