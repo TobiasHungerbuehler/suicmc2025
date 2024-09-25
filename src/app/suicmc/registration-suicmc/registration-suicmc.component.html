@@ -48,12 +48,46 @@
 
                 <div class="input-group">
                     <div class="single-box">
-                    <!-- Startnummer (Pflichtfeld, 1 bis 4-stellige Zahl) -->
-                        <input [(ngModel)]="userData.startnummer" type="number" id="startnummer" name="startnummer" placeholder="Startnummer (optional)"
-                        min="1" max="9999" #startnummer="ngModel">
-                        <span *ngIf="(startnummer.invalid && (startnummer.touched || registrationForm.submitted))">Startnummer muss zwischen 1 und 9999 liegen</span>
+                        <!-- Startnummer (optional, 1 bis 4-stellige Zahl) -->
+                        <input [(ngModel)]="userData.startnummer" (ngModelChange)="startnummerFehler=''"
+                               type="number" id="startnummer" name="startnummer" placeholder="Startnummer (optional)"
+                               min="1" max="9999" #startnummer="ngModel">
+                
+                        <!-- Validierungsfehlermeldung für ungültige Eingabe -->
+                        <span *ngIf="(startnummer.invalid && (startnummer.touched || registrationForm.submitted))">
+                            Startnummer muss zwischen 1 und 9999 liegen
+                        </span>
+                
+
+                    </div>
+
+                    <div class="single-box">
+                        <!-- Fehlermeldung, wenn Startnummer bereits vergeben -->
+                        <span *ngIf="startnummerFehler" class="error-message">
+                            {{ startnummerFehler }}
+                        </span>
+
+                    </div>
+
+                    <div class="single-box">
+                
+                        <!-- Anzeige der Startnummernliste beim Klicken auf den Text -->
+                        <div class="numberbox">
+                            <p class="show-link" (click)="showStartnummern = !showStartnummern" style="cursor: pointer; text-decoration: underline;">
+                            belegte Startnummern:
+                            </p>
+                            <div *ngIf="showStartnummern">
+                            <!-- Startnummernliste -->
+                            <div >
+                                <span class="nummern-liste" *ngFor="let nummer of startnummern; let isLast = last">
+                                {{ nummer }}<span class="nummern-liste" *ngIf="!isLast">, </span>
+                                </span>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
 
                 <div class="title-box">
                     <h2>RACES</h2>
