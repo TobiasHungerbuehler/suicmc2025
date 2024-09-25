@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
+import { RouterModule } from '@angular/router';
 
 // Erstelle einen Union-Typ für die zulässigen Routen
 type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
@@ -8,7 +9,7 @@ type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 @Component({
   selector: 'app-anmeldung',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './anmeldung.component.html',
   styleUrls: ['./anmeldung.component.scss']
 })
@@ -31,7 +32,9 @@ export class AnmeldungComponent implements OnInit {
         },
         "button": {
           "de": "ONLINE ANMELDUNG",
-          "en": "ONLINE REGISTRATION"
+          "en": "ONLINE REGISTRATION",
+          "link": "/registration",
+
         }
       },
       "sbpc": {
@@ -45,7 +48,8 @@ export class AnmeldungComponent implements OnInit {
         },
         "button": {
           "de": "ONLINE ANMELDUNG",
-          "en": "ONLINE REGISTRATION"
+          "en": "ONLINE REGISTRATION",
+          "link": "",
         }
       },
       "pre ecmc": {
@@ -59,7 +63,8 @@ export class AnmeldungComponent implements OnInit {
         },
         "button": {
           "de": "ONLINE ANMELDUNG",
-          "en": "ONLINE REGISTRATION"
+          "en": "ONLINE REGISTRATION",
+          "link": "",
         }
       }
     }
@@ -87,4 +92,9 @@ export class AnmeldungComponent implements OnInit {
   getText(part: 'titel' | 'text1' | 'button'): string {
     return this.text.anmeldung[this.currentRoute][part][this.currentLanguage];
   }
+
+    // Methode, um den Text für Titel oder Absätze dynamisch abzurufen
+    getLink() {
+      return this.text.anmeldung[this.currentRoute]['button']['link'];
+    }
 }
