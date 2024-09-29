@@ -25,12 +25,12 @@ export class UnserVereinComponent implements OnInit {
         "en": "OUR ASSOCIATION"
       },
       "p1": {
-        "de": "Hinter der Organisation steht der Verein Drehmoment 9000, welcher im Mai 2022 in einer Velowerkstatt durch St.Galler Velokurier*innen zwecks Reparaturhilfe und deren Ersatzteilbeschaffung sowie dem Interesse Anlässe für die Kurier- und Velocommunity zu organisieren, gegründet wurde.",
-        "en": "Behind the organization is the association Drehmoment 9000, which was founded in May 2022 in a bicycle workshop by St.Gallen bike couriers with the purpose of repair assistance and spare part procurement, as well as the interest to organize events for the courier and cycling community."
+        "de": "Hinter der Organisation steht der Verein Drehmoment 9000, welcher im Mai 2022 in einer Velowerkstatt durch St.Galler Velokurier*innen zwecks Reparaturhilfe und deren Ersatzteilbeschaffung sowie dem Interesse Anlässe für die Kurier- und Velocommunity zu organisieren, gegründet wurde. ",
+        "en": "Behind the organization is the association Drehmoment 9000, which was founded in May 2022 in a bicycle workshop by St. Gallen bike couriers with the purpose of providing repair assistance and procuring spare parts, as well as the interest in organizing events for the courier and cycling community. "
       },
       "p2": {
-        "de": "Das Herz des Vereins besteht aus drei Vorstandsmitgliedern. Für die Organisation der SUICMC 2025 und SBPC 2025 haben sich rund 25 Ressortleiter*innen gemeldet, welche sich darum kümmern, dass von der Anmeldung, über das Catering und die sanitären Anlagen bis hin zur Streckensicherung alles reibungslos verläuft.",
-        "en": "The heart of the association consists of three board members. For the organization of the SUICMC 2025 and SBPC 2025, around 25 department heads have volunteered, who ensure that everything runs smoothly from registration, catering, and sanitary facilities to course security."
+        "de": "Das Herz des Vereins besteht aus drei Vorstandsmitgliedern. Für die Organisation der SUICMC 2025 und SBPC 2025 haben sich rund 25 Ressortleiter*innen gemeldet, welche sich darum kümmern, dass von der Anmeldung, über das Catering und die sanitären Anlagen bis hin zur Streckensicherung alles reibungslos verläuft. ",
+        "en": "The heart of the association consists of three board members. For the organization of the SUICMC 2025 and SBPC 2025, around 25 department heads have volunteered, to ensure that everything runs smoothly, from registration and catering to sanitary facilities and course security. "
       },
       "p3": {
         "de": "Wir freuen uns auf euch",
