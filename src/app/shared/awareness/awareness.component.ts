@@ -27,8 +27,8 @@ export class AwarenessComponent {
           "en": "Awareness "
         },
         "text1": {
-          "de": "Unser Awareness-Konzept liegt uns besonders am Herzen. Achtsamkeit und Rücksicht im Umgang miteinander stehen dabei an erster Stelle. Persönliche Grenzen müssen respektiert werden und ein respektvolles Miteinander ist selbstverständlich. Bitte nimm dir die Zeit, unser Awareness-Konzept sorgfältig zu lesen – nur gemeinsam können wir eine Atmosphäre schaffen, in der sich alle sicher und willkommen fühlen. Bei Fragen stehen wir dir sehr gerne zur Verfügung. <a href='mailto:hallo@suicmc25.ch'>E-Mail</a> ",
-          "en": "Our awareness concept is particularly close to our hearts. Mindfulness and consideration in how we treat each other are our top priorities. Personal boundaries must be respected, and respectful interactions are a given. Please take the time to carefully read our awareness concept – only together can we create an atmosphere where everyone feels safe and welcome. If you have any questions, we are happy to assist you. <a href='mailto:hallo@suicmc25.ch'>e-Mail</a>"
+          "de": "Unser Awareness-Konzept liegt uns besonders am Herzen. Achtsamkeit und Rücksicht im Umgang miteinander stehen dabei an erster Stelle. Persönliche Grenzen müssen respektiert werden und ein respektvolles Miteinander ist selbstverständlich. Bitte nimm dir die Zeit, unser Awareness-Konzept sorgfältig zu lesen – nur gemeinsam können wir eine Atmosphäre schaffen, in der sich alle sicher und willkommen fühlen. Bei Fragen stehen wir dir sehr gerne zur Verfügung. <a href='mailto:awareness@suicmc25.ch'>E-Mail</a> ",
+          "en": "Our awareness concept is particularly close to our hearts. Mindfulness and consideration in how we treat each other are our top priorities. Personal boundaries must be respected, and respectful interactions are a given. Please take the time to carefully read our awareness concept – only together can we create an atmosphere where everyone feels safe and welcome. If you have any questions, we are happy to assist you. <a href='mailto:awareness@suicmc25.ch'>e-mail</a>"
         }
       },
       "sbpc": {

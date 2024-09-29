@@ -27,8 +27,8 @@ export class WasIstComponent {
           "en": "What is the SUICMC?"
         },
         "text1": {
-          "de": "Die Suisse Cycling Messenger Championships kurz SUICMC, sind die Schweizermeister*innenschaften der Velokurier*innen Branche. Es handelt sich dabei um ein vielfältiges, lustiges und aufregendes Wochenende, gespickt mit Partys, Herausforderungen und vielen lieben Menschen. Alle sind willkommen. Das Hauptevent stellt dabei das Mainrace am Sonntag dar. Gleichzeitig findet auch die Bikepolo Meister*innenschaft statt. ",
-          "en": "The Swiss Cycling Messenger Championships, or SUICMC for short, are the Swiss championships of the bike courier community. It’s a diverse, fun, and exciting weekend filled with parties, challenges, and many wonderful people. Everyone is welcome. The main event is the Mainrace on Sunday. At the same time, the Bike Polo championship is also taking place."
+          "de": "Die Suisse Cycling Messenger Championships (kurz SUICMC) sind die Schweizermeister*innenschaften der Velokurier*innen. Dabei handelt es sich um ein vielfältiges, interessantes und aufregendes Wochenende, gespickt mit Partys, Herausforderungen und vielen lieben Menschen. Alle sind willkommen! Das Hauptevent ist das Mainrace am Sonntag. Am selben Wochenende findet auch die Bikepolo Meister*innenschaft statt. ",
+          "en": "The Suisse Cycling Messenger Championships (SUICMC for short) are the Swiss championships of the bike courier community. It’s a diverse, fun, and exciting weekend filled with parties, challenges, and many wonderful people. Everyone is welcome! The highlight is the Mainrace on Sunday. At the same time, the Bike Polo championship is also taking place. "
         }
       },
       "sbpc": {
@@ -37,8 +37,8 @@ export class WasIstComponent {
           "en": "What is the SBPC?"
         },
         "text1": {
-          "de": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis felis nec nisi viverra cursus. Aenean eget scelerisque leo. Sed aliquet malesuada erat.",
-          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis felis nec nisi viverra cursus. Aenean eget scelerisque leo. Sed aliquet malesuada erat."
+          "de": "Die Suisse Bikepolo Championships (kurz SBPC) sind die Schweizer Bikepolo Meister*innenschaften. Die SBPC findet zeitgleich zur SUICMC statt. Du darfst dich auf ein vielfältiges, interessantes und aufregendes Wochenende freuen, gespickt mit Partys, Herausforderungen und vielen lieben Menschen. Alle sind willkommen! Die Bikepolo Meister*innenschaft findet am Samstag und Sonntag statt.  ",
+          "en": "SBPC stands for Suisse Bikepolo Championships. The SBPC takes place simultaneously with the SUICMC. You can look forward to a diverse, fun, and exciting weekend filled with parties, challenges, and many wonderful people. Everyone is welcome! The Bikepolo Championships take place on Saturday and Sunday. "
         }
       },
       "pre ecmc": {
@@ -47,8 +47,8 @@ export class WasIstComponent {
           "en": "What is the PRE ECMC?"
         },
         "text1": {
-          "de": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget odio id risus fermentum pretium non sit amet nulla. Fusce aliquam suscipit est.",
-          "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget odio id risus fermentum pretium non sit amet nulla. Fusce aliquam suscipit est."
+          "de": "",
+          "en": ""
         }
       }
     }
