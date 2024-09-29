@@ -27,8 +27,8 @@ export class AnmeldungComponent implements OnInit {
           "en": "Registration"
         },
         "text1": {
-          "de": "Die Online – Anmeldung für die SUICMC 25 ist vom 1. Oktober 2024 bis zum 31. August 2025 geöffnet. Danach kannst du dich vor Ort anmelden. Die Anmeldegebühr beträgt 20.- CHF. Die Anmeldegebühr für WTNB ist freiwillig. Magst du mehr beisteuern – wir sind über jede zusätzliche Hilfe sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen, erhältst du nach der Anmeldung.",
-          "en": "Online registration for SUICMC 25 is open from October 1, 2024 to August 31, 2025. After that, you can register on-site. The registration fee is 20.- CHF. The registration fee for WTNB is voluntary. If you'd like to contribute more, we greatly appreciate any additional support. You will receive a confirmation email with payment details after registration."
+          "de": "Die Online-Anmeldung für die SUICMC 25 ist vom 1. Oktober 2024 bis zum 31. August 2025 geöffnet. Danach kannst du dich vor Ort anmelden. Die Anmeldegebühr beträgt 20.- CHF. Magst du mehr beisteuern? Wir sind um jede zusätzliche Unterstützung sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen erhältst du nach der Anmeldung. ",
+          "en": "The online registration for SUICMC 25 is open from October 1, 2024, to August 31, 2025. After that, you can register on-site. The registration fee is 20.- CHF. If you'd like to contribute more, we greatly appreciate any additional support. You will receive a confirmation e-mail with payment details after registration.  "
         },
         "button": {
           "de": "ONLINE ANMELDUNG",
@@ -42,8 +42,8 @@ export class AnmeldungComponent implements OnInit {
           "en": "Registration"
         },
         "text1": {
-          "de": "Die Online-Anmeldung für die SBPC ist vom 1. Dezember 2024 bis zum 31. August 2025 geöffnet. Die Anmeldegebühr beträgt 80.- CHF pro Team. Möchtet ihr mehr beisteuern? Wir sind für jede zusätzliche Unterstützung sehr dankbar. Ein Bikepolo-Team besteht aus vier Spieler*innen, davon mindestens eine WTNB-Person. Eine Bestätigungsmail mit den Zahlungsinformationen erhältst du nach der Anmeldung. ",
-          "en": "The online registration for the SBPC is open from December 1, 2024, to August 31, 2025. The registration fee is 80.- CHF per team. Would you like to contribute more? We are very grateful for any additional support. A bike polo team consists of four players, including at least one WTNB person. You will receive a confirmation email with the payment information after registration.  "
+          "de": "Die Online-Anmeldung für die SBPC ist vom 1. Dezember 2024 bis zum 31. August 2025 geöffnet. Die Anmeldegebühr beträgt 80.- CHF pro Team. Möchtet ihr mehr beisteuern? Wir sind für jede zusätzliche Unterstützung sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen erhältst du nach der Anmeldung. ",
+          "en": "The online registration for the SBPC is open from December 1, 2024, to August 31, 2025. The registration fee is 80.- CHF per team. Would you like to contribute more? We are very grateful for any additional support. You will receive a confirmation email with the payment information after registration.  "
         },
         "button": {
           "de": "ONLINE ANMELDUNG",
