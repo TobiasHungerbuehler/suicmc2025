@@ -22,12 +22,12 @@ export class SupportUsComponent {
   text = {
     "supportUs": {
       "titel": {
-        "de": "Like to support us ",
+        "de": "Deine Unterstützung  ",
         "en": "Like to support us "
       },
       "p1": {
-        "de": "Wir freuen uns über jede Art von Unterstützung! Wenn du Lust hast, uns bei der Planung oder Durchführung des Events zu helfen, schätzen wir das sehr. Schreibe uns gerne eine <a href='mailto:hallo@suicmc25.ch'>E-Mail</a>, damit wir deinen Einsatz gemeinsam planen können. Vielen Dank für dein Engagement!",
-        "en": "We appreciate any kind of support! If you would like to help us with the planning or execution of the event, we would greatly appreciate it. Feel free to send us an <a href='mailto:hallo@suicmc25.ch'>email</a>, so we can plan your involvement together. Thank you for your commitment!"
+        "de": "Wir freuen uns über jede Art von Unterstützung! Wenn du Lust hast, uns bei der Durchführung des Events zu helfen, würden wir das sehr schätzen. Schreibe uns gerne eine <a href='mailto:helfen@suicmc25.ch'>E-mail</a>, damit wir deinen Einsatz gemeinsam planen können. Wenn du uns finanziell unterstützen möchtest, kontaktiere bitte das Sponsoring-Ressort per <a href='mailto:finanzen@suicmc25.ch'>E-mail</a>. Vielen Dank für dein Engagement!",
+        "en": "We appreciate any kind of support! If you would like to help us with the execution of the event, we would greatly appreciate it. Feel free to send us an <a href='mailto:helfen@suicmc25.ch'>e-mail</a>, so we can plan your involvement together. If you would like to support us financially, please contact the sponsorship department via <a href='mailto:finanzen@suicmc25.ch'>E-mail</a>. Thank you for your commitment"
       }
 
     }
