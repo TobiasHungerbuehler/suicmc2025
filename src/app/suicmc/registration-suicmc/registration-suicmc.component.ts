@@ -52,6 +52,30 @@ export class RegistrationSuicmcComponent implements OnInit {
 
   constructor(private http: HttpClient, private navigationService: NavigationService) { }
 
+  //scrolling to top
+  //////////////////////////
+    ngAfterViewInit() {
+      // Verwende setTimeout, um sicherzustellen, dass das Element vollständig geladen ist
+      setTimeout(() => {
+        this.scrollToLast();
+      }, 0); // Die Verzögerung von 0 sorgt dafür, dass der nächste Event Loop-Zyklus abgewartet wird
+    }
+
+    scrollToLast() {
+      // Verwende document.getElementById(), um direkt auf das Element zuzugreifen
+      const element = document.getElementById('start');
+      if (element) {
+        console.log('Scrolling to last element');
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        console.log('Element not found');
+      }
+    }
+
+
+
+
+
   ngOnInit() {
     this.getStartnummern();
 
@@ -62,11 +86,6 @@ export class RegistrationSuicmcComponent implements OnInit {
         this.currentLanguage = validLanguage;
       }
     });
-
-
-
-
-
   }
 
   // Funktion zum Abrufen der Startnummern
