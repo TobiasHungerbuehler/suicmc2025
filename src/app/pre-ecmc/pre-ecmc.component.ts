@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { StartComponent } from '../shared/start/start.component';
 import { UnserVereinComponent } from '../shared/unser-verein/unser-verein.component';
 import { AnmeldungComponent } from '../shared/anmeldung/anmeldung.component';
@@ -15,6 +15,22 @@ import { SupportUsComponent } from '../shared/support-us/support-us.component';
   templateUrl: './pre-ecmc.component.html',
   styleUrl: './pre-ecmc.component.scss'
 })
-export class PreEcmcComponent {
+export class PreEcmcComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    // Verwende setTimeout, um sicherzustellen, dass das Element vollständig geladen ist
+    setTimeout(() => {
+      this.scrollToLast();
+    }, 0); // Die Verzögerung von 0 sorgt dafür, dass der nächste Event Loop-Zyklus abgewartet wird
+  }
 
+  scrollToLast() {
+    // Verwende document.getElementById(), um direkt auf das Element zuzugreifen
+    const element = document.getElementById('start');
+    if (element) {
+      console.log('Scrolling to last element');
+      element.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log('Element not found');
+    }
+  }
 }
