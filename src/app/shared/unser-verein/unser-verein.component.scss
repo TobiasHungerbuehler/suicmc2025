@@ -12,7 +12,7 @@ section{
     .text-box {
         > p {
           &:last-child {
-            text-decoration: underline;
+            font-weight: 800;
           }
         }
       }
