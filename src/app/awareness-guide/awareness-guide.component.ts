@@ -3,11 +3,12 @@ import { Component } from "@angular/core";
 import { StartComponent } from "../shared/start/start.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { NavigationService } from "../services/navigation.service";
+import { StoererKontaktComponent } from "../shared/stoerer-kontakt/stoerer-kontakt.component";
 
 @Component({
     selector: "app-awareness-guide",
     standalone: true,
-    imports: [CommonModule, StartComponent, FooterComponent],
+    imports: [CommonModule, StartComponent, FooterComponent, StoererKontaktComponent],
     templateUrl: "./awareness-guide.component.html",
     styleUrl: "./awareness-guide.component.scss",
 })
@@ -24,10 +25,9 @@ export class AwarenessGuideComponent {
         // this.navigationService.currentRoute$.subscribe(route => {
         //   this.currentRoute = route;
         // });
-
         // Abonniere die aktuelle Sprache
-        this.navigationService.currentLanguage$.subscribe((language) => {
-            this.currentLanguage = language;
-        });
+        // this.navigationService.currentLanguage$.subscribe((language) => {
+        //     this.currentLanguage = language;
+        // });
     }
 }
