@@ -4,6 +4,7 @@ import { SbpcComponent } from "./sbpc/sbpc.component";
 import { PreEcmcComponent } from "./pre-ecmc/pre-ecmc.component";
 import { RegistrationSuicmcComponent } from "./suicmc/registration-suicmc/registration-suicmc.component";
 import { AwarenessGuideComponent } from "./awareness-guide/awareness-guide.component";
+import { NgModule } from "@angular/core";
 
 export const routes: Routes = [
     { path: "", component: SuicmcComponent },

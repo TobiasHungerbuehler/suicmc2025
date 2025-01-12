@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.guide-element {
+    //border: 1px solid green;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:first-child {
+        background-color: $yellowB;
+    }
+
+    &:nth-child(3) {
+        > .inlay {
+            margin-top: 0px;
+        }
+    }
+
+    &:nth-child(4) {
+        > .inlay {
+            margin-top: 0px;
+        }
+    }
+
+    > .inlay {
+        .text-box {
+            width: 100%;
+            text-align: left;
+        }
+    }
+}

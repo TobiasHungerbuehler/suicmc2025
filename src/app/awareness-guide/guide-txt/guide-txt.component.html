@@ -1,0 +1,8 @@
+<div *ngFor="let item of text" class="guide-element">
+    <div class="inlay">
+        <h2>{{ item.titel[currentLanguage] }}</h2>
+        <div class="text-box">
+            <p [innerHTML]="item.text[currentLanguage]"></p>
+        </div>
+    </div>
+</div>

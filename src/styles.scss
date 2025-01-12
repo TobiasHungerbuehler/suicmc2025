@@ -60,7 +60,7 @@ $title-font: "Staatliches", sans-serif;
 $text-font: "IBM Plex Sans", sans-serif;
 
 // Font Size
-$text-font-size: clamp(16px, 4vw, 20px); //fliesstext grösse global
+$text-font-size: clamp(16px, 4vw, 18px); // fliesstext gr. geändert von max 20 auf max 18px
 
 // Font Colors
 // Textfarbe Seite SUICMC
@@ -83,22 +83,23 @@ $text-font-size: clamp(16px, 4vw, 20px); //fliesstext grösse global
 h2 {
     font-family: $title-font;
     text-align: center;
-    font-size: clamp(42px, 8vw, 100px);
+    font-size: clamp(42px, 8vw, 90px);
     font-weight: 400;
     //border: 1px solid red;
     margin: 0;
 }
 
+//inner Bereich für alle comoponents, einheitliche breite für titte, text vild etc
 .inlay {
     margin-top: 90px;
     height: 100%;
     width: 80%;
-    //border: 1px solid rgba(205, 134, 63, 0.272);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding-bottom: 90px;
+    //border: 1px solid rgba(205, 134, 63, 0.272);
 
     @media (max-width: 1000px) {
         margin-top: 40px;
@@ -106,8 +107,9 @@ h2 {
     }
 }
 
+//alle textboxen
 .text-box {
-    margin-top: 70px;
+    margin-top: 20px;
     font-family: $text-font;
     text-align: center;
     font-size: $text-font-size;

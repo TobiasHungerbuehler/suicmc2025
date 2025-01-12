@@ -92,7 +92,7 @@ export class StartComponent implements OnInit {
 
     // Methode, um den Text für die aktuelle Route und Sprache zu holen
     getText() {
-        console.log("CURRENT ROUTE", this.currentRoute, this.currentLanguage);
+        //console.log("CURRENT ROUTE", this.currentRoute, this.currentLanguage);
 
         return this.text[this.currentRoute][this.currentLanguage];
     }
