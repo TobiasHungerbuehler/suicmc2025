@@ -5,201 +5,380 @@
                 <h2>{{ currentLanguage === "de" ? "ANMELDUNG SUICMC 2025" : "REGISTRATION SUICMC 2025" }}</h2>
             </div>
 
+            <!-- /////////////////////////////////////// -->
+
+            <!-- // Captain Section //////////////////////////////////////////////// -->
+            <div class="title-box">
+                <h2>TEAM CAPTAIN</h2>
+            </div>
+            <div class="input-group">
+                <div class="single-box teamname">
+                    <!-- Teamname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.teamname" type="text" id="teamname" name="teamname" placeholder="{{ currentLanguage === 'de' ? 'Teamname' : 'Teamname' }}" required #teamname="ngModel" />
+                    <span *ngIf="teamname.invalid && (teamname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Teamname ist erforderlich" : "Teamname is required" }}
+                    </span>
+                </div>
+            </div>
             <div class="input-group">
                 <div class="single-box">
                     <!-- Vorname (Pflichtfeld) -->
-                    <input [(ngModel)]="userData.vorname" type="text" id="vorname" name="vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #vorname="ngModel" />
-                    <span *ngIf="vorname.invalid && (vorname.touched || registrationForm.submitted)">
+                    <input [(ngModel)]="userData.cap_vorname" type="text" id="cap_vorname" name="cap_vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #cap_vorname="ngModel" />
+                    <span *ngIf="cap_vorname.invalid && (cap_vorname.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Vorname ist erforderlich" : "First name is required" }}
                     </span>
                 </div>
 
                 <div class="single-box">
                     <!-- Nachname (Pflichtfeld) -->
-                    <input [(ngModel)]="userData.nachname" type="text" id="nachname" name="nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #nachname="ngModel" />
-                    <span *ngIf="nachname.invalid && (nachname.touched || registrationForm.submitted)">
+                    <input [(ngModel)]="userData.cap_nachname" type="text" id="cap_nachname" name="cap_nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #cap_nachname="ngModel" />
+                    <span *ngIf="cap_nachname.invalid && (cap_nachname.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Nachname ist erforderlich" : "Last name is required" }}
                     </span>
                 </div>
 
                 <div class="single-box">
                     <!-- Spitzname (optional) -->
-                    <input [(ngModel)]="userData.spitzname" type="text" id="spitzname" name="spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
+                    <input [(ngModel)]="userData.cap_spitzname" type="text" id="cap_spitzname" name="cap_spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
                 </div>
             </div>
-
             <div class="input-group">
                 <div class="single-box">
-                    <!-- Ort (Pflichtfeld) -->
-                    <input [(ngModel)]="userData.ort" type="text" id="ort" name="ort" placeholder="{{ currentLanguage === 'de' ? 'Ort' : 'City' }}" required #ort="ngModel" />
-                    <span *ngIf="ort.invalid && (ort.touched || registrationForm.submitted)">
-                        {{ currentLanguage === "de" ? "Ort ist erforderlich" : "City is required" }}
-                    </span>
-                </div>
-
-                <div class="single-box">
-                    <!-- Firma (optional) -->
-                    <input [(ngModel)]="userData.firma" type="text" id="firma" name="firma" placeholder="{{ currentLanguage === 'de' ? 'Firma (optional)' : 'Company (optional)' }}" />
+                    <!-- Verein (optional) -->
+                    <input [(ngModel)]="userData.cap_verein" type="text" id="cap_verein" name="cap_verein" placeholder="{{ currentLanguage === 'de' ? 'Verein (optional)' : 'Association (optional)' }}" />
                 </div>
 
                 <div class="single-box">
                     <!-- Email (Pflichtfeld) -->
-                    <input [(ngModel)]="userData.email" type="email" id="email" name="email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel" />
-                    <span *ngIf="email.invalid && (email.touched || registrationForm.submitted)">
+                    <input [(ngModel)]="userData.cap_email" type="email" id="cap_email" name="cap_email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #cap_email="ngModel" />
+                    <span *ngIf="cap_email.invalid && (cap_email.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Bitte gib eine gültige E-Mail-Adresse ein" : "Please enter a valid email address" }}
                     </span>
                 </div>
-            </div>
-
-            <div class="title-box">
-                <h2>RACES</h2>
-            </div>
-
-            <div class="tex-box">
-                {{ currentLanguage === "de" ? "Es können beide Rennen gefahren werden. Am Samstag, 6. September 2025 findet das Cargorace statt. Am Sonntag, 7. September 2025 findet das Mainrace statt. Bitte gib bei einer Anmeldung auch gleich die Kategorie an, in der du mitfahren möchtest: Open, WTNB (Woman Trans NonBinary), No Ranking." : "Both races can be ridden. On Saturday, September 6, 2025, the Cargorace will take place. On Sunday, September 7, 2025, the Mainrace will take place. Please specify the category you want to participate in when registering: Open, WTNB (Woman Trans NonBinary), No Ranking." }}
-            </div>
-
-            <!-- Cargorace -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>Cargorace</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="open" /> Open <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="noRanking" /> No Ranking
-            </div>
-
-            <!-- Mainrace -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>Mainrace</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="open" /> Open <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="noRanking" /> No Ranking
-            </div>
-
-            <div class="title-box">
-                <h2>SIDE EVENTS</h2>
-            </div>
-
-            <div class="tex-box">
-                {{ currentLanguage === "de" ? "Die meisten Side Events finden am Samstag, 6. September 2025 statt. Du kannst dich jetzt schon für Side Events einschreiben, da uns dies die Organisation vereinfacht. Aber keine Sorge, an den Side Events kannst du auch ganz spontan vor Ort teilnehmen." : "Most side events will take place on Saturday, September 6, 2025. You can already sign up for side events now, as this simplifies the organization for us. But don't worry, you can also participate spontaneously on site." }}
-            </div>
-
-            <!-- Bergsprint -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>{{ currentLanguage === "de" ? "Bergsprint" : "Uphill" }}</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="open" /> Open <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="noRanking" /> No Ranking
-            </div>
-
-            <!-- Skid -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>Skid</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.skid" name="skid" value="open" /> Open <input type="radio" [(ngModel)]="userData.skid" name="skid" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.skid" name="skid" value="noRanking" /> No Ranking
-            </div>
-
-            <!-- Trackstand -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>Trackstand</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="open" /> Open <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="noRanking" /> No Ranking
-            </div>
-
-            <!-- Footdown -->
-            <div class="radio-box">
-                <div class="label-container">
-                    <label>Footdown</label>
-                </div>
-                <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="open" /> Open <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="noRanking" /> No Ranking
-            </div>
-
-            <div class="title-box">
-                <h2>{{ currentLanguage === "de" ? "Essen" : "Food" }}</h2>
-            </div>
-
-            <div class="tex-box">
-                {{ currentLanguage === "de" ? "Damit unsere Küche planen kann, fragen wir dich jetzt schon, was für Essen du bevorzugst." : "To help our kitchen plan ahead, we would like to ask you what kind of food you prefer." }}
+                <div class="single-box"></div>
             </div>
 
             <!-- Essen -->
             <div class="radio-box">
-                <input type="radio" [(ngModel)]="userData.essen" name="essen" value="vegan" required />
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="vegan" required />
                 {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-                <input type="radio" [(ngModel)]="userData.essen" name="essen" value="vegetarisch" />
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="vegetarisch" />
                 {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
 
-                <input type="radio" [(ngModel)]="userData.essen" name="essen" value="keinWunsch" />
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="keinWunsch" />
                 {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
-            </div>
-
-            <!-- Fehlermeldung, kein Essen gewählt -->
-            <div *ngIf="!userData.essen && registrationForm.submitted">
-                <span style="color: red">
-                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
-                </span>
-            </div>
-
-            <div class="title-box">
-                <h2>Housing</h2>
-            </div>
-
-            <div class="tex-box">
-                {{
-                    currentLanguage === "de"
-                        ? "Für die Übernachtung in der Unterkunft stehen dir die Kategorien WTNB und Open zur Auswahl. Denk daran einen Schlafsack und Mätteli einzupacken. Das Housing kostet 5.- CHF zusätzlich zur Anmeldegebühr. Alternativ können wir auch Stellplätze für Büssli / Camper anbieten. Die Anzahl der Stellplätze ist begrenzt. Ein Stellplatz kostet zusätzliche 10.- CHF zur Anmeldegebühr."
-                        : "For overnight accommodation, you can choose between the WTNB and Open categories. Don’t forget to pack a sleeping bag and mat. The accommodation fee is 5.-CHF, in addition to the registration fee. Alternatively, we can offer parking spaces for camper vans or buses. The number of spots is limited, and each space costs an additional 10.- CHF on top of the registration fee."
-                }}
             </div>
 
             <!-- Housing -->
             <div class="radio-box">
-                <input type="radio" [(ngModel)]="userData.housing" name="housing" value="ja" required />
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.cap_housing" name="housing" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.housing" name="housing" value="nein" />
+                <input type="radio" [(ngModel)]="userData.cap_housing" name="housing" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Housing gewählt -->
-            <div *ngIf="!userData.housing && registrationForm.submitted">
+            <div *ngIf="!userData.cap_housing && registrationForm.submitted">
                 <span style="color: red">
                     {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
                 </span>
-            </div>
-
-            <div class="title-box">
-                <h2>{{ currentLanguage === "de" ? "Helfer*innen" : "Volunteers" }}</h2>
-            </div>
-
-            <div class="tex-box">
-                {{ currentLanguage === "de" ? "Möchtet du uns als Helfer*in unterstützen? Wir würden uns sehr über deine Anmeldung freuen! " : "Would you like to support us as a helper? We would be very happy to receive your sign-up!" }}
             </div>
 
             <!-- Helfer -->
             <div class="radio-box">
-                <input type="radio" [(ngModel)]="userData.helfer" name="helfer" value="ja" required />
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.cap_helfer" name="helfer" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.helfer" name="helfer" value="nein" />
+                <input type="radio" [(ngModel)]="userData.cap_helfer" name="helfer" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Helfer gewählt -->
-            <div *ngIf="!userData.helfer && registrationForm.submitted">
+            <div *ngIf="!userData.cap_helfer && registrationForm.submitted">
                 <span style="color: red">
                     {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
                 </span>
             </div>
 
             <div class="title-box">
-                <h2>{{ currentLanguage === "de" ? "Bemerkung" : "Message" }}</h2>
+                <h2>{{ currentLanguage === "de" ? "TEAM MITGLIEDER" : "TEAM MEMBER" }}</h2>
+            </div>
+            <!-- // Spieler 2  /////// -->
+            <!-- ///////////////////////////////////////// -->
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Vorname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp1_vorname" type="text" id="sp1_vorname" name="sp1_vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #sp1_vorname="ngModel" />
+                    <span *ngIf="sp1_vorname.invalid && (sp1_vorname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Vorname ist erforderlich" : "First name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Nachname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp1_nachname" type="text" id="sp1_nachname" name="sp1_nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #sp1_nachname="ngModel" />
+                    <span *ngIf="sp1_nachname.invalid && (sp1_nachname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Nachname ist erforderlich" : "Last name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Spitzname (optional) -->
+                    <input [(ngModel)]="userData.sp1_spitzname" type="text" id="sp1_spitzname" name="sp1_spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Verein (optional) -->
+                    <input [(ngModel)]="userData.sp1_verein" type="text" id="sp1_verein" name="sp1_verein" placeholder="{{ currentLanguage === 'de' ? 'Verein (optional)' : 'Association (optional)' }}" />
+                </div>
+
+                <div class="single-box">
+                    <!-- Email (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp1_email" type="email" id="sp1_email" name="sp1_email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #sp1_email="ngModel" />
+                    <span *ngIf="sp1_email.invalid && (sp1_email.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Bitte gib eine gültige E-Mail-Adresse ein" : "Please enter a valid email address" }}
+                    </span>
+                </div>
+                <div class="single-box"></div>
             </div>
 
-            <!-- Bemerkungen (optional) -->
-            <textarea [(ngModel)]="userData.bemerkung" type="text" id="bemerkung" name="bemerkung" placeholder="{{ currentLanguage === 'de' ? 'Bemerkung...' : 'Message...' }}"></textarea>
+            <!-- Essen -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="vegan" required />
+                {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-            <div class="button-box">
-                <!-- Submit Button -->
-                <input class="button" type="submit" value="{{ currentLanguage === 'de' ? 'JETZT ANMELDEN' : 'REGISTER NOW' }}" />
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="vegetarisch" />
+                {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
+
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="keinWunsch" />
+                {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+
+            <!-- Housing -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp1_housing" name="housing" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp1_housing" name="housing" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Housing gewählt -->
+            <div *ngIf="!userData.sp1_housing && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+
+            <!-- Helfer -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="helfer" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="helfer" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Helfer gewählt -->
+            <div *ngIf="!userData.sp1_helfer && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+            <!-- // Spieler 2  /////// -->
+            <!-- ///////////////////////////////////////// -->
+            <br />
+            <br />
+            <br />
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Vorname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp2_vorname" type="text" id="sp2_vorname" name="sp2_vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #sp2_vorname="ngModel" />
+                    <span *ngIf="sp2_vorname.invalid && (sp2_vorname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Vorname ist erforderlich" : "First name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Nachname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp2_nachname" type="text" id="sp2_nachname" name="sp2_nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #sp2_nachname="ngModel" />
+                    <span *ngIf="sp2_nachname.invalid && (sp2_nachname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Nachname ist erforderlich" : "Last name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Spitzname (optional) -->
+                    <input [(ngModel)]="userData.sp2_spitzname" type="text" id="sp2_spitzname" name="sp2_spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Verein (optional) -->
+                    <input [(ngModel)]="userData.sp2_verein" type="text" id="sp2_verein" name="sp2_verein" placeholder="{{ currentLanguage === 'de' ? 'Verein (optional)' : 'Association (optional)' }}" />
+                </div>
+
+                <div class="single-box">
+                    <!-- Email (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp2_email" type="email" id="sp2_email" name="sp2_email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #sp2_email="ngModel" />
+                    <span *ngIf="sp2_email.invalid && (sp2_email.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Bitte gib eine gültige E-Mail-Adresse ein" : "Please enter a valid email address" }}
+                    </span>
+                </div>
+                <div class="single-box"></div>
+            </div>
+
+            <!-- Essen -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="vegan" required />
+                {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
+
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="vegetarisch" />
+                {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
+
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="keinWunsch" />
+                {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+
+            <!-- Housing -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp2_housing" name="housing" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp2_housing" name="housing" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Housing gewählt -->
+            <div *ngIf="!userData.sp2_housing && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+
+            <!-- Helfer -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="helfer" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="helfer" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Helfer gewählt -->
+            <div *ngIf="!userData.sp2_helfer && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+            <!-- // Spieler 3  /////// -->
+            <!-- ///////////////////////////////////////// -->
+            <br />
+            <br />
+            <br />
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Vorname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp3_vorname" type="text" id="sp3_vorname" name="sp3_vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #sp3_vorname="ngModel" />
+                    <span *ngIf="sp3_vorname.invalid && (sp3_vorname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Vorname ist erforderlich" : "First name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Nachname (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp3_nachname" type="text" id="sp3_nachname" name="sp3_nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #sp3_nachname="ngModel" />
+                    <span *ngIf="sp3_nachname.invalid && (sp3_nachname.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Nachname ist erforderlich" : "Last name is required" }}
+                    </span>
+                </div>
+
+                <div class="single-box">
+                    <!-- Spitzname (optional) -->
+                    <input [(ngModel)]="userData.sp3_spitzname" type="text" id="sp3_spitzname" name="sp3_spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
+                </div>
+            </div>
+            <div class="input-group">
+                <div class="single-box">
+                    <!-- Verein (optional) -->
+                    <input [(ngModel)]="userData.sp3_verein" type="text" id="sp3_verein" name="sp3_verein" placeholder="{{ currentLanguage === 'de' ? 'Verein (optional)' : 'Association (optional)' }}" />
+                </div>
+
+                <div class="single-box">
+                    <!-- Email (Pflichtfeld) -->
+                    <input [(ngModel)]="userData.sp3_email" type="email" id="sp3_email" name="sp3_email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #sp3_email="ngModel" />
+                    <span *ngIf="sp3_email.invalid && (sp3_email.touched || registrationForm.submitted)">
+                        {{ currentLanguage === "de" ? "Bitte gib eine gültige E-Mail-Adresse ein" : "Please enter a valid email address" }}
+                    </span>
+                </div>
+                <div class="single-box"></div>
+            </div>
+
+            <!-- Essen -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="vegan" required />
+                {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
+
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="vegetarisch" />
+                {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
+
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="keinWunsch" />
+                {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+
+            <!-- Housing -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp3_housing" name="housing" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp3_housing" name="housing" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Housing gewählt -->
+            <div *ngIf="!userData.sp3_housing && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+
+            <!-- Helfer -->
+            <div class="radio-box">
+                <div class="label-container">
+                    <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
+                </div>
+                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="helfer" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="helfer" value="nein" />
+                {{ currentLanguage === "de" ? "Nein" : "No" }}
+            </div>
+            <!-- Fehlermeldung, kein Helfer gewählt -->
+            <div *ngIf="!userData.sp3_helfer && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
             </div>
         </form>
     </div>

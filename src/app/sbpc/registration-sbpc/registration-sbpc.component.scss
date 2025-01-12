@@ -51,10 +51,11 @@ section {
 
                 > .single-box {
                     width: 30%;
-                    margin: 20px 0;
+                    margin: 20px 0px;
 
                     @media (max-width: 1000px) {
                         width: 80%;
+                        margin: 20px 0px;
                     }
 
                     > input {
@@ -74,16 +75,12 @@ section {
                             color: #437cfa;
                         }
                     }
+                }
 
-                    .numberbox {
-                        .show-link {
-                            font-size: 14px;
-                            color: #729af2;
-                        }
-                        .nummern-liste {
-                            font-size: 14px;
-                            color: #729af2;
-                        }
+                .teamname {
+                    width: 100%;
+                    @media (max-width: 1000px) {
+                        width: 80%;
                     }
                 }
             }
