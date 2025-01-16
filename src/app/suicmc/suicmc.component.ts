@@ -11,11 +11,12 @@ import { filter } from "rxjs/operators";
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { routes } from "../app.routes";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })
