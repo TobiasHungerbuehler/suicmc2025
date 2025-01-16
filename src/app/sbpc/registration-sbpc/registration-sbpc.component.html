@@ -4,8 +4,15 @@
             <div class="title-box">
                 <h2>{{ currentLanguage === "de" ? "ANMELDUNG SUICMC 2025" : "REGISTRATION SUICMC 2025" }}</h2>
             </div>
-
-            <!-- /////////////////////////////////////// -->
+            <div class="text-box" [innerHTML]="text[0].text[currentLanguage]"></div>
+            <div class="title-box">
+                <h2>HOUSING</h2>
+            </div>
+            <div class="text-box" [innerHTML]="text[1].text[currentLanguage]"></div>
+            <div class="title-box">
+                <h2>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</h2>
+            </div>
+            <div class="text-box" [innerHTML]="text[2].text[currentLanguage]"></div>
 
             <!-- // Captain Section //////////////////////////////////////////////// -->
             <div class="title-box">
@@ -63,14 +70,20 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="vegan" required />
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="cap_essen" value="vegan" required />
                 {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="vegetarisch" />
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="cap_essen" value="vegetarisch" />
                 {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
 
-                <input type="radio" [(ngModel)]="userData.cap_essen" name="essen" value="keinWunsch" />
+                <input type="radio" [(ngModel)]="userData.cap_essen" name="cap_essen" value="keinWunsch" />
                 {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+            <!-- Fehlermeldung, kein Essen gewählt -->
+            <div *ngIf="!userData.cap_essen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
             </div>
 
             <!-- Housing -->
@@ -78,9 +91,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.cap_housing" name="housing" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.cap_housing" name="cap_housing" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.cap_housing" name="housing" value="nein" />
+                <input type="radio" [(ngModel)]="userData.cap_housing" name="cap_housing" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Housing gewählt -->
@@ -95,9 +108,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.cap_helfer" name="helfer" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.cap_helfer" name="cap_helfer" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.cap_helfer" name="helfer" value="nein" />
+                <input type="radio" [(ngModel)]="userData.cap_helfer" name="cap_helfer" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Helfer gewählt -->
@@ -155,14 +168,20 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="vegan" required />
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="sp1_essen" value="vegan" required />
                 {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="vegetarisch" />
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="sp1_essen" value="vegetarisch" />
                 {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
 
-                <input type="radio" [(ngModel)]="userData.sp1_essen" name="essen" value="keinWunsch" />
+                <input type="radio" [(ngModel)]="userData.sp1_essen" name="sp1_essen" value="keinWunsch" />
                 {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+            <!-- Fehlermeldung, kein Essen gewählt -->
+            <div *ngIf="!userData.sp1_essen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
             </div>
 
             <!-- Housing -->
@@ -170,9 +189,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp1_housing" name="housing" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp1_housing" name="sp1_housing" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp1_housing" name="housing" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp1_housing" name="sp1_housing" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Housing gewählt -->
@@ -187,9 +206,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="helfer" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="sp1_helfer" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="helfer" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp1_helfer" name="sp1_helfer" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Helfer gewählt -->
@@ -246,14 +265,20 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="vegan" required />
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="sp2_essen" value="vegan" required />
                 {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="vegetarisch" />
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="sp2_essen" value="vegetarisch" />
                 {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
 
-                <input type="radio" [(ngModel)]="userData.sp2_essen" name="essen" value="keinWunsch" />
+                <input type="radio" [(ngModel)]="userData.sp2_essen" name="sp2_essen" value="keinWunsch" />
                 {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+            <!-- Fehlermeldung, kein Essen gewählt -->
+            <div *ngIf="!userData.sp2_essen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
             </div>
 
             <!-- Housing -->
@@ -261,9 +286,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp2_housing" name="housing" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp2_housing" name="sp2_housing" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp2_housing" name="housing" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp2_housing" name="sp2_housing" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Housing gewählt -->
@@ -278,9 +303,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="helfer" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="sp2_helfer" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="helfer" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp2_helfer" name="sp2_helfer" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Helfer gewählt -->
@@ -337,14 +362,20 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "ESSEN" : "FOOD" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="vegan" required />
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="sp3_essen" value="vegan" required />
                 {{ currentLanguage === "de" ? "Vegan" : "Vegan" }}
 
-                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="vegetarisch" />
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="sp3_essen" value="vegetarisch" />
                 {{ currentLanguage === "de" ? "Vegetarisch" : "Vegetarian" }}
 
-                <input type="radio" [(ngModel)]="userData.sp3_essen" name="essen" value="keinWunsch" />
+                <input type="radio" [(ngModel)]="userData.sp3_essen" name="sp3_essen" value="keinWunsch" />
                 {{ currentLanguage === "de" ? "Kein Wunsch" : "No Preference" }}
+            </div>
+            <!-- Fehlermeldung, kein Essen gewählt -->
+            <div *ngIf="!userData.sp3_essen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
             </div>
 
             <!-- Housing -->
@@ -352,9 +383,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HOUSING" : "HOUSING" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp3_housing" name="housing" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp3_housing" name="sp3_housing" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp3_housing" name="housing" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp3_housing" name="sp3_housing" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Housing gewählt -->
@@ -369,9 +400,9 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "HELFER*INNEN" : "VOLUNTEERS" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="helfer" value="ja" required />
+                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="sp3_helfer" value="ja" required />
                 {{ currentLanguage === "de" ? "Ja" : "Yes" }}
-                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="helfer" value="nein" />
+                <input type="radio" [(ngModel)]="userData.sp3_helfer" name="sp3_helfer" value="nein" />
                 {{ currentLanguage === "de" ? "Nein" : "No" }}
             </div>
             <!-- Fehlermeldung, kein Helfer gewählt -->
@@ -379,6 +410,33 @@
                 <span style="color: red">
                     {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
                 </span>
+            </div>
+            <div class="title-box">
+                <h2>AWARENESS</h2>
+            </div>
+            <div class="text-box" [innerHTML]="text[3].text[currentLanguage]"></div>
+
+            <!-- Awareness gelesen -->
+            <div class="radio-box">
+                <input type="radio" [(ngModel)]="awareness_gelesen" name="awareness_gelesen" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+            </div>
+            <!-- Fehlermeldung, Awareness nicht bestätigt -->
+            <div *ngIf="!awareness_gelesen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
+
+            <div class="title-box">
+                <h2>{{ currentLanguage === "de" ? "Bemerkung" : "Message" }}</h2>
+            </div>
+            <!-- Bemerkungen (optional) -->
+            <textarea [(ngModel)]="userData.bemerkung" type="text" id="bemerkung" name="bemerkung" placeholder="{{ currentLanguage === 'de' ? 'Bemerkung...' : 'Message...' }}"></textarea>
+
+            <div class="button-box">
+                <!-- Submit Button -->
+                <input class="button" type="submit" value="{{ currentLanguage === 'de' ? 'JETZT ANMELDEN' : 'REGISTER NOW' }}" />
             </div>
         </form>
     </div>

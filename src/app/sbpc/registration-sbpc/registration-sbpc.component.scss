@@ -8,10 +8,11 @@ section {
     //justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #deeeff;
+    background-color: $sbpc-violett-02;
+    background-color: #9343e3dc;
     font-family: $text-font;
     font-size: $text-font-size;
-    color: #437cfa;
+    color: $sbpc-violett-01;
 
     span {
         color: red;
@@ -27,8 +28,13 @@ section {
         }
 
         > h2 {
-            margin: 50px 0;
+            margin: 100px 0;
+            margin-bottom: 0px;
         }
+    }
+
+    .text-box {
+        text-align: left;
     }
 
     > .inlay {
@@ -63,16 +69,16 @@ section {
                         width: 100%;
                         background: none; /* Kein Hintergrund */
                         border: none; /* Entfernt den Standard-Rahmen */
-                        border-bottom: 1px solid #437cfa; /* Nur blauer Rahmen unten */
+                        border-bottom: 1px solid $sbpc-violett-01; /* Nur blauer Rahmen unten */
                         font-family: $text-font;
                         font-size: $text-font-size;
-                        color: #437cfa;
+                        color: $sbpc-violett-01;
                         outline: none; /* Kein Fokusrahmen */
 
                         &::placeholder {
                             font-family: $text-font;
                             font-size: $text-font-size;
-                            color: #437cfa;
+                            color: $sbpc-violett-01;
                         }
                     }
                 }
@@ -86,7 +92,7 @@ section {
             }
 
             > .radio-box {
-                border: 1px solid #437cfa;
+                border: 1px solid $sbpc-violett-01;
                 padding: 30px;
                 border-radius: 15px;
                 width: 100%;
@@ -113,7 +119,7 @@ section {
             input[type="radio"] {
                 //appearance: none; /* Entfernt das Standard-Styling des Radio-Buttons */
                 background-color: none; /* Kein Hintergrund */
-                border: 2px solid #437cfa; /* Blauer Rahmen */
+                border: 2px solid $sbpc-violett-01; /* Blauer Rahmen */
                 width: 20px; /* Breite des Radio-Buttons */
                 height: 20px; /* Höhe des Radio-Buttons */
                 border-radius: 50%; /* Runde Form */
@@ -137,7 +143,7 @@ section {
                 left: 50%;
                 width: 12px; /* Größe des gefüllten Kreises */
                 height: 12px;
-                background-color: #437cfa; /* Farbe des Punktes, wenn ausgewählt */
+                background-color: $sbpc-violett-03; /* Farbe des Punktes, wenn ausgewählt */
                 border-radius: 50%;
                 transform: translate(-50%, -50%);
             }
@@ -151,12 +157,12 @@ section {
         textarea {
             background: none; /* Kein Hintergrund */
             border: none; /* Entfernt den Standard-Rahmen */
-            border: 1px solid #437cfa; /* Nur blauer Rahmen unten */
+            border: 1px solid $sbpc-violett-01; /* Nur blauer Rahmen unten */
             outline: none; /* Kein Fokusrahmen */
             border-radius: 15px;
             font-family: $text-font;
             font-size: $text-font-size;
-            color: #437cfa;
+            color: $sbpc-violett-01;
             width: 100%;
             height: auto;
             min-height: 250px;
@@ -164,7 +170,7 @@ section {
             &::placeholder {
                 font-family: $text-font;
                 font-size: $text-font-size;
-                color: #437cfa;
+                color: $sbpc-violett-01;
             }
         }
 
@@ -187,12 +193,12 @@ section {
                 font-size: clamp(14px, 5vw, 24px);
                 letter-spacing: 1.5px;
                 cursor: pointer;
-                background-color: #437cfa;
+                background-color: $sbpc-violett-03;
                 color: #ecf1fa;
                 transition: all 125ms ease-in-out;
 
                 &:hover {
-                    background-color: #5388fd;
+                    background-color: $sbpc-violett-02;
                     padding: 11px 62px;
                     transition: all 125ms ease-in-out;
                     //color: #437CFA;
