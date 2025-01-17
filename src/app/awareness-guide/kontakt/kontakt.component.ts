@@ -4,10 +4,9 @@ import { NavigationService } from "../../services/navigation.service";
 
 @Component({
     selector: "app-kontakt",
-    standalone: true,
     imports: [CommonModule],
     templateUrl: "./kontakt.component.html",
-    styleUrl: "./kontakt.component.scss",
+    styleUrl: "./kontakt.component.scss"
 })
 export class KontaktComponent {
     currentLanguage: "de" | "en" = "de"; // Standardwert für die Sprache

@@ -8,10 +8,9 @@ type RouteType = "suicmc" | "sbpc" | "pre ecmc";
 
 @Component({
     selector: "app-anmeldung",
-    standalone: true,
     imports: [CommonModule, RouterModule],
     templateUrl: "./anmeldung.component.html",
-    styleUrls: ["./anmeldung.component.scss"],
+    styleUrls: ["./anmeldung.component.scss"]
 })
 export class AnmeldungComponent implements OnInit {
     currentRoute: RouteType = "suicmc"; // Standardwert mit spezifischem Typ

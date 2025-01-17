@@ -6,11 +6,10 @@ import { NavigationService } from '../../services/navigation.service';
 type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 
 @Component({
-  selector: 'app-was-ist',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './was-ist.component.html',
-  styleUrl: './was-ist.component.scss'
+    selector: 'app-was-ist',
+    imports: [CommonModule],
+    templateUrl: './was-ist.component.html',
+    styleUrl: './was-ist.component.scss'
 })
 export class WasIstComponent {
 

@@ -11,10 +11,9 @@ import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guid
 
 @Component({
     selector: "app-sbpc",
-    standalone: true,
     imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent],
     templateUrl: "./sbpc.component.html",
-    styleUrl: "./sbpc.component.scss",
+    styleUrl: "./sbpc.component.scss"
 })
 export class SbpcComponent implements AfterViewInit {
     ngAfterViewInit() {

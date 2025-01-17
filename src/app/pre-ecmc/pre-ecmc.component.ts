@@ -11,10 +11,9 @@ import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guid
 
 @Component({
     selector: "app-pre-ecmc",
-    standalone: true,
     imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent],
     templateUrl: "./pre-ecmc.component.html",
-    styleUrl: "./pre-ecmc.component.scss",
+    styleUrl: "./pre-ecmc.component.scss"
 })
 export class PreEcmcComponent implements AfterViewInit {
     ngAfterViewInit() {

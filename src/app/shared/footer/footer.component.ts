@@ -6,11 +6,10 @@ import { NavigationService } from '../../services/navigation.service';
 type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+    selector: 'app-footer',
+    imports: [CommonModule],
+    templateUrl: './footer.component.html',
+    styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
 

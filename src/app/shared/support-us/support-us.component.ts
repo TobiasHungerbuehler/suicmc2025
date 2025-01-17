@@ -7,10 +7,9 @@ type RouteType = "suicmc" | "sbpc" | "pre ecmc";
 
 @Component({
     selector: "app-support-us",
-    standalone: true,
     imports: [CommonModule],
     templateUrl: "./support-us.component.html",
-    styleUrl: "./support-us.component.scss",
+    styleUrl: "./support-us.component.scss"
 })
 export class SupportUsComponent {
     currentRoute: RouteType = "suicmc"; // Standardwert mit spezifischem Typ

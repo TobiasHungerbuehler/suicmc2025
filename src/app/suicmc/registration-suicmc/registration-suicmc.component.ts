@@ -7,10 +7,9 @@ import { NavigationService } from "../../services/navigation.service";
 
 @Component({
     selector: "app-registration-suicmc",
-    standalone: true,
     imports: [CommonModule, FormsModule, HttpClientModule, RouterModule],
     templateUrl: "./registration-suicmc.component.html",
-    styleUrls: ["./registration-suicmc.component.scss"],
+    styleUrls: ["./registration-suicmc.component.scss"]
 })
 export class RegistrationSuicmcComponent implements OnInit {
     userData = {

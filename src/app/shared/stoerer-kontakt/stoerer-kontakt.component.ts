@@ -3,10 +3,9 @@ import { NavigationService } from "../../services/navigation.service";
 
 @Component({
     selector: "app-stoerer-kontakt",
-    standalone: true,
     imports: [],
     templateUrl: "./stoerer-kontakt.component.html",
-    styleUrl: "./stoerer-kontakt.component.scss",
+    styleUrl: "./stoerer-kontakt.component.scss"
 })
 export class StoererKontaktComponent {
     currentRoute: string = "SUICMC"; // Standardwert

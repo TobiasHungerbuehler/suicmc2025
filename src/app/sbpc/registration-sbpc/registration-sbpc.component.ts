@@ -7,10 +7,9 @@ import { NavigationService } from "../../services/navigation.service";
 
 @Component({
     selector: "app-registration-sbpc",
-    standalone: true,
     imports: [CommonModule, FormsModule, HttpClientModule, RouterModule],
     templateUrl: "./registration-sbpc.component.html",
-    styleUrl: "./registration-sbpc.component.scss",
+    styleUrl: "./registration-sbpc.component.scss"
 })
 export class RegistrationSbpcComponent implements OnInit {
     userData = {

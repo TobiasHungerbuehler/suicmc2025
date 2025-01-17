@@ -4,10 +4,9 @@ import { NavigationService } from "../../services/navigation.service";
 
 @Component({
     selector: "app-glossar",
-    standalone: true,
     imports: [CommonModule],
     templateUrl: "./glossar.component.html",
-    styleUrl: "./glossar.component.scss",
+    styleUrl: "./glossar.component.scss"
 })
 export class GlossarComponent {
     currentLanguage: "de" | "en" = "de"; // Standardwert für die Sprache

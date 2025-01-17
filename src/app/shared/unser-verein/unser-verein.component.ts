@@ -6,11 +6,10 @@ import { NavigationService } from '../../services/navigation.service';
 type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 
 @Component({
-  selector: 'app-unser-verein',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './unser-verein.component.html',
-  styleUrls: ['./unser-verein.component.scss']
+    selector: 'app-unser-verein',
+    imports: [CommonModule],
+    templateUrl: './unser-verein.component.html',
+    styleUrls: ['./unser-verein.component.scss']
 })
 export class UnserVereinComponent implements OnInit {
   currentRoute: RouteType = 'suicmc'; // Standardwert mit spezifischem Typ

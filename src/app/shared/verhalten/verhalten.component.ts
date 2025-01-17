@@ -4,8 +4,7 @@ import { MatExpansionModule } from "@angular/material/expansion";
 
 @Component({
     selector: "app-verhalten",
-    standalone: true,
-    imports: [CommonModule, MatExpansionModule],
+    imports: [CommonModule],
     templateUrl: "./verhalten.component.html",
     styleUrl: "./verhalten.component.scss",
 })

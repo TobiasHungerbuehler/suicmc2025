@@ -15,10 +15,9 @@ import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 
 @Component({
     selector: "app-suicmc",
-    standalone: true,
     imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent],
     templateUrl: "./suicmc.component.html",
-    styleUrls: ["./suicmc.component.scss"],
+    styleUrls: ["./suicmc.component.scss"]
 })
 export class SuicmcComponent implements AfterViewInit {
     ngAfterViewInit() {

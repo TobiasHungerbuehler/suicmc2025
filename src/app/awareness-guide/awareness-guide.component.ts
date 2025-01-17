@@ -9,10 +9,9 @@ import { GlossarComponent } from "./glossar/glossar.component";
 import { ActivatedRoute } from "@angular/router";
 @Component({
     selector: "app-awareness-guide",
-    standalone: true,
     imports: [CommonModule, StartComponent, StoererKontaktComponent, GuideTxtComponent, KontaktComponent, GlossarComponent],
     templateUrl: "./awareness-guide.component.html",
-    styleUrl: "./awareness-guide.component.scss",
+    styleUrl: "./awareness-guide.component.scss"
 })
 export class AwarenessGuideComponent {
     currentRoute: string = "SUICMC"; // Standardwert

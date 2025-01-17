@@ -8,10 +8,9 @@ type RouteType = "suicmc" | "sbpc" | "pre ecmc" | "awarenessguide";
 
 @Component({
     selector: "app-start",
-    standalone: true,
     imports: [CommonModule, RouterModule],
     templateUrl: "./start.component.html",
-    styleUrls: ["./start.component.scss"],
+    styleUrls: ["./start.component.scss"]
 })
 export class StartComponent implements OnInit {
     currentRoute: RouteType = "suicmc"; // Standardwert mit spezifischem Typ

@@ -6,11 +6,10 @@ import { NavigationService } from '../../services/navigation.service';
 type RouteType = 'suicmc' | 'sbpc' | 'pre ecmc';
 
 @Component({
-  selector: 'app-awareness',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './awareness.component.html',
-  styleUrl: './awareness.component.scss'
+    selector: 'app-awareness',
+    imports: [CommonModule],
+    templateUrl: './awareness.component.html',
+    styleUrl: './awareness.component.scss'
 })
 export class AwarenessComponent {
 

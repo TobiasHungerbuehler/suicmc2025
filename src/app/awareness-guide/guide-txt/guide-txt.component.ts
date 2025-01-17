@@ -4,10 +4,9 @@ import { CommonModule } from "@angular/common";
 
 @Component({
     selector: "app-guide-txt",
-    standalone: true,
     imports: [CommonModule],
     templateUrl: "./guide-txt.component.html",
-    styleUrl: "./guide-txt.component.scss",
+    styleUrl: "./guide-txt.component.scss"
 })
 export class GuideTxtComponent {
     currentLanguage: "de" | "en" = "de"; // Standardwert für die Sprache
