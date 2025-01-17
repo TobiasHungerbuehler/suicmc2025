@@ -5,14 +5,14 @@ import { UnserVereinComponent } from "../shared/unser-verein/unser-verein.compon
 import { AnmeldungComponent } from "../shared/anmeldung/anmeldung.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { WasIstComponent } from "../shared/was-ist/was-ist.component";
-import { AwarenessComponent } from "../shared/awareness/awareness.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, AwarenessComponent, SupportUsComponent, StoererAwarenessGuideComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })

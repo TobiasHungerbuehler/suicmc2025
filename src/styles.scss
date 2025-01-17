@@ -129,3 +129,20 @@ h2 {
     -webkit-box-shadow: -2px 12px 12px -5px rgba(0, 0, 0, 0.42);
     box-shadow: -2px 12px 12px -5px rgba(0, 0, 0, 0.42);
 }
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+//umgeht die styles von material
+// styles.scss (global)
+::ng-deep mat-accordion,
+::ng-deep mat-expansion-panel,
+::ng-deep mat-expansion-panel-header {
+    color: inherit !important;
+}

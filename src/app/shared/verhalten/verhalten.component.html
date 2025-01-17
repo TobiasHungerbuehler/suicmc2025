@@ -1,1 +1,23 @@
-<p>verhalten works!</p>
+<section
+    [ngClass]="{
+        suicmc: currentRoute === 'suicmc',
+        sbpc: currentRoute === 'sbpc',
+        'pre-ecmc': currentRoute === 'pre ecmc'
+    }"
+>
+    <div class="inlay">
+        <div class="title-box">
+            <h2>{{ currentLanguage === "de" ? "Verhaltenskodex" : "Code of conduct" }}</h2>
+        </div>
+        <div class="text-box" [innerHTML]="text[0].text[currentLanguage]"></div>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let rule of rulesText; let i = index" (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ rule.titel[currentLanguage] }}</mat-panel-title>
+                </mat-expansion-panel-header>
+                <p class="ac-text">{{ rule.text[currentLanguage] }}</p>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</section>
