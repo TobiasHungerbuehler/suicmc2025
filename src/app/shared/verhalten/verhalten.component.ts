@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-verhalten',
-  standalone: true,
-  imports: [],
-  templateUrl: './verhalten.component.html',
-  styleUrl: './verhalten.component.scss'
+    selector: "app-verhalten",
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: "./verhalten.component.html",
+    styleUrl: "./verhalten.component.scss",
 })
-export class VerhaltenComponent {
-
-}
+export class VerhaltenComponent {}
