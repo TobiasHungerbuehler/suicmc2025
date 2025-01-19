@@ -29,9 +29,6 @@ export class NavigationService {
             } else {
                 this.currentRouteSubject.next("SUICMC"); // Standardwert
             }
-
-            // Debug-Ausgabe zur Überprüfung
-            console.log("Current route updated to:", this.currentRouteSubject.value);
         });
     }
 
@@ -43,7 +40,6 @@ export class NavigationService {
     // Methode zum Ändern der Sprache
     setLanguage(language: string): void {
         this.languageSubject.next(language);
-        console.log(language);
     }
 
     // Methode, um die aktuelle Sprache zu erhalten

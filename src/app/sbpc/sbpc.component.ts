@@ -28,7 +28,6 @@ export class SbpcComponent implements AfterViewInit {
         // Verwende document.getElementById(), um direkt auf das Element zuzugreifen
         const element = document.getElementById("start");
         if (element) {
-            console.log("Scrolling to last element");
             element.scrollIntoView({ behavior: "smooth" });
         } else {
             console.log("Element not found");
