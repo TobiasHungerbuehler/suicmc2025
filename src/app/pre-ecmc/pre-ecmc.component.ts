@@ -7,11 +7,12 @@ import { FooterComponent } from "../shared/footer/footer.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
+import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent, SponsoringComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })
