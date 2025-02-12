@@ -48,6 +48,9 @@ export class RegistrationSuicmcComponent implements OnInit {
     // Variable zur Steuerung der Anzeige der Startnummernliste
     showStartnummern: boolean = false;
 
+    // Awareness gelesen kontroll variable in Formular
+    awareness_gelesen = "";
+
     constructor(private http: HttpClient, private navigationService: NavigationService) {}
 
     //scrolling to top
@@ -88,7 +91,6 @@ export class RegistrationSuicmcComponent implements OnInit {
             (response) => {
                 this.startnummern = response.map((num) => String(num).trim());
                 this.startnummern.sort((a, b) => parseInt(a) - parseInt(b));
-                console.log("Startnummern beim Laden:", this.startnummern);
             },
             (error) => {
                 console.error("Fehler beim Abrufen der Startnummern:", error);
@@ -205,4 +207,13 @@ export class RegistrationSuicmcComponent implements OnInit {
             this.startnummerFehler = "Diese Startnummer ist bereits vergeben.";
         }
     }
+
+    textAwareness = [
+        {
+            text: {
+                de: 'Gemeinsam prägen wir unser Miteinander während dieser SUICMC und SBPC 2025. Es ist uns wichtig, dass du dich darüber informiert hast. Hast du unser Awareness Guide schon gelesen? Hier kannst du diesen abrufen: <a href="/awarenessguide">Awareness Guide</a>',
+                en: 'Together, we shape how we interact with one another during this SUICMC and SBPC 2025. It is important to us that you are informed about this. Have you already read our Awareness Guide? You can access it here: <a href="/awarenessguide">Awareness Guide</a>',
+            },
+        },
+    ];
 }

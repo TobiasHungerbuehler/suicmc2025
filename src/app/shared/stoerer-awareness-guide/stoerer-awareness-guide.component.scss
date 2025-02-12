@@ -14,7 +14,7 @@
         transition: all 125ms ease-in-out;
 
         @media (max-width: 800px) {
-            height: 120px;
+            height: 90px;
         }
 
         &:hover {
@@ -37,7 +37,7 @@
         pointer-events: none; /* Klicks durch den Text hindurch zulassen */
 
         @media (max-width: 800px) {
-            font-size: 22px; /* Schriftgröße */
+            font-size: 16px; /* Schriftgröße */
         }
     }
 }

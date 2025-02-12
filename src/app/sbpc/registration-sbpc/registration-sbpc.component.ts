@@ -50,43 +50,6 @@ export class RegistrationSbpcComponent implements OnInit {
         bemerkung: "",
     };
 
-    // userData = {
-    //     teamname: "Fast Riders",
-    //     cap_vorname: "Max",
-    //     cap_nachname: "Mustermann",
-    //     cap_spitzname: "Captain Max",
-    //     cap_verein: "Speedy Bikers",
-    //     cap_email: "tobylast.music@gmail.com",
-    //     cap_essen: "vegetarisch",
-    //     cap_housing: "ja",
-    //     cap_helfer: "nein",
-    //     sp1_vorname: "Anna",
-    //     sp1_nachname: "Müller",
-    //     sp1_spitzname: "Speedy",
-    //     sp1_verein: "City Racers",
-    //     sp1_email: "anna.mueller@example.com",
-    //     sp1_essen: "vegan",
-    //     sp1_housing: "nein",
-    //     sp1_helfer: "ja",
-    //     sp2_vorname: "Lukas",
-    //     sp2_nachname: "Schmidt",
-    //     sp2_spitzname: "Rocket",
-    //     sp2_verein: "Urban Cyclists",
-    //     sp2_email: "lukas.schmidt@example.com",
-    //     sp2_essen: "keinWunsch",
-    //     sp2_housing: "ja",
-    //     sp2_helfer: "nein",
-    //     sp3_vorname: "Sophie",
-    //     sp3_nachname: "Klein",
-    //     sp3_spitzname: "Thunder",
-    //     sp3_verein: "Pedal Pushers",
-    //     sp3_email: "sophie.klein@example.com",
-    //     sp3_essen: "vegetarisch",
-    //     sp3_housing: "nein",
-    //     sp3_helfer: "ja",
-    //     bemerkung: "Freuen uns auf das Event!",
-    // };
-
     // Awareness gelesen kontroll variable in Formular
     awareness_gelesen = "";
 

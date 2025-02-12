@@ -221,6 +221,23 @@
                     {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
                 </span>
             </div>
+            <!-- //////////////////////// -->
+            <div class="title-box">
+                <h2>AWARENESS</h2>
+            </div>
+            <div class="text-box" style="text-align: left" [innerHTML]="textAwareness[0].text[currentLanguage]"></div>
+
+            <!-- Awareness gelesen -->
+            <div class="radio-box">
+                <input type="radio" [(ngModel)]="awareness_gelesen" name="awareness_gelesen" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+            </div>
+            <!-- Fehlermeldung, Awareness nicht bestätigt -->
+            <div *ngIf="!awareness_gelesen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
 
             <div class="title-box">
                 <h2>{{ currentLanguage === "de" ? "Bemerkung" : "Message" }}</h2>
