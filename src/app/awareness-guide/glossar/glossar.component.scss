@@ -1,0 +1,21 @@
+@import "../../../styles.scss";
+
+.guide-element {
+    //border: 1px solid green;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    > .inlay {
+        .text-box {
+            width: 100%;
+            text-align: left;
+
+            > p {
+                margin: 0;
+            }
+        }
+    }
+}

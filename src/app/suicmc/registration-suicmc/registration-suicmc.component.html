@@ -8,15 +8,7 @@
             <div class="input-group">
                 <div class="single-box">
                     <!-- Vorname (Pflichtfeld) -->
-                    <input
-                        [(ngModel)]="userData.vorname"
-                        type="text"
-                        id="vorname"
-                        name="vorname"
-                        placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}"
-                        required
-                        #vorname="ngModel"
-                    />
+                    <input [(ngModel)]="userData.vorname" type="text" id="vorname" name="vorname" placeholder="{{ currentLanguage === 'de' ? 'Vorname' : 'First Name' }}" required #vorname="ngModel" />
                     <span *ngIf="vorname.invalid && (vorname.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Vorname ist erforderlich" : "First name is required" }}
                     </span>
@@ -24,15 +16,7 @@
 
                 <div class="single-box">
                     <!-- Nachname (Pflichtfeld) -->
-                    <input
-                        [(ngModel)]="userData.nachname"
-                        type="text"
-                        id="nachname"
-                        name="nachname"
-                        placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}"
-                        required
-                        #nachname="ngModel"
-                    />
+                    <input [(ngModel)]="userData.nachname" type="text" id="nachname" name="nachname" placeholder="{{ currentLanguage === 'de' ? 'Nachname' : 'Last Name' }}" required #nachname="ngModel" />
                     <span *ngIf="nachname.invalid && (nachname.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Nachname ist erforderlich" : "Last name is required" }}
                     </span>
@@ -40,28 +24,14 @@
 
                 <div class="single-box">
                     <!-- Spitzname (optional) -->
-                    <input
-                        [(ngModel)]="userData.spitzname"
-                        type="text"
-                        id="spitzname"
-                        name="spitzname"
-                        placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}"
-                    />
+                    <input [(ngModel)]="userData.spitzname" type="text" id="spitzname" name="spitzname" placeholder="{{ currentLanguage === 'de' ? 'Spitzname (optional)' : 'Nickname (optional)' }}" />
                 </div>
             </div>
 
             <div class="input-group">
                 <div class="single-box">
                     <!-- Ort (Pflichtfeld) -->
-                    <input
-                        [(ngModel)]="userData.ort"
-                        type="text"
-                        id="ort"
-                        name="ort"
-                        placeholder="{{ currentLanguage === 'de' ? 'Ort' : 'City' }}"
-                        required
-                        #ort="ngModel"
-                    />
+                    <input [(ngModel)]="userData.ort" type="text" id="ort" name="ort" placeholder="{{ currentLanguage === 'de' ? 'Ort' : 'City' }}" required #ort="ngModel" />
                     <span *ngIf="ort.invalid && (ort.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Ort ist erforderlich" : "City is required" }}
                     </span>
@@ -69,27 +39,12 @@
 
                 <div class="single-box">
                     <!-- Firma (optional) -->
-                    <input
-                        [(ngModel)]="userData.firma"
-                        type="text"
-                        id="firma"
-                        name="firma"
-                        placeholder="{{ currentLanguage === 'de' ? 'Firma (optional)' : 'Company (optional)' }}"
-                    />
+                    <input [(ngModel)]="userData.firma" type="text" id="firma" name="firma" placeholder="{{ currentLanguage === 'de' ? 'Firma (optional)' : 'Company (optional)' }}" />
                 </div>
 
                 <div class="single-box">
                     <!-- Email (Pflichtfeld) -->
-                    <input
-                        [(ngModel)]="userData.email"
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}"
-                        required
-                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                        #email="ngModel"
-                    />
+                    <input [(ngModel)]="userData.email" type="email" id="email" name="email" placeholder="{{ currentLanguage === 'de' ? 'E-Mail' : 'Email' }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel" />
                     <span *ngIf="email.invalid && (email.touched || registrationForm.submitted)">
                         {{ currentLanguage === "de" ? "Bitte gib eine gültige E-Mail-Adresse ein" : "Please enter a valid email address" }}
                     </span>
@@ -99,17 +54,7 @@
             <div class="input-group">
                 <div class="single-box">
                     <!-- Startnummer (optional, 1 bis 4-stellige Zahl) -->
-                    <input
-                        [(ngModel)]="userData.startnummer"
-                        (ngModelChange)="startnummerFehler = ''"
-                        type="number"
-                        id="startnummer"
-                        name="startnummer"
-                        placeholder="{{ currentLanguage === 'de' ? 'Startnummer (optional)' : 'Start Number (optional)' }}"
-                        min="1"
-                        max="9999"
-                        #startnummer="ngModel"
-                    />
+                    <input [(ngModel)]="userData.startnummer" (ngModelChange)="startnummerFehler = ''" type="number" id="startnummer" name="startnummer" placeholder="{{ currentLanguage === 'de' ? 'Startnummer (optional)' : 'Start Number (optional)' }}" min="1" max="9999" #startnummer="ngModel" />
 
                     <!-- Validierungsfehlermeldung für ungültige Eingabe -->
                     <span *ngIf="startnummer.invalid && (startnummer.touched || registrationForm.submitted)">
@@ -131,9 +76,7 @@
                         <div *ngIf="showStartnummern">
                             <!-- Startnummernliste -->
                             <div>
-                                <span class="nummern-liste" *ngFor="let nummer of startnummern; let isLast = last">
-                                    {{ nummer }}<span class="nummern-liste" *ngIf="!isLast">, </span>
-                                </span>
+                                <span class="nummern-liste" *ngFor="let nummer of startnummern; let isLast = last"> {{ nummer }}<span class="nummern-liste" *ngIf="!isLast">, </span> </span>
                             </div>
                         </div>
                     </div>
@@ -145,11 +88,7 @@
             </div>
 
             <div class="tex-box">
-                {{
-                    currentLanguage === "de"
-                        ? "Es können beide Rennen gefahren werden. Am Samstag, 6. September 2025 findet das Cargorace statt. Am Sonntag, 7. September 2025 findet das Mainrace statt. Bitte gib bei einer Anmeldung auch gleich die Kategorie an, in der du mitfahren möchtest: Open, WTNB (Woman Trans NonBinary), No Ranking."
-                        : "Both races can be ridden. On Saturday, September 6, 2025, the Cargorace will take place. On Sunday, September 7, 2025, the Mainrace will take place. Please specify the category you want to participate in when registering: Open, WTNB (Woman Trans NonBinary), No Ranking."
-                }}
+                {{ currentLanguage === "de" ? "Es können beide Rennen gefahren werden. Am Samstag, 6. September 2025 findet das Cargorace statt. Am Sonntag, 7. September 2025 findet das Mainrace statt. Bitte gib bei einer Anmeldung auch gleich die Kategorie an, in der du mitfahren möchtest: Open, WTNB (Woman Trans NonBinary), No Ranking." : "Both races can be ridden. On Saturday, September 6, 2025, the Cargorace will take place. On Sunday, September 7, 2025, the Mainrace will take place. Please specify the category you want to participate in when registering: Open, WTNB (Woman Trans NonBinary), No Ranking." }}
             </div>
 
             <!-- Cargorace -->
@@ -157,9 +96,7 @@
                 <div class="label-container">
                     <label>Cargorace</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="open" /> Open <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.cargorace" name="cargorace" value="noRanking" /> No Ranking
             </div>
 
             <!-- Mainrace -->
@@ -167,9 +104,7 @@
                 <div class="label-container">
                     <label>Mainrace</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="open" /> Open <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.mainrace" name="mainrace" value="noRanking" /> No Ranking
             </div>
 
             <div class="title-box">
@@ -177,11 +112,7 @@
             </div>
 
             <div class="tex-box">
-                {{
-                    currentLanguage === "de"
-                        ? "Die meisten Side Events finden am Samstag, 6. September 2025 statt. Du kannst dich jetzt schon für Side Events einschreiben, da uns dies die Organisation vereinfacht. Aber keine Sorge, an den Side Events kannst du auch ganz spontan vor Ort teilnehmen."
-                        : "Most side events will take place on Saturday, September 6, 2025. You can already sign up for side events now, as this simplifies the organization for us. But don't worry, you can also participate spontaneously on site."
-                }}
+                {{ currentLanguage === "de" ? "Die meisten Side Events finden am Samstag, 6. September 2025 statt. Du kannst dich jetzt schon für Side Events einschreiben, da uns dies die Organisation vereinfacht. Aber keine Sorge, an den Side Events kannst du auch ganz spontan vor Ort teilnehmen." : "Most side events will take place on Saturday, September 6, 2025. You can already sign up for side events now, as this simplifies the organization for us. But don't worry, you can also participate spontaneously on site." }}
             </div>
 
             <!-- Bergsprint -->
@@ -189,9 +120,7 @@
                 <div class="label-container">
                     <label>{{ currentLanguage === "de" ? "Bergsprint" : "Uphill" }}</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="open" /> Open <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.bergsprint" name="bergsprint" value="noRanking" /> No Ranking
             </div>
 
             <!-- Skid -->
@@ -199,9 +128,7 @@
                 <div class="label-container">
                     <label>Skid</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.skid" name="skid" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.skid" name="skid" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.skid" name="skid" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.skid" name="skid" value="open" /> Open <input type="radio" [(ngModel)]="userData.skid" name="skid" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.skid" name="skid" value="noRanking" /> No Ranking
             </div>
 
             <!-- Trackstand -->
@@ -209,9 +136,7 @@
                 <div class="label-container">
                     <label>Trackstand</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="open" /> Open <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.trackstand" name="trackstand" value="noRanking" /> No Ranking
             </div>
 
             <!-- Footdown -->
@@ -219,9 +144,7 @@
                 <div class="label-container">
                     <label>Footdown</label>
                 </div>
-                <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="open" /> Open
-                <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="wtnb" /> WTNB
-                <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="noRanking" /> No Ranking
+                <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="open" /> Open <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="wtnb" /> WTNB <input type="radio" [(ngModel)]="userData.footdown" name="footdown" value="noRanking" /> No Ranking
             </div>
 
             <div class="title-box">
@@ -229,11 +152,7 @@
             </div>
 
             <div class="tex-box">
-                {{
-                    currentLanguage === "de"
-                        ? "Damit unsere Küche planen kann, fragen wir dich jetzt schon, was für Essen du bevorzugst."
-                        : "To help our kitchen plan ahead, we would like to ask you what kind of food you prefer."
-                }}
+                {{ currentLanguage === "de" ? "Damit unsere Küche planen kann, fragen wir dich jetzt schon, was für Essen du bevorzugst." : "To help our kitchen plan ahead, we would like to ask you what kind of food you prefer." }}
             </div>
 
             <!-- Essen -->
@@ -286,11 +205,7 @@
             </div>
 
             <div class="tex-box">
-                {{
-                    currentLanguage === "de"
-                        ? "Möchtet du uns als Helfer*in unterstützen? Wir würden uns sehr über deine Anmeldung freuen! "
-                        : "Would you like to support us as a helper? We would be very happy to receive your sign-up!"
-                }}
+                {{ currentLanguage === "de" ? "Möchtet du uns als Helfer*in unterstützen? Wir würden uns sehr über deine Anmeldung freuen! " : "Would you like to support us as a helper? We would be very happy to receive your sign-up!" }}
             </div>
 
             <!-- Helfer -->
@@ -306,19 +221,30 @@
                     {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
                 </span>
             </div>
+            <!-- //////////////////////// -->
+            <div class="title-box">
+                <h2>AWARENESS</h2>
+            </div>
+            <div class="text-box" style="text-align: left" [innerHTML]="textAwareness[0].text[currentLanguage]"></div>
+
+            <!-- Awareness gelesen -->
+            <div class="radio-box">
+                <input type="radio" [(ngModel)]="awareness_gelesen" name="awareness_gelesen" value="ja" required />
+                {{ currentLanguage === "de" ? "Ja" : "Yes" }}
+            </div>
+            <!-- Fehlermeldung, Awareness nicht bestätigt -->
+            <div *ngIf="!awareness_gelesen && registrationForm.submitted">
+                <span style="color: red">
+                    {{ currentLanguage === "de" ? "Bitte wählen" : "Please choose" }}
+                </span>
+            </div>
 
             <div class="title-box">
                 <h2>{{ currentLanguage === "de" ? "Bemerkung" : "Message" }}</h2>
             </div>
 
             <!-- Bemerkungen (optional) -->
-            <textarea
-                [(ngModel)]="userData.bemerkung"
-                type="text"
-                id="bemerkung"
-                name="bemerkung"
-                placeholder="{{ currentLanguage === 'de' ? 'Bemerkung...' : 'Message...' }}"
-            ></textarea>
+            <textarea [(ngModel)]="userData.bemerkung" type="text" id="bemerkung" name="bemerkung" placeholder="{{ currentLanguage === 'de' ? 'Bemerkung...' : 'Message...' }}"></textarea>
 
             <div class="button-box">
                 <!-- Submit Button -->

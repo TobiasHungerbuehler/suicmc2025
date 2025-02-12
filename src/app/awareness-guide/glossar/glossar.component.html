@@ -1,0 +1,14 @@
+<div class="guide-element">
+    <div class="inlay">
+        @if (currentLanguage === "de") {
+        <h2>GLOSSAR UND BEGRIFFE</h2>
+        } @if (currentLanguage === "en") {
+        <h2>GLOSSARY AND TERMS</h2>
+        }
+        <br />
+        <div *ngFor="let item of text" class="text-box">
+            <p [innerHTML]="item.titel[currentLanguage]"></p>
+            <p [innerHTML]="item.text[currentLanguage]"></p>
+        </div>
+    </div>
+</div>

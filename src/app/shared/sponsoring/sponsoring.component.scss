@@ -1,0 +1,75 @@
+@import "../../../styles.scss";
+
+section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    .text-box {
+        margin-bottom: 60px;
+    }
+
+    .sponsor-box {
+        width: 100%;
+        margin-top: 1rem;
+
+        > .silver {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            gap: 10px;
+        }
+    }
+
+    a .single-sponsor {
+        height: 130px;
+        border: 2px solid silver;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: white;
+        cursor: pointer;
+        @media screen and (max-width: 900px) {
+            height: 100px;
+        }
+
+        @media screen and (max-width: 500px) {
+            height: 70px;
+        }
+
+        img {
+            padding-top: 12px;
+            padding-bottom: 12px;
+
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; // Verhindert Verzerrung des Bildes
+        }
+    }
+
+    .supporter-box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); // Standard: 4 Spalten
+        gap: 10px;
+        margin-bottom: 40px;
+
+        > p {
+            font-size: 14px;
+            margin: 0;
+            text-align: left;
+        }
+
+        @media screen and (max-width: 900px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

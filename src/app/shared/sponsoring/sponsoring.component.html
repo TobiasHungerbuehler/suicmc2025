@@ -1,0 +1,66 @@
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+    }"
+>
+    <div
+        class="inlay"
+        [ngStyle]="{
+            color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+        }"
+    >
+        <!-- alle Titel  -->
+        <h2>{{ getText("titel") }}</h2>
+
+        <!-- texte alle -->
+        <div class="text-box">
+            <!-- <p>{{ getText('text1') }}</p> -->
+            <p [innerHTML]="getText('text1')"></p>
+        </div>
+
+        <!-- <div class="sponsor-box">
+            <div class="silver">
+                @for (sponsor of sponsors["gold"]; track $index) {
+                <a [href]="sponsor.link" target="_blank">
+                    <div class="single-sponsor" style="border: 4px solid #ffef29">
+                        <img [src]="sponsor.img" [alt]="sponsor.name" />
+                    </div>
+                </a>
+                }
+            </div>
+        </div> -->
+
+        <div class="sponsor-box">
+            <div class="silver">
+                @for (sponsor of sponsors["silber"]; track $index) {
+                <a [href]="sponsor.link" target="_blank">
+                    <div class="single-sponsor" style="border: 4px solid #c6c6c6">
+                        <img [src]="sponsor.img" [alt]="sponsor.name" />
+                    </div>
+                </a>
+                }
+            </div>
+        </div>
+
+        <div class="sponsor-box">
+            <div class="silver">
+                @for (sponsor of sponsors["bronze"]; track $index) {
+                <a [href]="sponsor.link" target="_blank">
+                    <div class="single-sponsor" style="border: 4px solid #f5c56b">
+                        <img [src]="sponsor.img" [alt]="sponsor.name" />
+                    </div>
+                </a>
+                }
+            </div>
+        </div>
+        <div class="text-box">
+            <p>Supporters</p>
+        </div>
+
+        <div class="supporter-box">
+            @for (supporter of supporters; track $index) {
+            <p>{{ supporter }}</p>
+            }
+        </div>
+    </div>
+</section>

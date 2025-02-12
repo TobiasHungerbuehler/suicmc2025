@@ -1,23 +1,25 @@
 <section
     class="header"
     [ngStyle]="{
-        'background-color':
-            currentRoute === 'SUICMC' ? '#2b61d9' : currentRoute === 'SBPC' ? '#622a9b' : currentRoute === 'PRE ECMC' ? '#d86c00' : 'white'
+        'background-color': currentRoute === 'SUICMC' ? '#2b61d9' : currentRoute === 'SBPC' ? '#622a9b' : currentRoute === 'PRE ECMC' ? '#d86c00' : currentRoute === 'awarenessguide' ? '#ffeb53' : 'white'
     }"
+    [ngClass]="{ 'awarenessguide-style': currentRoute === 'awarenessguide' }"
+    [ngClass]="{ 'awarenessguide-color': currentRoute === 'awarenessguide', 'default-color': currentRoute !== 'awarenessguide' }"
 >
     <nav>
         <!-- Navigation Links  -->
-        <a routerLink="/" [class.active]="currentRoute === 'SUICMC'">SUICMC</a>
-        <a routerLink="/sbpc" [class.active]="currentRoute === 'SBPC'">SBPC</a>
-        <a routerLink="/preecmc" [class.active]="currentRoute === 'PRE ECMC'">PRE ECMC</a>
+        <nav>
+            <a routerLink="/" [ngStyle]="{ color: currentRoute === 'awarenessguide' ? 'black' : 'white' }" [class.active]="currentRoute === 'SUICMC'">SUICMC</a>
+            <a routerLink="/sbpc" [ngStyle]="{ color: currentRoute === 'awarenessguide' ? 'black' : 'white' }" [class.active]="currentRoute === 'SBPC'">SBPC</a>
+            <a routerLink="/preecmc" [ngStyle]="{ color: currentRoute === 'awarenessguide' ? 'black' : 'white' }" [class.active]="currentRoute === 'PRE ECMC'">PRE ECMC</a>
+        </nav>
 
         <!-- Language Selector -->
         <div class="language-box" (click)="toggleLanguageSelector()">
-            <img src="./assets/img/globe-2-64.png" class="globe-icon" />
-
+            <img [src]="currentRoute === 'awarenessguide' ? './assets/img/globe-2-64-black.png' : './assets/img/globe-2-64.png'" class="globe-icon" />
             <div class="language-selector" *ngIf="showLanguageSelector" (click)="$event.stopPropagation()">
-                <a (click)="changeLanguage('de'); $event.stopPropagation()" [class.active]="currentLanguage === 'de'">Deutsch</a>
-                <a (click)="changeLanguage('en'); $event.stopPropagation()" [class.active]="currentLanguage === 'en'">English</a>
+                <a (click)="changeLanguage('de'); $event.stopPropagation()" [ngStyle]="{ color: currentRoute === 'awarenessguide' ? 'black' : 'white' }" [class.active]="currentLanguage === 'de'"> Deutsch </a>
+                <a (click)="changeLanguage('en'); $event.stopPropagation()" [ngStyle]="{ color: currentRoute === 'awarenessguide' ? 'black' : 'white' }" [class.active]="currentLanguage === 'en'"> English </a>
             </div>
         </div>
     </nav>
@@ -25,7 +27,7 @@
     <!-- Sponsoren Box -->
     <div class="sponsor-box">
         <div class="placeholder">
-            <img src="assets/img/St. Gallen logo 2694.png" alt="" />
+            <img src="assets/img/sponsoren/St. Gallen logo 2694.png" alt="" />
         </div>
     </div>
 

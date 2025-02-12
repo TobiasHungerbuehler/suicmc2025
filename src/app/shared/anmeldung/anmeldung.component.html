@@ -1,49 +1,68 @@
-<section [ngStyle]="{
-  'background-color': currentRoute === 'suicmc' ? '#DEEEFF' :
-                      currentRoute === 'sbpc' ? '#EEDDFF' :
-                      currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
-}">
-  <div class="inlay" [ngStyle]="{
-    'color':  currentRoute === 'suicmc' ? '#437CFA' :
-              currentRoute === 'sbpc' ? '#9343E3' :
-              currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
-  }">
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+    }"
+>
+    <div
+        class="inlay"
+        [ngStyle]="{
+            color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+        }"
+    >
+        <!-- alle Titel  -->
+        <h2>{{ getText("titel") }}</h2>
 
-      <h2> {{ getText('titel') }}</h2>
-  
-      <div class="text-box">
-        <!-- <p>{{ getText('text1') }}</p> -->
-        <p [innerHTML]="getText('text1')"></p>
-      </div>
-      
-      @if(currentRoute === 'pre ecmc'){
-
-        <div class="button-box">
-          <a class="button" [href]="getLink()" [ngStyle]="{
-            'border-color': currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
-          }">
-            <p style="color: #FF9021;">{{ getText('button') }} </p>    
-        </a>
-        </div>
-        
-      }
-
-      @if (currentRoute === 'suicmc') {
-        <div class="button-box">
-          <div class="button" routerLink="{{ getLink() }}" [ngStyle]="{
-            'border-color':  currentRoute === 'suicmc' ? '#437CFA' :
-                      currentRoute === 'sbpc' ? '#9343E3' :
-                      currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
-          }">
-            <p >{{ getText('button') }} </p>    
-          </div>
+        <!-- texte alle -->
+        <div class="text-box">
+            <!-- <p>{{ getText('text1') }}</p> -->
+            <p [innerHTML]="getText('text1')"></p>
         </div>
 
-      } 
+        <!-- button sbpc -->
+        @if (currentRoute === 'sbpc') {
+        <div class="button-box">
+            <div
+                class="button"
+                routerLink="{{ getLink() }}"
+                [ngStyle]="{
+                    'border-color': currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+                }"
+            >
+                <p>{{ getText("button") }}</p>
+            </div>
+        </div>
 
+        }
 
+        <!-- button suicmc -->
+        @if (currentRoute === 'suicmc') {
+        <div class="button-box">
+            <div
+                class="button"
+                routerLink="{{ getLink() }}"
+                [ngStyle]="{
+                    'border-color': currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+                }"
+            >
+                <p>{{ getText("button") }}</p>
+            </div>
+        </div>
 
+        }
 
-
-  </div>
+        <!-- // button pre ecmc  -->
+        @if(currentRoute === 'pre ecmc'){
+        <div class="button-box">
+            <a
+                class="button"
+                [href]="getLink()"
+                [ngStyle]="{
+                    'border-color': currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+                }"
+            >
+                <p style="color: #ff9021">{{ getText("button") }}</p>
+            </a>
+        </div>
+        }
+    </div>
 </section>

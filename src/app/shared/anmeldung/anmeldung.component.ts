@@ -42,13 +42,13 @@ export class AnmeldungComponent implements OnInit {
                     en: "Registration",
                 },
                 text1: {
-                    de: "Die Online-Anmeldung für die SBPC ist von Januar 2025 bis zum 31. August 2025 geöffnet. Die Anmeldegebühr beträgt 80.- CHF pro Team. Möchtet ihr mehr beisteuern? Wir sind für jede zusätzliche Unterstützung sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen erhältst du nach der Anmeldung. ",
-                    en: "The online registration for the SBPC is open from January 2025, to August 31, 2025. The registration fee is 80.- CHF per team. Would you like to contribute more? We are very grateful for any additional support. You will receive a confirmation email with the payment information after registration.  ",
+                    de: "Die Online-Anmeldung für die SBPC 2025 ist vom 01. Januar 2025 bis zum 31. August 2025 geöffnet. Die Anmeldegebühr beträgt 100.- CHF pro Team. Möchtet ihr mehr beisteuern? Wir sind für jede zusätzliche Unterstützung sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen erhält der Teamcaptain nach der Anmeldung.",
+                    en: "The online registration for the SBPC 2025 will be open from January 1, 2025, to August 31, 2025. The registration fee is 100 CHF per team. Would you like to contribute more? We are grateful for any additional support. A confirmation email with payment information will be sent to the team captain after registration.",
                 },
                 button: {
                     de: "ONLINE ANMELDUNG",
                     en: "ONLINE REGISTRATION",
-                    link: "",
+                    link: "/sbpc/registration",
                 },
             },
             "pre ecmc": {
@@ -57,8 +57,8 @@ export class AnmeldungComponent implements OnInit {
                     en: "Registration",
                 },
                 text1: {
-                    de: "Wenige Tage nach der SUICMC findet die Europäische Kuriermeister*innenschaft in Salzburg statt, kurz: <a href='https://www.ecmc2025.com/'>ECM</a>. Wir veranstalten einen Groupride dorthin, welcher am 8. September 2025 in St. Gallen startet. Der Button weiter unten führt dich zum Registrierungsformular. ",
-                    en: "Following the SUICMC, the European Cycle Messenger Championship will take place in Salzburg, short <a href='https://www.ecmc2025.com/'>ECM</a>. We are organizing a group ride, which will start on September 8, 2025, in St. Gallen. The button below will take you to the registration form. ",
+                    de: "Wenige Tage nach der SUICMC findet die Europäische Kuriermeister*innenschaft in Salzburg statt, kurz: <a href='https://www.ecmc2025.com/'>ECMC</a>. Wir veranstalten einen Groupride dorthin, welcher am 8. September 2025 in St. Gallen startet. Der Button weiter unten führt dich zum Registrierungsformular. ",
+                    en: "Following the SUICMC, the European Cycle Messenger Championship will take place in Salzburg, short <a href='https://www.ecmc2025.com/'>ECMC</a>. We are organizing a group ride, which will start on September 8, 2025, in St. Gallen. The button below will take you to the registration form. ",
                 },
                 button: {
                     de: "ONLINE ANMELDUNG",
