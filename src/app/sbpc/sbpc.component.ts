@@ -9,11 +9,13 @@ import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
+import { ProgammSbpcComponent } from "./progamm-sbpc/progamm-sbpc.component";
+import { RegistrationSbpcComponent } from "./registration-sbpc/registration-sbpc.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent, SponsoringComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, ProgammSbpcComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })

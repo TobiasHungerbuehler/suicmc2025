@@ -8,13 +8,13 @@ import { CommonModule } from "@angular/common";
 type RouteType = "suicmc" | "sbpc" | "pre ecmc";
 
 @Component({
-    selector: "app-programm",
+    selector: "app-progamm-sbpc",
     standalone: true,
     imports: [CommonModule, MatExpansionModule],
-    templateUrl: "./programm.component.html",
-    styleUrl: "./programm.component.scss",
+    templateUrl: "./progamm-sbpc.component.html",
+    styleUrl: "./progamm-sbpc.component.scss",
 })
-export class ProgrammComponent {
+export class ProgammSbpcComponent {
     currentRoute: RouteType = "suicmc"; // Standardwert mit spezifischem Typ
     currentLanguage: "de" | "en" = "de"; // Standardwert für die Sprache
     readonly panelOpenState = signal(false);
@@ -54,13 +54,13 @@ export class ProgrammComponent {
             dateLabel: { de: "Freitag, 05. 09. 2025", en: "Friday, 05. 09. 2025" },
             text: {
                 de: `15 – 19 Uhr Welcome Drink @Hermann Bier
-                      19 – 21 Uhr Alleycat
-                      20 – 22 Uhr Essen @Grabenhalle
-                      20 – 04 Uhr Party @Grabenhalle`,
+19 – 21 Uhr Alleycat
+20 – 22 Uhr Essen @Grabenhalle
+20 – 04 Uhr Party @Grabenhalle`,
                 en: `15 – 19 Uhr Welcome Drink @Hermann Bier
-                      19 – 21 Uhr Alleycat
-                      20 – 22 Uhr Food @Grabenhalle
-                      20 – 04 Uhr Party @Grabenhalle`,
+19 – 21 Uhr Alleycat
+20 – 22 Uhr Food @Grabenhalle
+20 – 04 Uhr Party @Grabenhalle`,
             },
         },
         {
@@ -68,43 +68,37 @@ export class ProgrammComponent {
             dateLabel: { de: "Samstag, 06. 09. 2025", en: "Saturday, 06. 09. 2025" },
             text: {
                 de: `07 – 09 Uhr Frühstück @Bürgli
-                    10 – 12 Uhr Bergsprint @Dreilinden
-                    11 – 13 Uhr Appetizer @Dreilinden
-                    14 – 16 Uhr Cargorace @Museumsstr.
-                    17 – 18 Uhr WTNB-Forum @Theater
-                    18 – 19 Uhr Skid, Trackstand @Theater
-                    19 – 21 Uhr Alleycat
-                    20 – 22 Uhr Essen @Grabenhalle
-                    20 – 04 Uhr Party @Grabenhalle`,
+08 – 18 Uhr Quali SBPC @Bürgli
+11 – 13 Uhr Appetizer @Bürgli
+18 – 20 Uhr Pick ups @Bürgli
+20 – 22 Uhr Essen @Grabenhalle
+20 – 04 Uhr Party @Grabenhalle`,
                 en: `07 – 09 Uhr Breakfast @Bürgli
-                    10 – 12 Uhr Hill Sprint @Dreilinden
-                    11 – 13 Uhr Appetizer @Dreilinden
-                    14 – 16 Uhr Cargorace @Museumsstr.
-                    17 – 18 Uhr WTNB-Forum @Theater
-                    18 – 19 Uhr Skid, Trackstand @Theater
-                    19 – 21 Uhr Alleycat
-                    20 – 22 Uhr Food @Grabenhalle
-                    20 – 04 Uhr Party @Grabenhalle`,
+08 – 18 Uhr Quali SBPC @Bürgli
+11 – 13 Uhr Appetizer @Bürgli
+18 – 20 Uhr Pick ups @Bürgli
+20 – 22 Uhr Food @Grabenhalle
+20 – 04 Uhr Party @Grabenhalle`,
             },
         },
         {
             dayLabel: { de: "SONNTAG", en: "SUNDAY" },
-            dateLabel: { de: "Sonntag, 07. 09. 2025", en: "Sunday, 07. 09. 2025" },
+            dateLabel: { de: "Sonntag, 07. 09. 2025 «SBPC»", en: "Sunday, 07. 09. 2025" },
             text: {
                 de: `07 – 12 Uhr Brunch @Theater
-                      10 – 15 Uhr Mainrace @Museumsstr. inkl. Sprint
-                      16 – 17 Uhr Open Forum @Theater
-                      17      Uhr Gruppenfoto @Theater
-                      17 – 18 Uhr Ehrungen @Theater
-                      17 – 20 Uhr Essen @Theater
-                      20 – 23 Uhr Party @Engel`,
+08 – 13 Uhr Playoffs SBPC @Bürgli
+13 – 17 Uhr Finals SBPC @Bürgli
+17 Uhr Gruppenfoto @Theater
+17 – 18 Uhr Ehrungen @Theater
+17 – 20 Uhr Essen @Theater
+20 – 23 Uhr Party @Engel`,
                 en: `07 – 12 Uhr Brunch @Theater
-                      10 – 15 Uhr Mainrace @Museumsstr. incl. Sprint
-                      16 – 17 Uhr Open Forum @Theater
-                      17      Uhr Group Photo @Theater
-                      17 – 18 Uhr Awards @Theater
-                      17 – 20 Uhr Food @Theater
-                      20 – 23 Uhr Party @Engel`,
+08 – 13 Uhr Playoffs SBPC @Bürgli
+13 – 17 Uhr Finals SBPC @Bürgli
+17 Uhr Group Photo @Theater
+17 – 18 Uhr Awards @Theater
+17 – 20 Uhr Food @Theater
+20 – 23 Uhr Party @Engel`,
             },
         },
     ];
