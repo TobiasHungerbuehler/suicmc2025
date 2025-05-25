@@ -13,11 +13,12 @@ import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guid
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammComponent } from "./programm/programm.component";
+import { KarteComponent } from "../shared/karte/karte.component";
 
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })

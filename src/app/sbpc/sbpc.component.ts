@@ -11,11 +11,13 @@ import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgammSbpcComponent } from "./progamm-sbpc/progamm-sbpc.component";
 import { RegistrationSbpcComponent } from "./registration-sbpc/registration-sbpc.component";
+import { KarteComponent } from "../shared/karte/karte.component";
+import { LineupComponent } from "../shared/lineup/lineup.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, ProgammSbpcComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, KarteComponent, LineupComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })
