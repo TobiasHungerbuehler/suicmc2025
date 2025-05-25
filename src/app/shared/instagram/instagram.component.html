@@ -1,0 +1,16 @@
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+    }"
+>
+    <div
+        class="inlay"
+        [ngStyle]="{
+            color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+        }"
+    >
+        <h2>
+            {{ getText("titel") }}
+        </h2>
+    </div>
+</section>

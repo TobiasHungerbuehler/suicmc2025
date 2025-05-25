@@ -15,10 +15,12 @@ import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammComponent } from "./programm/programm.component";
 import { KarteComponent } from "../shared/karte/karte.component";
 import { LineupComponent } from "../shared/lineup/lineup.component";
+import { InstagramComponent } from "../shared/instagram/instagram.component";
+
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent, LineupComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })

@@ -13,11 +13,12 @@ import { ProgammSbpcComponent } from "./progamm-sbpc/progamm-sbpc.component";
 import { RegistrationSbpcComponent } from "./registration-sbpc/registration-sbpc.component";
 import { KarteComponent } from "../shared/karte/karte.component";
 import { LineupComponent } from "../shared/lineup/lineup.component";
+import { InstagramComponent } from "../shared/instagram/instagram.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, KarteComponent, LineupComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, KarteComponent, LineupComponent, InstagramComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })
