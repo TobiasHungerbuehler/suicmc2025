@@ -18,16 +18,41 @@ export class SponsoringComponent implements OnInit {
     currentLanguage: "de" | "en" = "de"; // Standardwert für die Sprache
     constructor(private navigationService: NavigationService) {}
 
+    //sortierfunktion supporters
+    splitIntoRows(columns: number): string[] {
+        const sorted = [...this.supporters].sort((a, b) => a.localeCompare(b, "de-CH"));
+
+        const perColumn = Math.ceil(sorted.length / columns);
+        const grid: string[] = [];
+
+        // Spaltenweise anordnen (wie visuell gewünscht)
+        for (let i = 0; i < perColumn; i++) {
+            for (let j = 0; j < columns; j++) {
+                const index = j * perColumn + i;
+                if (sorted[index]) {
+                    grid.push(sorted[index]);
+                }
+            }
+        }
+
+        return grid;
+    }
+
     sponsors = {
         gold: [
             {
-                name: "",
-                img: "",
-                link: "",
+                name: "St.Galler Stadtwerke",
+                img: "/assets/img/sponsoren/sgsw.png",
+                link: "https://www.sgsw.ch/",
             },
             {
-                name: "",
-                img: "",
+                name: "FISBA",
+                img: "/assets/img/sponsoren/fisba.png",
+                link: "https://www.fisba.com/",
+            },
+            {
+                name: "Hostcity",
+                img: "/assets/img/sponsoren/St. Gallen logo 2694.png",
                 link: "",
             },
         ],
@@ -83,7 +108,50 @@ export class SponsoringComponent implements OnInit {
         ],
     };
 
-    supporters: string[] = ["amiata", "Amt für Umwelt und Energie", "Associazione Saetta Verde", "Bäckerei Füger", "brewbee", "Camion Transport", "DirtySox", "EINSTOFFEN", "Frame of Mind", "FREITAG", "Goba AG", "IBG Engineering AG", "Kolb Rahmenbau", "Kryptonite", "Messaker", "Migros KulturProzent", "Mosterei Möhl", "Omnium", "RUGBY CLUB ST. GALLEN", "Seifenmuseum St.Gallen", "SqLab", "Swissconnect", "syndicom", "Tanner Werbetechnik AG", "velo&werk", "Velokurier Bern", "Velokurier Luzern-Zug", "Velokurier Winterthur", "SOB – Schweizerische Südostbahn", "Vesto AG"];
+    supporters: string[] = [
+        "amiata",
+        "Amt für Umwelt und Energie",
+        "Associazione Saetta Verde",
+        "Bäckerei Füger",
+        "brewbee",
+        "Camion Transport",
+        "DirtySox",
+        "EINSTOFFEN",
+        "Frame of Mind",
+        "FREITAG",
+        "Genossenschaft Tofurei Engel",
+        "Goba AG",
+        "Gruppetto",
+        "Gutsch Haferdrink",
+        "Headdy",
+        "IBG Engineering AG",
+        "Kolb Rahmenbau",
+        "Komenda AG",
+        "Kryptonite",
+        "La Cyclone",
+        "Messaker",
+        "Migros KulturProzent",
+        "Mosterei Möhl",
+        "New Roots",
+        "Omnium",
+        "RUGBY CLUB ST. GALLEN",
+        "Seifenmuseum St.Gallen",
+        "SqLab",
+        "SUICMC 2023 Bern",
+        "Swissconnect",
+        "syndicom",
+        "Tanner Werbetechnik AG",
+        "velo&werk",
+        "Velokurier Bern",
+        "Velokurier Biel",
+        "Velokurier Luzern-Zug",
+        "Velokurier St. Gallen",
+        "Velokurier Winterthur",
+        "Veloplus",
+        "Vélocité",
+        "Vesto AG",
+        "SOB – Schweizerische Südostbahn",
+    ];
 
     text = {
         anmeldung: {

@@ -1,6 +1,6 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
-section{
+section {
     margin: 0;
     width: 100%;
     height: auto;
@@ -9,5 +9,9 @@ section{
     align-items: center;
     flex-direction: column;
 
-     
+    img {
+        width: 100%;
+        max-width: 1300px;
+        height: auto;
+    }
 }

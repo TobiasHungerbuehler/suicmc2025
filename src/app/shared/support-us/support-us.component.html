@@ -1,23 +1,22 @@
-<section [ngStyle]="{
-    'background-color': currentRoute === 'suicmc' ? '#2B61D9' :
-                        currentRoute === 'sbpc' ? '#7222C3' :
-                        currentRoute === 'pre ecmc' ? '#D86C00' : 'white'
-  }">
-  
-    <div class="inlay" [ngStyle]="{
-      'color': currentRoute === 'suicmc' ? '#DEEEFF' :
-               currentRoute === 'sbpc' ? '#EEDDFF' :
-               currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
-    }">
-      <h2>
-        {{ getText('titel') }}
-      </h2>
-  
-      <div class="text-box">
-        <p [innerHTML]="getText('p1')"></p>
-      </div>
-  
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#2B61D9' : currentRoute === 'sbpc' ? '#7222C3' : currentRoute === 'pre ecmc' ? '#D86C00' : 'white'
+    }"
+>
+    <div
+        class="inlay"
+        [ngStyle]="{
+            color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+        }"
+    >
+        <h2>
+            {{ getText("titel") }}
+        </h2>
+
+        <div class="text-box">
+            <p [innerHTML]="getText('p1')"></p>
+        </div>
+
+        <img class="twint-img" [src]="getTwintImageUrl()" alt="Twint QR" />
     </div>
-    
-  </section>
-  
+</section>
