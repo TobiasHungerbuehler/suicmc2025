@@ -8,11 +8,13 @@ import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
+import { ProgrammPreEcmcComponent } from "./programm-pre-ecmc/programm-pre-ecmc.component";
+import { InstagramComponent } from "../shared/instagram/instagram.component";
 
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, VerhaltenComponent, SponsoringComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammPreEcmcComponent, SponsoringComponent, InstagramComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })

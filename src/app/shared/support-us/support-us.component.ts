@@ -25,8 +25,12 @@ export class SupportUsComponent {
                 en: "Like to support us ",
             },
             p1: {
-                de: "Wir freuen uns über jede Art von Unterstützung! Wenn du Lust hast, uns bei der Durchführung des Events zu helfen, würden wir das sehr schätzen. Schreibe uns gerne eine <a href='mailto:helfen@suicmc2025.ch'>E-mail</a>, damit wir deinen Einsatz gemeinsam planen können. Wenn du uns finanziell unterstützen möchtest, kontaktiere bitte das Sponsoring-Ressort per <a href='mailto:finanzen@suicmc2025.ch'>E-mail</a>. Vielen Dank für dein Engagement!",
-                en: "We appreciate any kind of support! If you would like to help us with the execution of the event, we would greatly appreciate it. Feel free to send us an <a href='mailto:helfen@suicmc2025.ch'>e-mail</a>, so we can plan your involvement together. If you would like to support us financially, please contact the sponsorship department via <a href='mailto:finanzen@suicmc2025.ch'>E-mail</a>. Thank you for your commitment",
+                de: `
+Wir freuen uns über jede Art von Unterstützung! Wenn du Lust hast, uns bei der Durchführung des Events zu helfen, würden wir das sehr schätzen. Schreibe uns gerne eine <a href='mailto:helfen@suicmc2025.ch'>E-Mail</a>, damit wir deinen Einsatz gemeinsam planen können. Wenn du uns finanziell unterstützen möchtest, kannst du entweder den gewünschten Betrag per Twint an uns senden oder das Sponsoring-Ressort per <a href='mailto:finanzen@suicmc2025.ch'>E-Mail</a> kontaktieren. Vielen Dank für dein Engagement!
+      `,
+                en: `
+We appreciate any kind of support! If you would like to help us with the execution of the event, we would greatly appreciate it. Feel free to send us an <a href='mailto:helfen@suicmc2025.ch'>e-mail</a>, so we can plan your involvement together. If you would like to support us financially, you can either send the desired amount via Twint or contact the sponsorship department by <a href='mailto:finanzen@suicmc2025.ch'>e-mail</a>. Thank you for your commitment!
+      `,
             },
         },
     };
@@ -52,5 +56,12 @@ export class SupportUsComponent {
     // Methode, um den Text für Titel oder Absätze dynamisch abzurufen
     getText(part: "titel" | "p1"): string {
         return this.text.supportUs[part][this.currentLanguage];
+    }
+
+    // Twint codes ausgeben
+    getTwintImageUrl(): string {
+        const base = "assets/img/twint";
+        const routeKey = this.currentRoute.replace(/\s/g, "-");
+        return `${base}/TWINT_${routeKey}_${this.currentLanguage}.png`;
     }
 }

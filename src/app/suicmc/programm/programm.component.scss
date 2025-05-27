@@ -1,0 +1,126 @@
+@import "../../../styles.scss";
+
+section.suicmc {
+    background-color: #437cfa;
+
+    .inlay {
+        color: #deeeff;
+
+        mat-accordion {
+            color: #deeeff;
+        }
+
+        mat-expansion-panel {
+            border-top: 1px solid $suicmc-blau-01;
+
+            &:last-child {
+                border-bottom: 1px solid $suicmc-blau-01;
+            }
+        }
+
+        mat-panel-title {
+            color: $suicmc-blau-01;
+        }
+        .ac-text {
+            color: $suicmc-blau-01;
+        }
+    }
+}
+
+section.sbpc {
+    background-color: #9343e3;
+
+    .inlay {
+        color: #eeddff;
+
+        mat-accordion {
+            color: #eeddff;
+        }
+        mat-expansion-panel {
+            border-top: 1px solid $sbpc-violett-01;
+
+            &:last-child {
+                border-bottom: 1px solid $sbpc-violett-01;
+            }
+        }
+
+        mat-panel-title {
+            color: $sbpc-violett-01;
+        }
+        .ac-text {
+            color: $sbpc-violett-01;
+        }
+    }
+}
+
+section.pre-ecmc {
+    background-color: #ff9021;
+
+    .inlay {
+        color: #fde9d5;
+
+        mat-accordion {
+            color: #fde9d5;
+        }
+        mat-expansion-panel {
+            border-top: 1px solid $pre-ecmc-light-apricot;
+
+            &:last-child {
+                border-bottom: 1px solid $pre-ecmc-light-apricot;
+            }
+        }
+
+        mat-panel-title {
+            color: $pre-ecmc-light-apricot;
+        }
+        .ac-text {
+            color: $pre-ecmc-light-apricot;
+        }
+    }
+}
+
+section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+
+    > .inlay {
+        .text-box {
+            margin-bottom: 60px;
+        }
+
+        > mat-accordion {
+            width: 100%;
+
+            > mat-expansion-panel {
+                border-radius: 0px;
+                background-color: transparent !important;
+                width: 100%;
+
+                > mat-expansion-panel-header {
+                    //padding-left: 0;
+                    font-family: $title-font;
+                    font-size: clamp(20px, 6vw, 30px);
+                    //height: auto !important;
+                }
+            }
+        }
+
+        // ::ng-deep .mat-expansion-panel-body {
+        //     //padding: 0 !important;
+        // }
+    }
+}
+
+.ac-date {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.ac-text p {
+    margin: 2px 0;
+}

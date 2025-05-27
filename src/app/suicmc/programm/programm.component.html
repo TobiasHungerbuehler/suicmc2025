@@ -1,0 +1,34 @@
+<section
+    [ngClass]="{
+        suicmc: currentRoute === 'suicmc',
+        sbpc: currentRoute === 'sbpc',
+        'pre-ecmc': currentRoute === 'pre ecmc'
+    }"
+>
+    <div class="inlay">
+        <div class="title-box">
+            <h2>{{ currentLanguage === "de" ? "Programm" : "Schedule" }}</h2>
+        </div>
+        <div class="text-box" [innerHTML]="text[0].text[currentLanguage]"></div>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let rule of rulesText">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ rule.dayLabel[currentLanguage] }}</mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <!-- DATUM -->
+                <p class="ac-date">
+                    <strong>{{ rule.dateLabel[currentLanguage] }}</strong>
+                </p>
+
+                <!-- VERANSTALTUNGEN -->
+                <div class="ac-text">
+                    <ng-container *ngFor="let line of rule.text[currentLanguage].split('\n')">
+                        <p>{{ line }}</p>
+                    </ng-container>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</section>

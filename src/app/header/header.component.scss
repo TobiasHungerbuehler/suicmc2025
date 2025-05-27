@@ -102,16 +102,6 @@
             margin-left: 3%;
         }
 
-        .title {
-            font-family: $text-font;
-            color: white;
-            font-size: 12px;
-
-            @media (max-width: 1000px) {
-                display: none;
-            }
-        }
-
         > .placeholder {
             height: 70px;
             width: 150px;
@@ -123,16 +113,26 @@
             color: white;
 
             @media (max-width: 1000px) {
-                width: 125px;
+                width: 100px;
             }
 
-            // @media (max-width: 550px) {
-            //     width: 20vw;
-            //     height: 8vw;
-            // }
-            > img {
+            @media (max-width: 500px) {
+                width: 25%;
+                justify-content: flex-start;
+            }
+
+            > a img {
                 height: auto;
+                max-height: 45px;
                 width: 100%;
+
+                @media (max-width: 1000px) {
+                    max-height: 30px;
+                }
+
+                @media (max-width: 500px) {
+                    max-height: 25px;
+                }
             }
         }
     }

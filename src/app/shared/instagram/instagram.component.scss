@@ -9,9 +9,11 @@ section {
     align-items: center;
     flex-direction: column;
 
-    img {
-        width: 100%;
-        max-width: 1300px;
-        height: auto;
+    .text-box {
+        > p {
+            &:last-child {
+                font-weight: 800;
+            }
+        }
     }
 }
