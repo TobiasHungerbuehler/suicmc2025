@@ -58,7 +58,7 @@
         </div>
 
         <div class="supporter-box">
-            @for (supporter of splitIntoRows(4); track $index) {
+            @for (supporter of splitIntoRows(columns); track $index) {
             <p>{{ supporter }}</p>
             }
         </div>

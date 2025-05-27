@@ -188,22 +188,33 @@ export class SponsoringComponent implements OnInit {
         },
     };
 
+    columns = 4;
+
     ngOnInit(): void {
-        // Abonniere den aktuellen Routenstatus
+        // Sprache + Route abonnieren
         this.navigationService.currentRoute$.subscribe((route) => {
             const validRoute = route.toLowerCase() as RouteType;
-            if (validRoute) {
-                this.currentRoute = validRoute;
-            }
+            if (validRoute) this.currentRoute = validRoute;
         });
-
-        // Abonniere die aktuelle Sprache
         this.navigationService.currentLanguage$.subscribe((language) => {
             const validLanguage = language.toLowerCase() as "de" | "en";
-            if (validLanguage) {
-                this.currentLanguage = validLanguage;
-            }
+            if (validLanguage) this.currentLanguage = validLanguage;
         });
+
+        // Aktuelle Spaltenanzahl setzen
+        this.setColumns();
+        window.addEventListener("resize", () => this.setColumns());
+    }
+
+    setColumns(): void {
+        const width = window.innerWidth;
+        if (width < 600) {
+            this.columns = 2;
+        } else if (width < 900) {
+            this.columns = 3;
+        } else {
+            this.columns = 4;
+        }
     }
 
     // Methode, um den Text für Titel oder Absätze dynamisch abzurufen
