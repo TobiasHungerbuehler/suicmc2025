@@ -27,7 +27,7 @@ export class LineupComponent implements OnInit {
             text1: {
                 de: `
 <strong>Freitag, 05. 09. 2025 | Türöffnung 20 Uhr</strong><br>
-Hermann Bier, Lämmlisbrunnenstrasse 18, 9000 St. Gallen<br>
+Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Abendkasse Gäste-Eintritt: 20 CHF<br><br>
 <strong class="artist">The Sound Monkeys:</strong> <span class="genre">Indie Rock</span><br>
 <strong class="artist">Flanke:</strong> <span class="genre">Punk Rock</span><br>
@@ -36,7 +36,7 @@ Abendkasse Gäste-Eintritt: 20 CHF<br><br>
       `,
                 en: `
 <strong>Friday, 05. 09. 2025 | Doors open at 8:00 PM</strong><br>
-Hermann Bier, Lämmlisbrunnenstrasse 18, 9000 St. Gallen<br>
+Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Guest admission at the door: CHF 20<br><br>
 <strong class="artist">The Sound Monkeys:</strong> <span class="genre">Indie Rock</span><br>
 <strong class="artist">Flanke:</strong> <span class="genre">Punk Rock</span><br>
