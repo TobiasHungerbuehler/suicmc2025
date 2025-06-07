@@ -51,7 +51,7 @@ Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Abendkasse Gäste-Eintritt: 20 CHF<br><br>
 <strong class="artist">Depat Milieu:</strong> <span class="genre">Hip Hop</span><br>
 <strong class="artist">Funt:</strong> <span class="genre">Balkan, Rap, Reggae</span><br>
-<strong class="artist">Tempo30:</strong> <span class="genre">Electro</span><br><br>
+<strong class="artist">Tembo30:</strong> <span class="genre">Electro</span><br><br>
 <em>DJ’s: Snatch, YPB</em>
       `,
                 en: `
@@ -60,7 +60,7 @@ Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Guest admission at the door: CHF 20<br><br>
 <strong class="artist">Depat Milieu:</strong> <span class="genre">Hip Hop</span><br>
 <strong class="artist">Funt:</strong> <span class="genre">Balkan, Rap, Reggae</span><br>
-<strong class="artist">Tempo30:</strong> <span class="genre">Electro</span><br><br>
+<strong class="artist">Tembo30:</strong> <span class="genre">Electro</span><br><br>
 <em>DJ’s: Snatch, YPB</em>
       `,
             },
