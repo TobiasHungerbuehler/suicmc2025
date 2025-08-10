@@ -14,6 +14,7 @@ import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guid
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammComponent } from "./programm/programm.component";
+import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
 import { KarteComponent } from "../shared/karte/karte.component";
 import { LineupComponent } from "../shared/lineup/lineup.component";
 import { InstagramComponent } from "../shared/instagram/instagram.component";
@@ -21,7 +22,7 @@ import { InstagramComponent } from "../shared/instagram/instagram.component";
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, InfrastrukturLocationsComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })

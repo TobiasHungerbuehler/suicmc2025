@@ -11,11 +11,12 @@ import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammPreEcmcComponent } from "./programm-pre-ecmc/programm-pre-ecmc.component";
 import { InstagramComponent } from "../shared/instagram/instagram.component";
 import { HelferComponent } from "../shared/helfer/helfer.component";
+import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
 
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, HelferComponent, ProgrammPreEcmcComponent, SponsoringComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, HelferComponent, ProgrammPreEcmcComponent, InfrastrukturLocationsComponent, SponsoringComponent, InstagramComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })
