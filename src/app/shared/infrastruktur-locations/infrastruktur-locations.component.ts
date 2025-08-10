@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { MatExpansionModule } from "@angular/material/expansion";
-import { ChangeDetectionStrategy } from "@angular/core";
 import { NavigationService } from "../../services/navigation.service";
 import { CommonModule } from "@angular/common";
 
@@ -13,7 +12,6 @@ type RouteType = "suicmc" | "sbpc" | "pre ecmc";
     imports: [CommonModule, MatExpansionModule],
     templateUrl: "./infrastruktur-locations.component.html",
     styleUrl: "./infrastruktur-locations.component.scss",
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InfrastrukturLocationsComponent {
     currentRoute: RouteType = "suicmc"; // Standardwert mit spezifischem Typ
