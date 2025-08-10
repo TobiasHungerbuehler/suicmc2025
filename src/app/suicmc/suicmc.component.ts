@@ -5,6 +5,7 @@ import { UnserVereinComponent } from "../shared/unser-verein/unser-verein.compon
 import { AnmeldungComponent } from "../shared/anmeldung/anmeldung.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { WasIstComponent } from "../shared/was-ist/was-ist.component";
+import { HelferComponent } from "../shared/helfer/helfer.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { filter } from "rxjs/operators";
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
@@ -20,7 +21,7 @@ import { InstagramComponent } from "../shared/instagram/instagram.component";
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })
