@@ -12,5 +12,24 @@
         <h2>
             {{ getText("titel") }}
         </h2>
+
+        <div class="grid">
+            <ng-container *ngFor="let img of images">
+                <img [src]="img" alt="Instagram post" />
+            </ng-container>
+        </div>
+
+        <a
+            class="insta-button"
+            [href]="instagramUrl"
+            target="_blank"
+            rel="noopener"
+            [ngStyle]="{
+                'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white',
+                color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'black'
+            }"
+        >
+            {{ getText('button') }}
+        </a>
     </div>
 </section>

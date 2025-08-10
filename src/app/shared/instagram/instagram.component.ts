@@ -28,8 +28,15 @@ export class InstagramComponent {
                 de: "",
                 en: "",
             },
+            button: {
+                de: "Folge uns auf Instagram",
+                en: "Follow us on Instagram",
+            },
         },
     };
+
+    // Platzhalterbilder; können später durch echte Instagram-Posts ersetzt werden
+    images: string[] = Array(9).fill("https://via.placeholder.com/300");
 
     ngOnInit(): void {
         // Abonniere den aktuellen Routenstatus
@@ -50,7 +57,9 @@ export class InstagramComponent {
     }
 
     // Methode, um den Text für Titel oder Absätze dynamisch abzurufen
-    getText(part: "titel" | "p1"): string {
+    getText(part: "titel" | "p1" | "button"): string {
         return this.text.unserVerein[part][this.currentLanguage];
     }
+
+    instagramUrl = "https://www.instagram.com/suicmc25_st.gallen";
 }
