@@ -9,15 +9,15 @@
             color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
         }"
     >
-        <h2>{{ getText('titel') }}</h2>
+        <h2>{{ getText("titel") }}</h2>
 
         <div class="text-box">
-            <p>{{ getText('intro') }}</p>
-            <ul>
+            <p>{{ getText("intro") }}</p>
+            <ul class="perks">
                 <li *ngFor="let item of getList()">{{ item }}</li>
             </ul>
             <p>
-                {{ getText('outro') }}
+                {{ getText("outro") }}
                 <a [href]="link" target="_blank">{{ link }}</a>
             </p>
         </div>
