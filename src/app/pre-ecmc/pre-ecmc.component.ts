@@ -6,6 +6,7 @@ import { AnmeldungComponent } from "../shared/anmeldung/anmeldung.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { StoererSportInklusivComponent } from "../shared/stoerer-sport-inklusiv/stoerer-sport-inklusiv.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammPreEcmcComponent } from "./programm-pre-ecmc/programm-pre-ecmc.component";
@@ -16,7 +17,7 @@ import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locatio
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, HelferComponent, ProgrammPreEcmcComponent, InfrastrukturLocationsComponent, SponsoringComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, HelferComponent, ProgrammPreEcmcComponent, InfrastrukturLocationsComponent, SponsoringComponent, InstagramComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })

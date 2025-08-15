@@ -1,0 +1,36 @@
+.stoerer {
+    position: fixed;
+    z-index: 5;
+    top: 75vh;
+    right: 12%;
+    background-color: #d0f8c8;
+    padding: 20px 15px;
+    transform: rotate(-10deg);
+    cursor: pointer;
+    transition: all 125ms ease-in-out;
+
+    @media (max-width: 800px) {
+        top: 80%;
+        right: 20%;
+        padding: 12px 10px;
+    }
+
+    &:hover {
+        transform: scale(1.1) rotate(-10deg);
+        opacity: 0.9;
+        transition: all 125ms ease-in-out;
+    }
+
+    .stoerer-text {
+        font-family: "Staatliches", sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        color: black;
+        text-align: center;
+        pointer-events: none;
+
+        @media (max-width: 800px) {
+            font-size: 16px;
+        }
+    }
+}

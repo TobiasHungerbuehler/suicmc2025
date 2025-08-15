@@ -6,6 +6,7 @@ import { RegistrationSuicmcComponent } from "./suicmc/registration-suicmc/regist
 import { AwarenessGuideComponent } from "./awareness-guide/awareness-guide.component";
 import { NgModule } from "@angular/core";
 import { RegistrationSbpcComponent } from "./sbpc/registration-sbpc/registration-sbpc.component";
+import { SportInklusivComponent } from "./sport-inklusiv/sport-inklusiv.component";
 
 export const routes: Routes = [
     { path: "", component: SuicmcComponent },
@@ -14,4 +15,5 @@ export const routes: Routes = [
     { path: "sbpc/registration", component: RegistrationSbpcComponent },
     { path: "preecmc", component: PreEcmcComponent },
     { path: "awarenessguide", component: AwarenessGuideComponent },
+    { path: "sportinklusiv", component: SportInklusivComponent },
 ];
