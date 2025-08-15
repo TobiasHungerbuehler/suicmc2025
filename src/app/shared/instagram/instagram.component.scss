@@ -6,13 +6,82 @@ section {
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 
-    .text-box {
-        > p {
-            &:last-child {
-                font-weight: 800;
+    .inlay {
+        /* Immer 3×3 – der gesamte Grid skaliert mit clamp() */
+        .grid {
+            /* Gesamtbreite des Grids: min 300px (mobile), bis ~1140px (3× ~360px + Gaps) */
+            --grid-min: 300px;
+            --grid-max: 1140px; /* 3 Kacheln à ~360px + Lücken */
+            width: clamp(var(--grid-min), 80vw, var(--grid-max));
+
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* bleibt immer 3 Spalten */
+            gap: 12px;
+            justify-content: center; /* Grid als Block zentrieren */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Jede Kachel bleibt quadratisch und füllt ihre Spalte */
+        .cell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 1 / 1; /* sorgt für Quadrat und gleichmäßiges Shrinken */
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+
+            img,
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Cropping */
+                display: block;
+                flex-shrink: 0;
+            }
+        }
+    }
+
+    .button-box {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+        .button {
+            border: 1px solid;
+            padding: 10px 60px;
+            border-radius: 50px;
+            @include boxshadow;
+            font-family: $title-font;
+            text-transform: uppercase;
+            font-size: clamp(14px, 5vw, 24px);
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 125ms ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.401);
+                padding: 11px 62px;
+                transition: all 125ms ease-in-out;
+            }
+
+            @media (max-width: 700px) {
+                padding: 15px 40px;
+            }
+
+            > p {
+                margin: 0;
             }
         }
     }
