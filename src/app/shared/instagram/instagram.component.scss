@@ -1,92 +1,88 @@
 @import "../../../styles.scss";
 
-/* Layout-Hülle */
 section {
     margin: 0;
     width: 100%;
+    height: auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    justify-content: center;
 
-section > .inlay {
-    align-items: stretch;
-    width: min(1200px, 80%);
-    margin-inline: auto;
-}
+    .inlay {
+        /* Immer 3×3 – der gesamte Grid skaliert mit clamp() */
+        .grid {
+            /* Gesamtbreite des Grids: min 300px (mobile), bis ~1140px (3× ~360px + Gaps) */
+            --grid-min: 300px;
+            --grid-max: 1140px; /* 3 Kacheln à ~360px + Lücken */
+            width: clamp(var(--grid-min), 80vw, var(--grid-max));
 
-h2 {
-    margin: 0 0 1rem;
-    line-height: 1.1;
-    text-align: center;
-}
+            margin-top: 5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* bleibt immer 3 Spalten */
+            gap: 12px;
+            justify-content: center; /* Grid als Block zentrieren */
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-/* GRID: 3 / 2 / 1 Spalten */
-.grid {
-    width: 100%;
-    margin-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 12px;
-}
+        /* Jede Kachel bleibt quadratisch und füllt ihre Spalte */
+        .cell {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-@media (max-width: 899px) {
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+            width: 100%;
+            max-width: 100%;
+            aspect-ratio: 1 / 1; /* sorgt für Quadrat und gleichmäßiges Shrinken */
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+
+            img,
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Cropping */
+                display: block;
+                flex-shrink: 0;
+            }
+        }
     }
-}
 
-/* Unter 750px: 1 Spalte + zentrieren */
-@media (max-width: 750px) {
-    .grid {
-        grid-template-columns: 1fr;
-        justify-items: center; /* Zelle horizontal zentrieren */
-    }
-    .cell {
-        max-width: 500px; /* optionale max-Breite, damit es nicht zu breit wird */
+    .button-box {
         width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+        .button {
+            border: 1px solid;
+            padding: 10px 60px;
+            border-radius: 50px;
+            @include boxshadow;
+            font-family: $title-font;
+            text-transform: uppercase;
+            font-size: clamp(14px, 5vw, 24px);
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 125ms ease-in-out;
+            text-decoration: none;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.401);
+                padding: 11px 62px;
+                transition: all 125ms ease-in-out;
+            }
+
+            @media (max-width: 700px) {
+                padding: 15px 40px;
+            }
+
+            > p {
+                margin: 0;
+            }
+        }
     }
-}
-
-/* Zelle fix hoch → Cropping */
-.cell {
-    position: relative;
-    width: 100%;
-    height: clamp(270px, calc(30vw + 50px), 390px);
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Embed zwingend volle Fläche */
-.instagram-media,
-.instagram-media.bare {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    height: 100% !important;
-    margin: 0 !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-}
-
-/* Iframe anpassen */
-.cell iframe {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: none !important;
-    height: 100% !important;
-    display: block;
-    object-fit: cover;
-}
-
-/* Button */
-.insta-button {
-    margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-family: $text-font;
-    font-size: $text-font-size;
-    border-radius: 4px;
-    display: inline-block;
 }

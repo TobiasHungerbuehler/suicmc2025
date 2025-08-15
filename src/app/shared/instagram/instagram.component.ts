@@ -1,9 +1,14 @@
 import { CommonModule } from "@angular/common";
-import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit, ViewChildren, ElementRef, QueryList } from "@angular/core";
 import { NavigationService } from "../../services/navigation.service";
 
-// exakt wie bei dir
 type RouteType = "suicmc" | "sbpc" | "pre ecmc";
+
+interface InstaPost {
+    src: string;
+    type: "image" | "video";
+    link: string;
+}
 
 @Component({
     selector: "app-instagram",
@@ -13,6 +18,8 @@ type RouteType = "suicmc" | "sbpc" | "pre ecmc";
     styleUrl: "./instagram.component.scss",
 })
 export class InstagramComponent implements OnInit, AfterViewInit {
+    @ViewChildren("clip") clips!: QueryList<ElementRef<HTMLVideoElement>>;
+
     currentRoute: RouteType = "suicmc";
     currentLanguage: "de" | "en" = "de";
 
@@ -21,15 +28,23 @@ export class InstagramComponent implements OnInit, AfterViewInit {
     text = {
         unserVerein: {
             titel: { de: "INSTAGRAM", en: "INSTAGRAM" },
-            p1: { de: "", en: "" },
             button: { de: "Folge uns auf Instagram", en: "Follow us on Instagram" },
         },
     };
 
     instagramUrl = "https://www.instagram.com/suicmc25_st.gallen";
 
-    // 🔗 deine 9 Beiträge (Permalinks reichen; UTM kann weg)
-    permalinks: string[] = ["https://www.instagram.com/reel/DNBjx2cMTrd/", "https://www.instagram.com/p/DMk3ZkBt6TW/", "https://www.instagram.com/reel/DMc2gOgtiVv/", "https://www.instagram.com/p/DMVjj48tG8m/", "https://www.instagram.com/reel/DMGaxVEtvDU/", "https://www.instagram.com/reel/DL6rYqtNvwu/", "https://www.instagram.com/reel/DLia0U4NV1Z/", "https://www.instagram.com/p/DLxJFXDNWIS/", "https://www.instagram.com/p/DLSxkFFMhlC/"];
+    posts: InstaPost[] = [
+        { src: "assets/insta/527508223_1188660369969134_5184272593645205898_n.gif", type: "image", link: "https://www.instagram.com/p/1" },
+        { src: "assets/insta/downloadgram.org_515753884_17889403422276770_1625861277151893216_n.jpg", type: "image", link: "https://www.instagram.com/p/2" },
+        { src: "assets/insta/downloadgram.org_522661738_17891095374276770_1670701878940595859_n.jpg", type: "image", link: "https://www.instagram.com/p/3" },
+        { src: "assets/insta/downloadgram.org_524811054_17891816568276770_214449539655147077_n.webp", type: "image", link: "https://www.instagram.com/p/4" },
+        { src: "assets/insta/downloadgram.org_AQO2f3eUsCX1kzztxkAdcqnp97EuP3o_ATPwL_vILebj0j1pgyXNQ5umVMWlcVkiTI9yQcvypiLLs1nu4akNzLPF4-8Hexj0QYnssGY.mp4", type: "video", link: "https://www.instagram.com/p/5" },
+        { src: "assets/insta/downloadgram.org_AQOiUHMyDFSZCm5IlX5tyt7k5k8vwr3z-Ial74v0SK8QGGDe6q4Ag_GP_GUc-AZzbKUZzcFxoeEInL6dObnMnNENY07jgPu0QsUUwuU.mp4", type: "video", link: "https://www.instagram.com/p/6" },
+        { src: "assets/insta/downloadgram.org_AQP7hgwpg0XUANbWONdyxxXN5qpYbePE2-efaPaDbHn56b29-VgtzUvHjR8GAyNZ4PxInpxgI_q3nCMTxyN2E_iUKfSYymBSV3ln2Sg.mp4", type: "video", link: "https://www.instagram.com/p/7" },
+        { src: "assets/insta/downloadgram.org_AQPNGz39pctjlyCK93Q6Wb7ulTWpUZckoA6qKm0FCNMqbRD4v-R7JL9mOODf5N47NUQR_vjmVSP7I4_UxK5v-NuZ8zIyDdQUTh9RtZ0.mp4", type: "video", link: "https://www.instagram.com/p/8" },
+        { src: "assets/insta/downloadgram.org_AQPoE-O0xyuS6wc7T9o64NX5YfKqsOjVEYn9xcRKFbe-C6OV_YMBl-N2KNZc4uDXFmFFA1fL6UNSCycFolnqv6cQkk7Bpl0BMzg50pA.mp4", type: "video", link: "https://www.instagram.com/p/9" },
+    ];
 
     ngOnInit(): void {
         this.navigationService.currentRoute$.subscribe((route) => {
@@ -44,28 +59,27 @@ export class InstagramComponent implements OnInit, AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        this.processInstagramEmbeds();
+        const enforceMute = (v: HTMLVideoElement) => {
+            v.muted = true;
+            v.defaultMuted = true;
+            v.volume = 0;
+            v.addEventListener("volumechange", () => {
+                if (!v.muted || v.volume !== 0) {
+                    v.muted = true;
+                    v.volume = 0;
+                }
+            });
+        };
+
+        // initial
+        this.clips.forEach((ref) => enforceMute(ref.nativeElement));
+        // falls ngFor später neu rendert
+        this.clips.changes.subscribe((list: QueryList<ElementRef<HTMLVideoElement>>) => {
+            list.forEach((ref) => enforceMute(ref.nativeElement));
+        });
     }
 
-    private processInstagramEmbeds() {
-        const w = window as any;
-        // Falls das Script schon da ist:
-        if (w.instgrm?.Embeds?.process) {
-            w.instgrm.Embeds.process();
-            return;
-        }
-        // Sonst einmalig laden und dann verarbeiten:
-        const existing = document.querySelector('script[src*="instagram.com/embed.js"]');
-        if (!existing) {
-            const s = document.createElement("script");
-            s.async = true;
-            s.src = "https://www.instagram.com/embed.js";
-            s.onload = () => w.instgrm?.Embeds?.process?.();
-            document.body.appendChild(s);
-        }
-    }
-
-    getText(part: "titel" | "p1" | "button"): string {
+    getText(part: "titel" | "button"): string {
         return this.text.unserVerein[part][this.currentLanguage];
     }
 }

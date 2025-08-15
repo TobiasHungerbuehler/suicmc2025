@@ -5,7 +5,6 @@
 >
     <div
         class="inlay"
-        style="background-color: red"
         [ngStyle]="{
             color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
         }"
@@ -13,23 +12,27 @@
         <h2>{{ getText("titel") }}</h2>
 
         <div class="grid">
-            <div class="cell" *ngFor="let url of permalinks">
-                <!-- Minimaler Embed: Blockquote + data-instgrm-permalink -->
-                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-version="14" [attr.data-instgrm-permalink]="url"></blockquote>
-            </div>
-        </div>
+            <a *ngFor="let post of posts; let i = index" class="cell" [href]="post.link" target="_blank" rel="noopener" [attr.aria-label]="'Instagram Post ' + (i + 1)">
+                <ng-container [ngSwitch]="post.type">
+                    <img *ngSwitchCase="'image'" [src]="post.src" alt="" />
 
-        <a
-            class="insta-button"
-            [href]="instagramUrl"
-            target="_blank"
-            rel="noopener"
-            [ngStyle]="{
-                'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white',
-                color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'black'
-            }"
-        >
-            {{ getText("button") }}
-        </a>
+                    <video *ngSwitchCase="'video'" #clip [src]="post.src" muted defaultMuted playsinline autoplay loop preload="metadata" disablePictureInPicture controlslist="nodownload noplaybackrate noremoteplayback"></video>
+                </ng-container>
+            </a>
+        </div>
+        <div class="button-box">
+            <a
+                class="button"
+                [href]="instagramUrl"
+                target="_blank"
+                rel="noopener"
+                [ngStyle]="{
+                    'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white',
+                    color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'black'
+                }"
+            >
+                {{ getText("button") }}
+            </a>
+        </div>
     </div>
 </section>
