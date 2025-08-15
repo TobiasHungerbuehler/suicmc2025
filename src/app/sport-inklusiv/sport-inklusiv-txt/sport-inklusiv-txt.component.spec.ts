@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 import { SportInklusivTxtComponent } from "./sport-inklusiv-txt.component";
 
 describe("SportInklusivTxtComponent", () => {
@@ -7,7 +8,7 @@ describe("SportInklusivTxtComponent", () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SportInklusivTxtComponent],
+            imports: [RouterTestingModule, SportInklusivTxtComponent],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SportInklusivTxtComponent);

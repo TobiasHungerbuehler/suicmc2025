@@ -1,6 +1,28 @@
 @import "../../../styles.scss";
 
-.text-box {
-    width: 100%;
-    text-align: left;
+.sport-element {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:nth-child(1) {
+        background-color: #b3efa5;
+    }
+
+    &:nth-child(2) {
+        background-color: #d0f8c8;
+    }
+
+    &:nth-child(3) {
+        background-color: #e8f8e3;
+    }
+
+    > .inlay {
+        .text-box {
+            width: 100%;
+            text-align: left;
+        }
+    }
 }
