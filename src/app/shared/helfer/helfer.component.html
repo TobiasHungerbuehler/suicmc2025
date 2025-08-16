@@ -1,0 +1,25 @@
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#2b61d9' : currentRoute === 'sbpc' ? '#622a9b' : currentRoute === 'pre ecmc' ? '#d86c00' : 'white'
+    }"
+>
+    <div
+        class="inlay"
+        [ngStyle]="{
+            color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
+        }"
+    >
+        <h2>{{ getText("titel") }}</h2>
+
+        <div class="text-box">
+            <p>{{ getText("intro") }}</p>
+            <ul class="perks">
+                <li *ngFor="let item of getList()">{{ item }}</li>
+            </ul>
+            <p>
+                {{ getText("outro") }}
+                <a [href]="link" target="_blank">{{ link }}</a>
+            </p>
+        </div>
+    </div>
+</section>

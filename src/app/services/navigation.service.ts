@@ -26,6 +26,8 @@ export class NavigationService {
                 this.currentRouteSubject.next("PRE ECMC");
             } else if (url.includes("awarenessguide")) {
                 this.currentRouteSubject.next("awarenessguide");
+            } else if (url.includes("sportinklusiv")) {
+                this.currentRouteSubject.next("sportinklusiv");
             } else {
                 this.currentRouteSubject.next("SUICMC"); // Standardwert
             }
