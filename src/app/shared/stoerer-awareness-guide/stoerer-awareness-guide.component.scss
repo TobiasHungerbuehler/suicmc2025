@@ -30,14 +30,14 @@
         left: 50%; /* Zentrierung */
         transform: translate(-50%, -50%) rotate(-10deg); /* Rotation und Zentrierung */
         font-family: "Staatliches", sans-serif; /* Anpassen an deine Schriftart */
-        font-size: 28px; /* Schriftgröße */
+        font-size: 24px; /* Schriftgröße */
         font-weight: 400; /* Fettgedruckt */
         color: black; /* Farbe anpassen */
         text-align: center;
         pointer-events: none; /* Klicks durch den Text hindurch zulassen */
 
         @media (max-width: 800px) {
-            font-size: 16px; /* Schriftgröße */
+            font-size: 14px; /* Schriftgröße */
         }
     }
 }
