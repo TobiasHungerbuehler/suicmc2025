@@ -9,8 +9,8 @@ section {
     color: #fff;
 
     > .inlay {
-        width: min(800px, 100%);
-        padding: 60px 20px;
+        // width: min(800px, 100%);
+        // padding: 60px 20px;
 
         .text-box {
             margin-bottom: 60px;
@@ -20,6 +20,7 @@ section {
             width: 100%;
 
             mat-expansion-panel {
+                color: #fff;
                 border-radius: 0;
                 background-color: transparent !important;
 
@@ -34,4 +35,8 @@ section {
 
 .ac-text p {
     margin: 2px 0;
+}
+
+mat-panel-title {
+    color: #fff;
 }
