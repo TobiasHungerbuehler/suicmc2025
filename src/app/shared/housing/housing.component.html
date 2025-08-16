@@ -1,0 +1,21 @@
+<section
+    [ngStyle]="{
+        'background-color': currentRoute === 'suicmc' ? '#2b61d9' : currentRoute === 'sbpc' ? '#622a9b' : currentRoute === 'pre ecmc' ? '#d86c00' : 'white'
+    }"
+>
+    <div class="inlay">
+        <div class="title-box">
+            <h2>{{ text.title[currentLanguage] }}</h2>
+        </div>
+        <div class="text-box" [innerHTML]="text.intro[currentLanguage]"></div>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let item of text.items">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ item.label[currentLanguage] }}</mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="ac-text" [innerHTML]="item.text[currentLanguage]"></div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</section>

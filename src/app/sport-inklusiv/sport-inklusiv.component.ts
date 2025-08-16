@@ -25,4 +25,21 @@ export class SportInklusivComponent implements OnInit {
             }
         });
     }
+
+    ngAfterViewInit() {
+        // Verwende setTimeout, um sicherzustellen, dass das Element vollständig geladen ist
+        setTimeout(() => {
+            this.scrollToLast();
+        }, 0); // Die Verzögerung von 0 sorgt dafür, dass der nächste Event Loop-Zyklus abgewartet wird
+    }
+
+    scrollToLast() {
+        // Verwende document.getElementById(), um direkt auf das Element zuzugreifen
+        const element = document.getElementById("start");
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        } else {
+            console.log("Element not found");
+        }
+    }
 }
