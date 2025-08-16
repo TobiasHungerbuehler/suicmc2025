@@ -57,4 +57,3 @@ export class RacemapComponent {
         this.selectedImage = null;
     }
 }
-
