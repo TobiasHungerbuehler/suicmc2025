@@ -53,15 +53,15 @@ export class ProgrammComponent {
             dayLabel: { de: 'FREITAG', en: 'FRIDAY' },
             dateLabel: { de: 'Freitag, 05. 09. 2025', en: 'Friday, 05. 09. 2025' },
             text: {
-                de: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                de: `15 – 19 Uhr Get together @Hermann Bier
 15 – 19 Uhr Registration/Infopoint @Hermann Bier
-19 – 21 Uhr Alleycat
+19 – 21 Uhr Alleycat Metzgkatze
 20 – 22 Uhr Essen @Grabenhalle
 20 – 23 Uhr Registration/Infopoint @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
-                en: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                en: `15 – 19 Uhr Get together @Hermann Bier
 15 – 19 Uhr Registration/Infopoint @Hermann Bier
-19 – 21 Uhr Alleycat
+19 – 21 Uhr Alleycat Metzgkatze
 20 – 22 Uhr Food @Grabenhalle
 20 – 23 Uhr Registration/Infopoint @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
@@ -76,10 +76,11 @@ export class ProgrammComponent {
 10 – 12 Uhr Bergsprint @Dreilinden
 11 – 13 Uhr Appetizer @Dreilinden
 12 – 19 Uhr Registration/Infopoint @Areal Theater
+ab 12 Uhr Musik, Essensstände, Bar, Laufradolympiade, Tattoo, Goldsprint,
+Velosammelstelle von Velafrica @Areal Theater
 14 – 16 Uhr Cargorace @Areal Theater
-16.15 – 17.15 Uhr Sponsor*innen-Apéro mit Wein von amiata Bioweine
 17 – 18 Uhr WTNB-Forum @Areal Theater
-18 – 19 Uhr Skid, Trackstand @Areal Theater
+18 – 19 Uhr Skid, Trackstand @Areal Theater, Parkstrasse
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Essen @Grabenhalle
 20 – 23 Uhr Registration/Infopoint @Grabenhalle
@@ -89,10 +90,11 @@ export class ProgrammComponent {
 10 – 12 Uhr Hillsprint @Dreilinden
 11 – 13 Uhr Appetizer @Dreilinden
 12 – 19 Uhr Registration/Infopoint @Areal Theater
+ab 12 Uhr Music, Food stalls, Bar, Balance bike olympics, Tattoo, Goldsprint,
+Bicycle collection point of Velafrica @Areal Theater
 14 – 16 Uhr Cargorace @Areal Theater
-16:15 – 17:15 Uhr Aperitif for sponsors with wine from amiata Bioweine
 17 – 18 Uhr WTNB-Forum @Areal Theater
-18 – 19 Uhr Skid, Trackstand @Areal Theater
+18 – 19 Uhr Skid, Trackstand @Areal Theater, Parkstrasse
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Food @Grabenhalle
 20 – 23 Uhr Registration/Infopoint @Grabenhalle
@@ -105,7 +107,9 @@ export class ProgrammComponent {
             text: {
                 de: `07 – 12 Uhr Brunch @Areal Theater
 07 – 16 Uhr Registration/Infopoint @Areal Theater
-10 – 15 Uhr Mainrace @Areal Theater inkl. IBG Ingeneering Sprint
+ab 8 Uhr Musik, Essensstände, Bar, Laufradolympiade, Tattoo, Goldsprint,
+Velosammelstelle von Velafrica @Areal Theater
+10 – 15 Uhr Mainrace @Areal Theater inkl. IBG Engineering Sprint
 16 – 17 Uhr Open Forum @Areal Theater
 17 Uhr Gruppenfoto @Areal Theater
 17 – 18 Uhr Ehrungen @Areal Theater
@@ -114,7 +118,9 @@ export class ProgrammComponent {
 20 – 23 Uhr Party @Schwarzer Engel`,
                 en: `07 – 12 Uhr Brunch @Areal Theater
 07 – 16 Uhr Registration/Infopoint @Areal Theater
-10 – 15 Uhr Mainrace @Areal Theater inkl. IBG Ingeneering Sprint
+ab 8 Uhr Music, Food stalls, Bar, Balance bike olympics, Tattoo, Goldsprint,
+Bicycle collection point of Velafrica @Areal Theater
+10 – 15 Uhr Mainrace @Areal Theater inkl. IBG Engineering Sprint
 16 – 17 Uhr Open Forum @Areal Theater
 17 Uhr Group Photo @Areal Theater
 17 – 18 Uhr Awards @Areal Theater

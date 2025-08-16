@@ -53,11 +53,11 @@ export class ProgammSbpcComponent {
             dayLabel: { de: 'FREITAG', en: 'FRIDAY' },
             dateLabel: { de: 'Freitag, 05. 09. 2025', en: 'Friday, 05. 09. 2025' },
             text: {
-                de: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                de: `15 – 19 Uhr Get together @Hermann Bier
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Essen @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
-                en: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                en: `15 – 19 Uhr Get together @Hermann Bier
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Food @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
@@ -68,14 +68,14 @@ export class ProgammSbpcComponent {
             dateLabel: { de: 'Samstag, 06. 09. 2025', en: 'Saturday, 06. 09. 2025' },
             text: {
                 de: `07 – 09 Uhr Frühstück @Areal Bürgli
-08 – 16 Uhr Infopoint @Areal Bürgli
-08 – 18 Uhr Quali SBPC @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgl
+08 – 20 Uhr Quali SBPC @Areal Bürgli
 11 – 13 Uhr Appetizer @Areal Bürgli
 20 – 22 Uhr Essen @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
                 en: `07 – 09 Uhr Breakfast @Areal Bürgli
-08 – 16 Uhr Infopoint @Areal Bürgli
-08 – 18 Uhr Quali SBPC @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgl
+08 – 20 Uhr Quali SBPC @Areal Bürgli
 11 – 13 Uhr Appetizer @Areal Bürgli
 20 – 22 Uhr Food @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
@@ -83,7 +83,7 @@ export class ProgammSbpcComponent {
         },
         {
             dayLabel: { de: 'SONNTAG', en: 'SUNDAY' },
-            dateLabel: { de: 'Sonntag, 07. 09. 2025 «SBPC»', en: 'Sunday, 07. 09. 2025' },
+            dateLabel: { de: 'Sonntag, 07. 09. 2025', en: 'Sunday, 07. 09. 2025' },
             text: {
                 de: `07 – 12 Uhr Brunch @Areal Theater
 08 – 13 Uhr Playoffs SBPC @Areal Bürgli
