@@ -1,36 +1,43 @@
 .stoerer {
     position: fixed;
     z-index: 5;
-    top: 75vh;
-    right: 12%;
-    background-color: #d0f8c8;
-    padding: 20px 15px;
-    transform: rotate(-10deg);
-    cursor: pointer;
-    transition: all 125ms ease-in-out;
+    top: 63vh;
+    right: 2%;
 
     @media (max-width: 800px) {
-        top: 80%;
-        right: 20%;
-        padding: 12px 10px;
+        top: 72%;
     }
 
-    &:hover {
-        transform: scale(1.1) rotate(-10deg);
-        opacity: 0.9;
+    > img {
+        height: 150px;
+        width: auto;
         transition: all 125ms ease-in-out;
+
+        @media (max-width: 800px) {
+            height: 90px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+            transition: all 125ms ease-in-out;
+        }
     }
 
     .stoerer-text {
-        font-family: "Staatliches", sans-serif;
-        font-size: 28px;
-        font-weight: 400;
-        color: black;
+        position: absolute;
+        top: 50%; /* Zentrierung */
+        left: 50%; /* Zentrierung */
+        transform: translate(-50%, -50%) rotate(-10deg); /* Rotation und Zentrierung */
+        font-family: "Staatliches", sans-serif; /* Anpassen an deine Schriftart */
+        font-size: 28px; /* Schriftgröße */
+        font-weight: 400; /* Fettgedruckt */
+        color: black; /* Farbe anpassen */
         text-align: center;
-        pointer-events: none;
+        pointer-events: none; /* Klicks durch den Text hindurch zulassen */
 
         @media (max-width: 800px) {
-            font-size: 16px;
+            font-size: 16px; /* Schriftgröße */
         }
     }
 }
