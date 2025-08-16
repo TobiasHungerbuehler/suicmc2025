@@ -9,12 +9,12 @@
     }
 
     > a img {
-        height: 150px;
+        height: 120px;
         width: auto;
         transition: all 125ms ease-in-out;
 
         @media (max-width: 800px) {
-            height: 120px;
+            height: 80px;
         }
 
         &:hover {
