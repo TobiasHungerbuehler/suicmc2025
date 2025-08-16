@@ -11,6 +11,7 @@ import { filter } from "rxjs/operators";
 import { Router, NavigationEnd, ActivatedRoute } from "@angular/router";
 import { routes } from "../app.routes";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { StoererSportInklusivComponent } from "../shared/stoerer-sport-inklusiv/stoerer-sport-inklusiv.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammComponent } from "./programm/programm.component";
@@ -22,7 +23,7 @@ import { InstagramComponent } from "../shared/instagram/instagram.component";
 @Component({
     selector: "app-suicmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammComponent, InfrastrukturLocationsComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, ProgrammComponent, InfrastrukturLocationsComponent, SponsoringComponent, KarteComponent, LineupComponent, InstagramComponent],
     templateUrl: "./suicmc.component.html",
     styleUrls: ["./suicmc.component.scss"],
 })

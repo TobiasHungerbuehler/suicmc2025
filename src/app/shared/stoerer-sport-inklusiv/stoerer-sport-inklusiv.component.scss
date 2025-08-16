@@ -1,11 +1,11 @@
 .stoerer {
     position: fixed;
     z-index: 5;
-    top: 75vh;
+    top: 63vh;
     right: 2%;
 
     @media (max-width: 800px) {
-        top: 85%;
+        top: 72%;
     }
 
     > img {
