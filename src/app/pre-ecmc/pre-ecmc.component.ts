@@ -13,11 +13,15 @@ import { ProgrammPreEcmcComponent } from "./programm-pre-ecmc/programm-pre-ecmc.
 import { InstagramComponent } from "../shared/instagram/instagram.component";
 import { HelferComponent } from "../shared/helfer/helfer.component";
 import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
+import { WasIstComponent } from "../shared/was-ist/was-ist.component";
+import { KarteComponent } from "../shared/karte/karte.component";
+import { LineupComponent } from "../shared/lineup/lineup.component";
+import { HousingComponent } from "../shared/housing/housing.component";
 
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, HelferComponent, ProgrammPreEcmcComponent, InfrastrukturLocationsComponent, SponsoringComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, WasIstComponent, HelferComponent, ProgrammPreEcmcComponent, KarteComponent, InfrastrukturLocationsComponent, HousingComponent, LineupComponent, SponsoringComponent, InstagramComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })

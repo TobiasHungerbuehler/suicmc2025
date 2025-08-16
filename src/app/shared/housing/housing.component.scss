@@ -1,0 +1,37 @@
+@import "../../../styles.scss";
+
+section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+
+    > .inlay {
+        width: min(800px, 100%);
+        padding: 60px 20px;
+
+        .text-box {
+            margin-bottom: 60px;
+        }
+
+        mat-accordion {
+            width: 100%;
+
+            mat-expansion-panel {
+                border-radius: 0;
+                background-color: transparent !important;
+
+                mat-expansion-panel-header {
+                    font-family: $title-font;
+                    font-size: clamp(20px, 6vw, 30px);
+                }
+            }
+        }
+    }
+}
+
+.ac-text p {
+    margin: 2px 0;
+}

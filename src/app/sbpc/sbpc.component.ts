@@ -17,11 +17,12 @@ import { KarteComponent } from "../shared/karte/karte.component";
 import { LineupComponent } from "../shared/lineup/lineup.component";
 import { InstagramComponent } from "../shared/instagram/instagram.component";
 import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
+import { HousingComponent } from "../shared/housing/housing.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, ProgammSbpcComponent, InfrastrukturLocationsComponent, SponsoringComponent, RegistrationSbpcComponent, KarteComponent, LineupComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, ProgammSbpcComponent, KarteComponent, InfrastrukturLocationsComponent, HousingComponent, SponsoringComponent, RegistrationSbpcComponent, LineupComponent, InstagramComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })
