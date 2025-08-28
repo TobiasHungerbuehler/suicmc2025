@@ -1,0 +1,17 @@
+<section class="racemap-section">
+    <div class="inlay">
+        <div class="racemap-block" *ngFor="let map of racemaps">
+            <h2>{{ map.title[currentLanguage] }}</h2>
+            <div class="image-box" (click)="openImage(map.img)">
+                <img [src]="map.img" [alt]="map.title[currentLanguage]" />
+                <!-- <img src="assets/racemaps/Pre-Racemap_MAINRACE_Suicmc2025.jpg" alt="" /> -->
+            </div>
+            <div class="text-box">
+                <p>{{ map.text[currentLanguage] }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="fullscreen" *ngIf="selectedImage" (click)="closeImage()">
+        <img [src]="selectedImage" alt="Racemap fullscreen" />
+    </div>
+</section>

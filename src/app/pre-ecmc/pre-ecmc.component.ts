@@ -6,15 +6,22 @@ import { AnmeldungComponent } from "../shared/anmeldung/anmeldung.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { StoererSportInklusivComponent } from "../shared/stoerer-sport-inklusiv/stoerer-sport-inklusiv.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgrammPreEcmcComponent } from "./programm-pre-ecmc/programm-pre-ecmc.component";
 import { InstagramComponent } from "../shared/instagram/instagram.component";
+import { HelferComponent } from "../shared/helfer/helfer.component";
+import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
+import { WasIstComponent } from "../shared/was-ist/was-ist.component";
+import { KarteComponent } from "../shared/karte/karte.component";
+import { LineupComponent } from "../shared/lineup/lineup.component";
+import { HousingComponent } from "../shared/housing/housing.component";
 
 @Component({
     selector: "app-pre-ecmc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgrammPreEcmcComponent, SponsoringComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, WasIstComponent, HelferComponent, ProgrammPreEcmcComponent, KarteComponent, InfrastrukturLocationsComponent, HousingComponent, LineupComponent, SponsoringComponent, InstagramComponent],
     templateUrl: "./pre-ecmc.component.html",
     styleUrl: "./pre-ecmc.component.scss",
 })

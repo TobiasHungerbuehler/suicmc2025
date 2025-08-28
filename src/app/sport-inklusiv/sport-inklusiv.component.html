@@ -1,0 +1,19 @@
+<section id="start">
+    <div class="background"></div>
+
+    <div class="content">
+        <div class="start text-awarenessguide" [ngSwitch]="currentLanguage">
+            <ng-container *ngSwitchCase="'de'">
+                <h1>INKLUSION SUICMC 2025</h1>
+                <p>Die kommenden Schweizermeister*innenschaft der Velokurier*innen soll ein Velofest für alle sein. Somit auch für dich!</p>
+            </ng-container>
+            <ng-container *ngSwitchCase="'en'">
+                <h1>INCLUSION SUICMC 2025</h1>
+                <p>The upcoming Swiss Championships of Bike Couriers should be a bike festival for everyone – and that includes you!</p>
+            </ng-container>
+        </div>
+        <!-- <app-stoerer-kontakt></app-stoerer-kontakt> -->
+        <!-- <app-stoerer-awareness-guide></app-stoerer-awareness-guide> -->
+        <app-sport-inklusiv-txt></app-sport-inklusiv-txt>
+    </div>
+</section>

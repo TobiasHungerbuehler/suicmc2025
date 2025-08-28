@@ -26,5 +26,13 @@
             }"
         ></div>
         <div class="text-box" [innerHTML]="text.lineup.text2[currentLanguage]"></div>
+
+        <div
+            class="line"
+            [ngStyle]="{
+                background: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'white'
+            }"
+        ></div>
+        <div class="text-box" [innerHTML]="text.lineup.text3[currentLanguage]"></div>
     </div>
 </section>
