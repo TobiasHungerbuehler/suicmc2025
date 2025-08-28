@@ -128,6 +128,7 @@ export class SponsoringComponent implements OnInit {
         "Headdy",
         "Hermann Bier",
         "IBG Engineering AG",
+        "Käserei Muolen",
         "Kaffeehaus",
         "Knog",
         "Kolb Rahmenbau",
