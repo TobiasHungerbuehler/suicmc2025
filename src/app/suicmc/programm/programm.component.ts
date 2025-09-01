@@ -50,8 +50,8 @@ export class ProgrammComponent {
 
     rulesText = [
         {
-            dayLabel: { de: 'FREITAG', en: 'FRIDAY' },
-            dateLabel: { de: 'Freitag, 05. 09. 2025', en: 'Friday, 05. 09. 2025' },
+            dayLabel: { de: "FREITAG", en: "FRIDAY" },
+            dateLabel: { de: "Freitag, 05. 09. 2025", en: "Friday, 05. 09. 2025" },
             text: {
                 de: `15 – 19 Uhr Get together @Hermann Bier
 15 – 19 Uhr Registration/Infopoint @Hermann Bier
@@ -68,8 +68,8 @@ export class ProgrammComponent {
             },
         },
         {
-            dayLabel: { de: 'SAMSTAG', en: 'SATURDAY' },
-            dateLabel: { de: 'Samstag, 06. 09. 2025', en: 'Saturday, 06. 09. 2025' },
+            dayLabel: { de: "SAMSTAG", en: "SATURDAY" },
+            dateLabel: { de: "Samstag, 06. 09. 2025", en: "Saturday, 06. 09. 2025" },
             text: {
                 de: `07 – 09 Uhr Frühstück @Areal Bürgli
 07 – 11:30 Uhr Registration/Infopoint @Areal Bürgli
@@ -79,6 +79,7 @@ export class ProgrammComponent {
 ab 12 Uhr Musik, Essensstände, Bar, Laufradolympiade, Tattoo, Goldsprint,
 Velosammelstelle von Velafrica @Areal Theater
 14 – 16 Uhr Cargorace @Areal Theater
+16:15 - 17:15 Uhr Sponsor*innenapero mit Wein von amiata Bioweine
 17 – 18 Uhr WTNB-Forum @Areal Theater
 18 – 19 Uhr Skid, Trackstand @Areal Theater, Parkstrasse
 19 – 21 Uhr Alleycat
@@ -93,6 +94,7 @@ Velosammelstelle von Velafrica @Areal Theater
 ab 12 Uhr Music, Food stalls, Bar, Balance bike olympics, Tattoo, Goldsprint,
 Bicycle collection point of Velafrica @Areal Theater
 14 – 16 Uhr Cargorace @Areal Theater
+16:15 - 17:15 Sponsor Apero with wine from Amiata Organic Wines
 17 – 18 Uhr WTNB-Forum @Areal Theater
 18 – 19 Uhr Skid, Trackstand @Areal Theater, Parkstrasse
 19 – 21 Uhr Alleycat
@@ -102,8 +104,8 @@ Bicycle collection point of Velafrica @Areal Theater
             },
         },
         {
-            dayLabel: { de: 'SONNTAG', en: 'SUNDAY' },
-            dateLabel: { de: 'Sonntag, 07. 09. 2025', en: 'Sunday, 07. 09. 2025' },
+            dayLabel: { de: "SONNTAG", en: "SUNDAY" },
+            dateLabel: { de: "Sonntag, 07. 09. 2025", en: "Sunday, 07. 09. 2025" },
             text: {
                 de: `07 – 12 Uhr Brunch @Areal Theater
 07 – 16 Uhr Registration/Infopoint @Areal Theater
