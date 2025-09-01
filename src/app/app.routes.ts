@@ -10,7 +10,7 @@ import { SportInklusivComponent } from "./sport-inklusiv/sport-inklusiv.componen
 
 export const routes: Routes = [
     { path: "", component: SuicmcComponent },
-    { path: "registration", component: RegistrationSuicmcComponent },
+    // { path: "registration", component: RegistrationSuicmcComponent },
     { path: "sbpc", component: SbpcComponent },
     { path: "sbpc/registration", component: RegistrationSbpcComponent },
     { path: "preecmc", component: PreEcmcComponent },
