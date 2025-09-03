@@ -1,0 +1,45 @@
+@import "../../../styles.scss";
+
+.racemap-section {
+    background-color: #2b61d9;
+    color: #deeeff;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inlay {
+    width: 100%;
+    max-width: 1200px;
+    padding: 4% 2%;
+}
+
+.racemap-block {
+    margin-bottom: 4rem;
+}
+
+.image-box {
+    width: 100%;
+    margin: 2rem auto;
+    img {
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+}

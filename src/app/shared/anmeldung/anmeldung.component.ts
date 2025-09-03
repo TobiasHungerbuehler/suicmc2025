@@ -27,8 +27,8 @@ export class AnmeldungComponent implements OnInit {
                     en: "Registration",
                 },
                 text1: {
-                    de: "Die Online-Anmeldung für die SUICMC 25 ist vom 1. Oktober 2024 bis zum 31. August 2025 geöffnet. Danach kannst du dich vor Ort anmelden. Die Anmeldegebühr beträgt 20.- CHF. Magst du mehr beisteuern? Wir sind um jede zusätzliche Unterstützung sehr dankbar. Eine Bestätigungsmail mit den Zahlungsinformationen erhältst du nach der Anmeldung. ",
-                    en: "The online registration for SUICMC 25 is open from October 1, 2024, to August 31, 2025. After that, you can register on-site. The registration fee is 20.- CHF. If you'd like to contribute more, we greatly appreciate any additional support. You will receive a confirmation e-mail with payment details after registration.  ",
+                    de: "Die Online-Anmeldung ist geschlossen. Du kannst dich aber direkt vor Ort am Event spontan anmelden. Die Zeiten und Orte der Registrierung findest du im Programm. Wir freuen uns auf dich!",
+                    en: "Online registration is now closed. But don’t worry – you can still sign up on site at the event. You’ll find the registration times and locations in the program. We’re looking forward to seeing you!",
                 },
                 button: {
                     de: "ONLINE ANMELDUNG",

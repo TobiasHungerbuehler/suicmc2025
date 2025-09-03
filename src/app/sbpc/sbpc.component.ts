@@ -5,8 +5,10 @@ import { UnserVereinComponent } from "../shared/unser-verein/unser-verein.compon
 import { AnmeldungComponent } from "../shared/anmeldung/anmeldung.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { WasIstComponent } from "../shared/was-ist/was-ist.component";
+import { HelferComponent } from "../shared/helfer/helfer.component";
 import { SupportUsComponent } from "../shared/support-us/support-us.component";
 import { StoererAwarenessGuideComponent } from "../shared/stoerer-awareness-guide/stoerer-awareness-guide.component";
+import { StoererSportInklusivComponent } from "../shared/stoerer-sport-inklusiv/stoerer-sport-inklusiv.component";
 import { VerhaltenComponent } from "../shared/verhalten/verhalten.component";
 import { SponsoringComponent } from "../shared/sponsoring/sponsoring.component";
 import { ProgammSbpcComponent } from "./progamm-sbpc/progamm-sbpc.component";
@@ -14,11 +16,13 @@ import { RegistrationSbpcComponent } from "./registration-sbpc/registration-sbpc
 import { KarteComponent } from "../shared/karte/karte.component";
 import { LineupComponent } from "../shared/lineup/lineup.component";
 import { InstagramComponent } from "../shared/instagram/instagram.component";
+import { InfrastrukturLocationsComponent } from "../shared/infrastruktur-locations/infrastruktur-locations.component";
+import { HousingComponent } from "../shared/housing/housing.component";
 
 @Component({
     selector: "app-sbpc",
     standalone: true,
-    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, SupportUsComponent, StoererAwarenessGuideComponent, ProgammSbpcComponent, SponsoringComponent, RegistrationSbpcComponent, KarteComponent, LineupComponent, InstagramComponent],
+    imports: [CommonModule, StartComponent, AnmeldungComponent, UnserVereinComponent, FooterComponent, WasIstComponent, HelferComponent, SupportUsComponent, StoererAwarenessGuideComponent, StoererSportInklusivComponent, ProgammSbpcComponent, KarteComponent, InfrastrukturLocationsComponent, HousingComponent, SponsoringComponent, RegistrationSbpcComponent, LineupComponent, InstagramComponent],
     templateUrl: "./sbpc.component.html",
     styleUrl: "./sbpc.component.scss",
 })

@@ -9,8 +9,30 @@
             color: currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white'
         }"
     >
-        <h2>
-            {{ getText("titel") }}
-        </h2>
+        <h2>{{ getText("titel") }}</h2>
+
+        <div class="grid">
+            <a *ngFor="let post of posts; let i = index" class="cell" [href]="post.link" target="_blank" rel="noopener" [attr.aria-label]="'Instagram Post ' + (i + 1)">
+                <ng-container [ngSwitch]="post.type">
+                    <img *ngSwitchCase="'image'" [src]="post.src" alt="" />
+
+                    <video *ngSwitchCase="'video'" #clip [src]="post.src" muted defaultMuted playsinline autoplay loop preload="metadata" disablePictureInPicture controlslist="nodownload noplaybackrate noremoteplayback"></video>
+                </ng-container>
+            </a>
+        </div>
+        <div class="button-box">
+            <a
+                class="button"
+                [href]="instagramUrl"
+                target="_blank"
+                rel="noopener"
+                [ngStyle]="{
+                    'background-color': currentRoute === 'suicmc' ? '#DEEEFF' : currentRoute === 'sbpc' ? '#EEDDFF' : currentRoute === 'pre ecmc' ? '#FDE9D5' : 'white',
+                    color: currentRoute === 'suicmc' ? '#437CFA' : currentRoute === 'sbpc' ? '#9343E3' : currentRoute === 'pre ecmc' ? '#FF9021' : 'black'
+                }"
+            >
+                {{ getText("button") }}
+            </a>
+        </div>
     </div>
 </section>

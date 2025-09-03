@@ -1,0 +1,33 @@
+<section
+    [ngClass]="{
+        suicmc: currentRoute === 'suicmc',
+        sbpc: currentRoute === 'sbpc',
+        'pre-ecmc': currentRoute === 'pre ecmc'
+    }"
+>
+    <div class="inlay">
+        <div class="title-box">
+            <h2>
+                {{
+                    currentLanguage === 'de'
+                        ? 'Informationen über Zugänglichkeit und Infrastruktur der Locations'
+                        : 'Information About Accessibility and Infrastructure'
+                }}
+            </h2>
+        </div>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let location of locations">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ location.label[currentLanguage] }}</mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="ac-text">
+                    <ng-container *ngFor="let line of location.text[currentLanguage].split('\n')">
+                        <p>{{ line }}</p>
+                    </ng-container>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</section>

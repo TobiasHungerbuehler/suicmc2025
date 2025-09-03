@@ -42,63 +42,65 @@ export class ProgammSbpcComponent {
     text = [
         {
             text: {
-                de: `Genaue Öffnungszeiten der Registration folgen. Die Registration ist jedoch an allen Standorten für Teilnehmende und Begleitpersonen möglich.`,
-                en: `Exact opening hours of the registration will follow. However, registration is available at all locations for participants and accompanying persons.`,
+                de: `Programmänderungen vorbehalten.`,
+                en: `Schedule subject to change.`,
             },
         },
     ];
 
     rulesText = [
         {
-            dayLabel: { de: "FREITAG", en: "FRIDAY" },
-            dateLabel: { de: "Freitag, 05. 09. 2025", en: "Friday, 05. 09. 2025" },
+            dayLabel: { de: 'FREITAG', en: 'FRIDAY' },
+            dateLabel: { de: 'Freitag, 05. 09. 2025', en: 'Friday, 05. 09. 2025' },
             text: {
-                de: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                de: `15 – 19 Uhr Get together @Hermann Bier
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Essen @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
-                en: `15 – 19 Uhr Welcome Drink @Hermann Bier
+                en: `15 – 19 Uhr Get together @Hermann Bier
 19 – 21 Uhr Alleycat
 20 – 22 Uhr Food @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
             },
         },
         {
-            dayLabel: { de: "SAMSTAG", en: "SATURDAY" },
-            dateLabel: { de: "Samstag, 06. 09. 2025", en: "Saturday, 06. 09. 2025" },
+            dayLabel: { de: 'SAMSTAG', en: 'SATURDAY' },
+            dateLabel: { de: 'Samstag, 06. 09. 2025', en: 'Saturday, 06. 09. 2025' },
             text: {
-                de: `07 – 09 Uhr Frühstück @Bürgli
-08 – 18 Uhr Quali SBPC @Bürgli
-11 – 13 Uhr Appetizer @Bürgli
-18 – 20 Uhr Pick ups @Bürgli
+                de: `07 – 09 Uhr Frühstück @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgl
+08 – 20 Uhr Quali SBPC @Areal Bürgli
+11 – 13 Uhr Appetizer @Areal Bürgli
 20 – 22 Uhr Essen @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
-                en: `07 – 09 Uhr Breakfast @Bürgli
-08 – 18 Uhr Quali SBPC @Bürgli
-11 – 13 Uhr Appetizer @Bürgli
-18 – 20 Uhr Pick ups @Bürgli
+                en: `07 – 09 Uhr Breakfast @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgl
+08 – 20 Uhr Quali SBPC @Areal Bürgli
+11 – 13 Uhr Appetizer @Areal Bürgli
 20 – 22 Uhr Food @Grabenhalle
 20 – 04 Uhr Party @Grabenhalle`,
             },
         },
         {
-            dayLabel: { de: "SONNTAG", en: "SUNDAY" },
-            dateLabel: { de: "Sonntag, 07. 09. 2025 «SBPC»", en: "Sunday, 07. 09. 2025" },
+            dayLabel: { de: 'SONNTAG', en: 'SUNDAY' },
+            dateLabel: { de: 'Sonntag, 07. 09. 2025', en: 'Sunday, 07. 09. 2025' },
             text: {
-                de: `07 – 12 Uhr Brunch @Theater
-08 – 13 Uhr Playoffs SBPC @Bürgli
-13 – 17 Uhr Finals SBPC @Bürgli
-17 Uhr Gruppenfoto @Theater
-17 – 18 Uhr Ehrungen @Theater
-17 – 20 Uhr Essen @Theater
-20 – 23 Uhr Party @Engel`,
-                en: `07 – 12 Uhr Brunch @Theater
-08 – 13 Uhr Playoffs SBPC @Bürgli
-13 – 17 Uhr Finals SBPC @Bürgli
-17 Uhr Group Photo @Theater
-17 – 18 Uhr Awards @Theater
-17 – 20 Uhr Food @Theater
-20 – 23 Uhr Party @Engel`,
+                de: `07 – 12 Uhr Brunch @Areal Theater
+08 – 13 Uhr Playoffs SBPC @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgli
+13 – 17 Uhr Finals SBPC @Areal Bürgli
+17 Uhr Gruppenfoto @Areal Theater
+17 – 18 Uhr Ehrungen @Areal Theater
+17 – 20 Uhr Essen @Areal Theater
+20 – 23 Uhr Party @Schwarzer Engel`,
+                en: `07 – 12 Uhr Brunch @Areal Theater
+08 – 13 Uhr Playoffs SBPC @Areal Bürgli
+08 – 16 Uhr Infopoint @Areal Bürgli
+13 – 17 Uhr Finals SBPC @Areal Bürgli
+17 Uhr Group Photo @Areal Theater
+17 – 18 Uhr Awards @Areal Theater
+17 – 20 Uhr Food @Areal Theater
+20 – 23 Uhr Party @Schwarzer Engel`,
             },
         },
     ];

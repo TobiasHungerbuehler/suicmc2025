@@ -1,0 +1,22 @@
+@import "../../../styles.scss";
+
+section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* bullets weg + leicht hervorheben */
+.perks {
+    list-style: none; /* keine Punkte */
+    margin: 0.5rem 0 1.5rem;
+    padding: 0;
+
+    li {
+        font-weight: 600; /* etwas fetter */
+        line-height: 1.7; /* mehr Zeilenhöhe */
+        margin: 0.15rem 0; /* minimaler Abstand */
+    }
+}

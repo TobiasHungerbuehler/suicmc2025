@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { NavigationService } from "../../services/navigation.service";
 import { RouterModule } from "@angular/router";
 
-// Erstelle einen Union-Typ für die zulässigen Routen
+// Erstelle einen Union-Typ für die zulässigen Routes
 type RouteType = "suicmc" | "sbpc" | "pre ecmc";
 
 @Component({
@@ -109,25 +109,33 @@ export class SponsoringComponent implements OnInit {
     };
 
     supporters: string[] = [
+        "Alena Lizier Tattoo & Art",
         "amiata",
-        "Amt für Umwelt und Energie",
         "Associazione Saetta Verde",
-        "Bäckerei Füger",
         "brewbee",
         "Camion Transport",
+        "Condecta AG",
         "DirtySox",
         "EINSTOFFEN",
+        "Energiestadt Gold St.Gallen",
         "Frame of Mind",
         "FREITAG",
         "Genossenschaft Tofurei Engel",
         "Goba AG",
         "Gruppetto",
         "Gutsch Haferdrink",
+        "Habibi",
         "Headdy",
+        "Hermann Bier",
         "IBG Engineering AG",
+        "Käserei Muolen",
+        "Kaffeehaus",
+        "Knog",
         "Kolb Rahmenbau",
         "Komenda AG",
+        "Kompotoi AG",
         "Kryptonite",
+        "Kurierzentrale",
         "La Cyclone",
         "Messaker",
         "Migros KulturProzent",
@@ -135,13 +143,18 @@ export class SponsoringComponent implements OnInit {
         "New Roots",
         "Omnium",
         "RUGBY CLUB ST. GALLEN",
+        "Schnider AG Transport und Recycling",
         "Seifenmuseum St.Gallen",
+        "SOB – Schweizerische Südostbahn",
+        "Sport Schmetta GmbH",
         "SqLab",
         "SUICMC 2023 Bern",
         "Swissconnect",
         "syndicom",
         "Tanner Werbetechnik AG",
+        "Trash Bags",
         "velo&werk",
+        "Velafrica",
         "Velokurier Bern",
         "Velokurier Biel",
         "Velokurier Luzern-Zug",
@@ -149,8 +162,9 @@ export class SponsoringComponent implements OnInit {
         "Velokurier Winterthur",
         "Veloplus",
         "Vélocité",
+        "Verein Glace-Velo St.Gallen",
         "Vesto AG",
-        "SOB – Schweizerische Südostbahn",
+        "Vitelli Velobedarf AG",
     ];
 
     text = {

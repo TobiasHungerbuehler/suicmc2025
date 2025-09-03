@@ -50,8 +50,8 @@ Guest admission at the door: CHF 20<br><br>
 Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Abendkasse Gäste-Eintritt: 20 CHF<br><br>
 <strong class="artist">Depat Milieu:</strong> <span class="genre">Hip Hop</span><br>
-<strong class="artist">Funt:</strong> <span class="genre">Balkan, Rap, Reggae</span><br>
-<strong class="artist">Tempo30:</strong> <span class="genre">Electro</span><br><br>
+<strong class="artist">Gunda Wechee & Friends:</strong> <span class="genre">Reggae, Hip Hop</span><br>
+<strong class="artist">Tembo30:</strong> <span class="genre">Electro</span><br><br>
 <em>DJ’s: Snatch, YPB</em>
       `,
                 en: `
@@ -59,9 +59,24 @@ Abendkasse Gäste-Eintritt: 20 CHF<br><br>
 Grabenhalle, Unterer Graben 17, 9000 St. Gallen<br>
 Guest admission at the door: CHF 20<br><br>
 <strong class="artist">Depat Milieu:</strong> <span class="genre">Hip Hop</span><br>
-<strong class="artist">Funt:</strong> <span class="genre">Balkan, Rap, Reggae</span><br>
-<strong class="artist">Tempo30:</strong> <span class="genre">Electro</span><br><br>
+<strong class="artist">Gunda Wechee & Friends:</strong> <span class="genre">Reggae, Hip Hop</span><br>
+<strong class="artist">Tembo30:</strong> <span class="genre">Electro</span><br><br>
 <em>DJ’s: Snatch, YPB</em>
+      `,
+            },
+            text3: {
+                de: `
+<strong>Sonntag, 07. 09. 2025 | Türöffnung 19 Uhr</strong><br>
+Schwarzer Engel, Engelgasse 22, 9000 St. Gallen<br>
+<strong class="artist">Dj Naurasta Selecta</strong><br>
+<strong class="artist">Dj Snatch</strong><br>
+      `,
+                en: `
+<strong>Sunday, 07. 09. 2025 | Doors open at 7:00 PM</strong><br>
+Schwarzer Engel, Engelgasse 22, 9000 St. Gallen<br>
+<strong class="artist">Dj Naurasta Selecta</strong><br>
+<strong class="artist">Dj Snatch</strong><br>
+
       `,
             },
         },
