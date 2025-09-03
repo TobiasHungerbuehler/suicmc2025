@@ -3,7 +3,7 @@ import { Component, OnInit } from "@angular/core";
 import { NavigationService } from "../../services/navigation.service";
 import { RouterModule } from "@angular/router";
 
-// Erstelle einen Union-Typ für die zulässigen Routen
+// Erstelle einen Union-Typ für die zulässigen Routes
 type RouteType = "suicmc" | "sbpc" | "pre ecmc";
 
 @Component({
