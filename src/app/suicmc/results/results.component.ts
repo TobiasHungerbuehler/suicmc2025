@@ -22,17 +22,20 @@ export class ResultsComponent {
         {
             title: { de: "Mainrace", en: "Mainrace" },
             pdfs: [
-                { label: "RESULTS_MAINRACE_WTNB", url: "" },
-                { label: "RESULTS_MAINRACE_OPEN", url: "" },
+                { label: "RESULTS_MAINRACE_WTNB", url: "assets/results/RESULTS_CARGO_WTNB.pdf" },
+                { label: "RESULTS_MAINRACE_OPEN", url: "assets/results/RESULTS_MAINRACE_OPEN.pdf" },
             ],
         },
         {
             title: { de: "Inklusion", en: "Inclusion" },
-            pdfs: [{ label: "RESULTS_INKLUSION", url: "" }],
+            pdfs: [{ label: "RESULTS_INKLUSION", url: "assets/results/RESULTS_INKLUSION.pdf" }],
         },
         {
             title: { de: "Cargo", en: "Cargo" },
-            pdfs: [{ label: "RESULTS_CARGO_WTNB", url: "" }],
+            pdfs: [
+                { label: "RESULTS_CARGO_WTNB", url: "assets/results/RESULTS_CARGO_WTNB.pdf" },
+                { label: "RESULTS_CARGO_OPEN", url: "assets/results/RESULTS_CARGO_OPEN.pdf" },
+            ],
         },
     ];
 
@@ -54,4 +57,3 @@ export class ResultsComponent {
         });
     }
 }
-
