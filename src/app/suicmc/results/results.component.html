@@ -1,0 +1,30 @@
+<section
+    [ngClass]="{
+        suicmc: currentRoute === 'suicmc',
+        sbpc: currentRoute === 'sbpc',
+        'pre-ecmc': currentRoute === 'pre ecmc'
+    }"
+>
+    <div class="inlay">
+        <div class="title-box">
+            <h2>{{ currentLanguage === "de" ? "Resultate" : "Results" }}</h2>
+        </div>
+
+        <mat-accordion>
+            <mat-expansion-panel *ngFor="let result of results">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ result.title[currentLanguage] }}</mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <div class="pdf-list">
+                    <a *ngFor="let pdf of result.pdfs" [href]="pdf.url" target="_blank" class="pdf-link">
+                        <mat-icon>picture_as_pdf</mat-icon>
+                        <span>{{ pdf.label }}</span>
+                    </a>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+
+    <img src="assets/results/RESULTS_CARGO_WTNB.pdf" alt="" />
+</section>
